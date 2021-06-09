@@ -60,6 +60,8 @@ pageEncoding="UTF-8"%>
 				</label>
 				<div>
 					<p><%= rowshow.getAttach1() %></p>
+					<!-- 이미지 경우 ↓ -->
+					<img src="upload/<%= rowshow.getAttach1() %>" alt="첨부파일 이미지">
 				</div>					
 			</div>
 			

@@ -1,17 +1,15 @@
 package com.hk.jsp.dao;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
-
+import java.util.*;
 import com.hk.jsp.vo.*;
 
 public class BoardDao {
 	
-	private static String driveName = "oracle.jdbc.driver.OracleDriver";
-	private static String url = "jdbc:oracle:thin:@localhost:1521:XE";
-	private static String user = "java";
-	private static String password = "1234";
+	static String driveName = "com.mysql.jdbc.Driver";
+	static String url = "jdbc:mysql://localhost:3306/jspweb";
+	static String user = "jsp";
+	static String password = "1234";
 	
 	private static Connection conn = null;
 	private static Statement stmt = null;
@@ -51,14 +49,13 @@ public class BoardDao {
 	}
 	
 	// 정렬 , 검색
-	public List<BoardVo> getBoardList(String sort, String keyword) throws Exception {
+	public List<BoardVo> getBoardList(String sort, String keyword, String type) throws Exception {
 		
 		List<BoardVo> rst = new ArrayList<BoardVo>();
 		connectDB();
 		
-		String sql = "select no, title, contents, writer, "
-				+ "TO_CHAR(regdate,'YYYY.MM.DD') as regdate, "
-				+ "views from board where title like '%"+keyword+"%' order by "+sort+ " desc";
+		String sql = "select no, title, contents, writer, regdate, "
+				+ "views from board where "+type+" like '%"+keyword+"%' order by "+sort+ " desc";
 		rs = stmt.executeQuery(sql);
 		while(rs.next()) {
 			BoardVo row = new BoardVo();
@@ -78,7 +75,7 @@ public class BoardDao {
 	public BoardVo getBoardByNo(String no) throws Exception {
 		BoardVo rst = new BoardVo();
 		connectDB();
-		String sql=String.format("select no, title, contents, writer, TO_CHAR(regdate,'YYYY.MM.DD HH:mm') as regdate, views, attach1 from board where no='%s'" , no);
+		String sql=String.format("select no, title, contents, writer, regdate, views, attach1, passwd from board where no='%s'" , no);
 		rs = stmt.executeQuery(sql);
 		while(rs.next()) {
 			rst.setNo(rs.getInt("no"));
@@ -88,6 +85,7 @@ public class BoardDao {
 			rst.setViews(rs.getInt("views"));
 			rst.setContents(rs.getString("contents"));		
 			rst.setAttach1(rs.getString("attach1"));
+			rst.setPasswd(rs.getString("passwd"));
 		}
 		closeDB();
 		return rst;
@@ -121,6 +119,57 @@ public class BoardDao {
 		return rst;
 	}
 	
+	// 공지사항 리스트
+	public List<BoardVo> getBoardLists() throws Exception {
+		List<BoardVo> rst = new ArrayList<BoardVo>();
+		connectDB();
+		
+		String sql = "select * from board";
+		rs = stmt.executeQuery(sql);
+		while(rs.next()) {
+			BoardVo bolvo = new BoardVo();
+			bolvo.setNo(rs.getInt("no"));
+			bolvo.setWriter(rs.getString("writer"));
+			bolvo.setTitle(rs.getString("title"));
+			bolvo.setRegdate(rs.getString("regdate"));
+			bolvo.setViews(rs.getInt("views"));
+			bolvo.setAdm_id(rs.getString("adm_id"));
+			bolvo.setPasswd(rs.getString("passwd"));
+			rst.add(bolvo);
+		}		
+		
+		closeDB();
+		return rst;
+	}
+	
+	
+	// 비밀번호 확인
+	public String chkPwd(String no) throws Exception {
+		String rst = "";
+		connectDB();
+		
+		String sql = String.format("select passwd from board where no = '%s'", no);
+		rs = stmt.executeQuery(sql);
+		
+		while(rs.next()) {
+			rst = rs.getString("passwd");
+		}
+				
+		closeDB();
+		return rst;
+	}
+	
+	// 게시물 삭제
+	public int delBoard(String no) throws Exception {
+		int rst = 0;
+		connectDB();		
+		
+		String sql = String.format("delete from board where no='%s'",no);
+		rst = stmt.executeUpdate(sql);	
+		
+		closeDB();
+		return rst;
+	}
 		
 
 }

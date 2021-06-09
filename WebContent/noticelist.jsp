@@ -77,7 +77,9 @@ pageEncoding="UTF-8"%>
 		<%
 			}
 		%>
-	</table>	
+	</table>
+	
+	<button type="button" onclick="location.href='noticewrite.jsp'">글작성</button>	
 	
 	<div>
 		<form id="form2" method="GET" action="noticelist.jsp">
