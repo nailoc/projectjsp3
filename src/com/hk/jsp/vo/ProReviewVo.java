@@ -6,12 +6,12 @@ public class ProReviewVo {
 	private String pno;
 	private String id;
 	private String passwd;
+	private String title;
 	private String contents;
 	private String regdate;
     private int views;
     private int score;
     private String attach1;
-    private String attahc2;
     private String avaliable;
     
     
@@ -38,6 +38,12 @@ public class ProReviewVo {
 	}
 	public void setPasswd(String passwd) {
 		this.passwd = passwd;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
 	}
 	public String getContents() {
 		return contents;
@@ -68,12 +74,6 @@ public class ProReviewVo {
 	}
 	public void setAttach1(String attach1) {
 		this.attach1 = attach1;
-	}
-	public String getAttahc2() {
-		return attahc2;
-	}
-	public void setAttahc2(String attahc2) {
-		this.attahc2 = attahc2;
 	}
 	public String getAvaliable() {
 		return avaliable;
