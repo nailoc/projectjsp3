@@ -16,9 +16,8 @@ public class BoardDao {
 	private static PreparedStatement pstmt = null;
 	private static ResultSet rs = null;
 	private static BoardDao instance = new BoardDao(); 
-	// 자신의 클래스에 대한 참조변수
 	
-	private BoardDao() { } // 생성자
+	private BoardDao() { }
 	
 	public static BoardDao getInstance() {
 		return instance;
@@ -26,11 +25,11 @@ public class BoardDao {
 	
 	private void connectDB() throws Exception {
 		Class.forName(driveName);
-		System.out.println("오라클 드라이버로딩성공");
-		if(conn==null) { //접속이 안된 상태면
+		System.out.println("����̺� �ε� ����");
+		if(conn==null) {
 			conn=DriverManager.getConnection(url, user, password);
 			stmt=conn.createStatement();
-			System.out.println("오라클 접속 성공");
+			System.out.println("����Ŭ ���� ����");
 		}
 	}
 	
@@ -41,14 +40,13 @@ public class BoardDao {
 			if(stmt!=null) { stmt.close(); stmt=null; }
 			if(pstmt!=null) { pstmt.close(); pstmt=null; }
 			if(rs!=null) { rs.close(); rs=null; }
-			System.out.println("오라클 접속 종료 완료");
+			System.out.println("����Ŭ ���� ����");
 		}catch(Exception e) {
-			System.out.println("오라클 접속 종료 오류");
+			System.out.println("�������");
 		}
 		
 	}
 	
-	// 정렬 , 검색
 	public List<BoardVo> getBoardList(String sort, String keyword, String type) throws Exception {
 		
 		List<BoardVo> rst = new ArrayList<BoardVo>();
@@ -71,7 +69,6 @@ public class BoardDao {
 		return rst;
 	}
 	
-	// 게시물 읽기
 	public BoardVo getBoardByNo(String no) throws Exception {
 		BoardVo rst = new BoardVo();
 		connectDB();
@@ -92,7 +89,6 @@ public class BoardDao {
 		
 	}
 	
-	// 조회수 증가
 	public void increaseBoardNo(String no) throws Exception {
 		connectDB();
 		String sql = String.format("update board set views=views+1 where no='%s'", no);
@@ -100,7 +96,6 @@ public class BoardDao {
 		closeDB();
 	}
 	
-	// 공지사항 작성
 	public int saveBoard(BoardVo brdvo) throws Exception {
 		int rst=0;
 		connectDB();
@@ -119,7 +114,6 @@ public class BoardDao {
 		return rst;
 	}
 	
-	// 공지사항 리스트
 	public List<BoardVo> getBoardLists() throws Exception {
 		List<BoardVo> rst = new ArrayList<BoardVo>();
 		connectDB();
@@ -143,7 +137,6 @@ public class BoardDao {
 	}
 	
 	
-	// 비밀번호 확인
 	public String chkPwd(String no) throws Exception {
 		String rst = "";
 		connectDB();
@@ -159,7 +152,6 @@ public class BoardDao {
 		return rst;
 	}
 	
-	// 게시물 삭제
 	public int delBoard(String no) throws Exception {
 		int rst = 0;
 		connectDB();		

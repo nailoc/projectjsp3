@@ -23,7 +23,7 @@ pageEncoding="UTF-8"%>
 			sortname="revno";
 		}
 		if(typeval==null) {
-			typeval="title";
+			typeval="pno";
 		}
 		
 	
@@ -56,9 +56,11 @@ pageEncoding="UTF-8"%>
 		<tr>
 			<th>상품문의번호</th>
 			<th>상품번호</th>
+			<th>작성자</th>
 			<th>제목</th>
 			<th>날짜</th>
 			<th>조회</th>
+			<th>별점</th>
 			<th>사진</th>
 		</tr>
 		
@@ -69,9 +71,11 @@ pageEncoding="UTF-8"%>
 		%>	
 			<td><%= temp.getRevno() %></td>
 			<td><%= temp.getPno() %></td>
-			<td><a href="proshow.jsp?revno=<%=temp.getRevno() %>"><%= temp.getTitle() %></a></td>
+			<td><%= temp.getId() %></td>
+			<td><a href="proshow.jsp?revno=<%=temp.getRevno() %>&pno=<%= temp.getPno() %>"><%= temp.getTitle() %></a></td>
 			<td><%= temp.getRegdate() %></td>
 			<td><%= temp.getViews() %></td>
+			<td><%= temp.getScore() %></td>
 			<td><img src="upload/<%= temp.getAttach1() %>" alt="썸네일"></td>
 		</tr>
 		
