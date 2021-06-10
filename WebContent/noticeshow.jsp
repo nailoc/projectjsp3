@@ -64,7 +64,9 @@ pageEncoding="UTF-8"%>
 					<img src="upload/<%= rowshow.getAttach1() %>" alt="첨부파일 이미지">
 				</div>					
 			</div>
-			
+			 
+			 <!-- admin id session 불러와서 협업때 체크 -->
+			 
 			 <button type="button" onclick="deleteB()">삭제하기</button>
 			 
 		<div class="left">
