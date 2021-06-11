@@ -47,6 +47,24 @@ pageEncoding="UTF-8"%>
 CKEDITOR.replace('iboard_content');
 
 function bbs_write() {
+	
+	title = document.getElementById("title").value;
+	writer = document.getElementById("writer").value;
+	passwd = document.getElementById("passwd").value;
+	
+	if(title=="") {
+		alert("제목을 입력하세요");
+		return;
+	}
+	if(writer=="") {
+		alert("작성자를 입력하세요");
+		return;
+	}
+	if(passwd=="") {
+		alert("비밀번호를 입력하세요");
+		return;
+	}
+	
 	frm = document.getElementById("frm_write");
 	frm.submit();
 }

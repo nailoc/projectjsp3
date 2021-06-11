@@ -20,32 +20,32 @@ pageEncoding="UTF-8"%>
 			keywordval="";
 		}			
 		if(sortname==null) {
-			sortname="revno";
+			sortname="qnano";
 		}
 		if(typeval==null) {
 			typeval="pno";
 		}
 		
 	
-		ProDao prodao = ProDao.getInstance();
+		ProQnaDao proqdao = ProQnaDao.getInstance();
 		// List<ProReviewVo> result = prodao.getBoardLists();
-		List<ProReviewVo> totalrst = prodao.getProLists(sortname, keywordval, typeval);
+		List<ProQnaVo> totalrst = proqdao.getProQnaLists(sortname, keywordval, typeval);
 			
 	%>
 
 <body>
 
-	<h2>상품후기</h2>
+	<h2>상품문의</h2>
 
 	<!-- 정렬 -->
 		<div>
 			<div>전체 <%=totalrst.size() %></div>	
 				
 			<div>
-				<form id="form1" method="GET" action="prolist.jsp">
+				<form id="form1" method="GET" action="proqnalist.jsp">
 					<select id="select1" name="select1" onchange="sort()">
-					<option value="revno" selected="selected">정렬</option>
-					<option value="revno">최신순</option>
+					<option value="qnano" selected="selected">정렬</option>
+					<option value="qnano">최신순</option>
 					<option value="views">조회순</option>	
 					</select>
 				</form>
@@ -54,29 +54,25 @@ pageEncoding="UTF-8"%>
 
 	<table>
 		<tr>
-			<th>상품후기번호</th>
+			<th>상품문의번호</th>
 			<th>상품번호</th>
 			<th>작성자</th>
 			<th>제목</th>
 			<th>날짜</th>
 			<th>조회</th>
-			<th>별점</th>
-			<th>사진</th>
 		</tr>
 		
 		<%
 			for(int i=0; i<totalrst.size(); i++) {
-				ProReviewVo temp = totalrst.get(i);
+				ProQnaVo temp = totalrst.get(i);
 				out.println("<tr class=''>");
 		%>	
-			<td><%= temp.getRevno() %></td>
+			<td><%= temp.getQnano() %></td>
 			<td><%= temp.getPno() %></td>
 			<td><%= temp.getId() %></td>
-			<td><a href="proshow.jsp?revno=<%=temp.getRevno() %>&pno=<%= temp.getPno() %>"><%= temp.getTitle() %></a></td>
+			<td><a href="proqnashow.jsp?qnano=<%=temp.getQnano() %>&pno=<%= temp.getPno() %>"><%= temp.getTitle() %></a></td>
 			<td><%= temp.getRegdate() %></td>
 			<td><%= temp.getViews() %></td>
-			<td><%= temp.getScore() %></td>
-			<td><img src="upload/<%= temp.getAttach1() %>" alt="썸네일"></td>
 		</tr>
 		
 		<%
@@ -84,10 +80,10 @@ pageEncoding="UTF-8"%>
 		%>
 	</table>
 	
-	<button type="button" onclick="location.href='proreviewwrite.jsp'">상품후기작성</button>	
+	<button type="button" onclick="location.href='proqna.jsp'">상품문의작성</button>	
 	
 	<div>
-		<form id="form2" method="GET" action="prolist.jsp">
+		<form id="form2" method="GET" action="proqnalist.jsp">
 				<select id="select2" name="target">
 					<option value="title">정렬</option>
 					<option value="title">제목</option>
@@ -106,7 +102,7 @@ pageEncoding="UTF-8"%>
 function sort() {	
 	var sel = document.getElementById("select1");
 	var sort_val = sel.options[sel.selectedIndex].value;
-	location.href="prolist.jsp?sort="+sort_val;	
+	location.href="proqnalist.jsp?sort="+sort_val;	
 }
 
 // 검색
@@ -117,7 +113,7 @@ function search() {
 	var keyword_val = document.getElementById("keyword").value;
 	var keyword_val_encode = encodeURI(keyword_val);	// url 주소 한글 -> 인코딩
 	if(keyword_val) {
-		location.href="prolist.jsp?sort=revno&keyword="+keyword_val_encode+"&type="+tval;		
+		location.href="proqnalist.jsp?sort=qnano&keyword="+keyword_val_encode+"&type="+tval;		
 	} else {
 		alert("검색어를 입력하세요");
 	}	

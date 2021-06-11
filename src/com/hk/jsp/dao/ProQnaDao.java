@@ -4,8 +4,8 @@ import java.sql.*;
 import java.util.*;
 import com.hk.jsp.vo.*;
 
-public class ProDao {
-
+public class ProQnaDao {
+	
 	static String driveName = "com.mysql.jdbc.Driver";
 	static String url = "jdbc:mysql://localhost:3306/jspweb";
 	static String user = "jsp";
@@ -15,11 +15,11 @@ public class ProDao {
 	private static Statement stmt = null;
 	private static PreparedStatement pstmt = null;
 	private static ResultSet rs = null;
-	private static ProDao instance = new ProDao(); 
+	private static ProQnaDao instance = new ProQnaDao(); 
 	
-	private ProDao() { }
+	private ProQnaDao() { }
 	
-	public static ProDao getInstance() {
+	public static ProQnaDao getInstance() {
 		return instance;
 	}
 	
@@ -47,15 +47,15 @@ public class ProDao {
 		
 	}
 	
-		public List<ProReviewVo> getProList() throws Exception {
-			List<ProReviewVo> rst = new ArrayList<ProReviewVo>();
+		public List<ProQnaVo> getProQnaList() throws Exception {
+			List<ProQnaVo> rst = new ArrayList<ProQnaVo>();
 			connectDB();
 			
-			String sql = "select * from proreview";
+			String sql = "select * from proqna";
 			rs = stmt.executeQuery(sql);
 			while(rs.next()) {
-				ProReviewVo provo = new ProReviewVo();
-				provo.setRevno(rs.getInt("revno"));
+				ProQnaVo provo = new ProQnaVo();
+				provo.setQnano(rs.getInt("qnano"));
 				provo.setPno(rs.getString("pno"));
 				provo.setId(rs.getString("id"));
 				provo.setPasswd(rs.getString("passwd"));
@@ -63,8 +63,7 @@ public class ProDao {
 				provo.setContents(rs.getString("contents"));
 				provo.setRegdate(rs.getString("regdate"));
 				provo.setViews(rs.getInt("views"));
-				provo.setScore(rs.getInt("score"));
-				provo.setAttach1(rs.getString("attach1"));
+				provo.setPrivateyn(rs.getString("privateyn"));
 				provo.setAvaliable(rs.getString("avaliable"));
 				rst.add(provo);
 			}		
@@ -73,17 +72,17 @@ public class ProDao {
 			return rst;
 		}
 	
-		public List<ProReviewVo> getProLists(String sort, String keyword, String type) throws Exception {
+		public List<ProQnaVo> getProQnaLists(String sort, String keyword, String type) throws Exception {
 			
-			List<ProReviewVo> rst = new ArrayList<ProReviewVo>();
+			List<ProQnaVo> rst = new ArrayList<ProQnaVo>();
 			connectDB();
 			
-			String sql = "select * from proreview where "+type+" like '%"+keyword+"%' order by "+sort+ " desc";
+			String sql = "select * from proqna where "+type+" like '%"+keyword+"%' order by "+sort+ " desc";
 			rs = stmt.executeQuery(sql);
 			
 			while(rs.next()) {
-				ProReviewVo provo = new ProReviewVo();
-				provo.setRevno(rs.getInt("revno"));
+				ProQnaVo provo = new ProQnaVo();
+				provo.setQnano(rs.getInt("qnano"));
 				provo.setPno(rs.getString("pno"));
 				provo.setId(rs.getString("id"));
 				provo.setPasswd(rs.getString("passwd"));
@@ -91,8 +90,7 @@ public class ProDao {
 				provo.setContents(rs.getString("contents"));
 				provo.setRegdate(rs.getString("regdate"));
 				provo.setViews(rs.getInt("views"));
-				provo.setScore(rs.getInt("score"));
-				provo.setAttach1(rs.getString("attach1"));
+				provo.setPrivateyn(rs.getString("privateyn"));
 				provo.setAvaliable(rs.getString("avaliable"));
 				rst.add(provo);
 			}
@@ -101,51 +99,51 @@ public class ProDao {
 			return rst;
 		}
 		
-		public void increaseProRVNo(String no) throws Exception {
+		public void increaseProQnaNo(String no) throws Exception {
 			connectDB();
-			String sql = String.format("update proreview set views=views+1 where revno='%s'", no);
+			String sql = String.format("update proqna set views=views+1 where qnano='%s'", no);
 			int res = stmt.executeUpdate(sql);
 			closeDB();
 		}
 		
-		public ProReviewVo getProVByNo(String no) throws Exception {
-			ProReviewVo rst = new ProReviewVo();
+		public ProQnaVo getProQnaByNo(String no) throws Exception {
+			ProQnaVo rst = new ProQnaVo();
 			connectDB();
-			String sql=String.format("select revno, pno, title, contents, id, regdate, views, score, attach1, passwd from proreview where revno='%s'" , no);
+			String sql=String.format("select * from proqna where qnano='%s'" , no);
 			rs = stmt.executeQuery(sql);
 			while(rs.next()) {
-				rst.setRevno(rs.getInt("revno"));
+				rst.setQnano(rs.getInt("qnano"));
 				rst.setPno(rs.getString("pno"));
-				rst.setTitle(rs.getString("title"));
 				rst.setId(rs.getString("id"));
+				rst.setPasswd(rs.getString("passwd"));
+				rst.setTitle(rs.getString("title"));
+				rst.setContents(rs.getString("contents"));
 				rst.setRegdate(rs.getString("regdate"));
 				rst.setViews(rs.getInt("views"));
-				rst.setScore(rs.getInt("score"));
-				rst.setContents(rs.getString("contents"));		
-				rst.setAttach1(rs.getString("attach1"));
-				rst.setPasswd(rs.getString("passwd"));
+				rst.setPrivateyn(rs.getString("privateyn"));
+				rst.setAvaliable(rs.getString("avaliable"));
 			}
 			closeDB();
 			return rst;
 			
 		}
 		
-		public ProReviewVo getProVByNoPno(String no, String pno) throws Exception {
-			ProReviewVo rst = new ProReviewVo();
+		public ProQnaVo getProQnaByNoPno(String no, String pno) throws Exception {
+			ProQnaVo rst = new ProQnaVo();
 			connectDB();
-			String sql=String.format("select revno, pno, title, contents, id, regdate, views, score, attach1, passwd from proreview where revno='%s' and pno like '%s' " , no, pno);
+			String sql=String.format("select * from proqna where qnano='%s' and pno like '%s' " , no, pno);
 			rs = stmt.executeQuery(sql);
 			while(rs.next()) {
-				rst.setRevno(rs.getInt("revno"));
+				rst.setQnano(rs.getInt("qnano"));
 				rst.setPno(rs.getString("pno"));
-				rst.setTitle(rs.getString("title"));
 				rst.setId(rs.getString("id"));
+				rst.setPasswd(rs.getString("passwd"));
+				rst.setTitle(rs.getString("title"));
+				rst.setContents(rs.getString("contents"));
 				rst.setRegdate(rs.getString("regdate"));
 				rst.setViews(rs.getInt("views"));
-				rst.setScore(rs.getInt("score"));
-				rst.setContents(rs.getString("contents"));		
-				rst.setAttach1(rs.getString("attach1"));
-				rst.setPasswd(rs.getString("passwd"));
+				rst.setPrivateyn(rs.getString("privateyn"));
+				rst.setAvaliable(rs.getString("avaliable"));
 			}
 			closeDB();
 			return rst;
@@ -156,7 +154,7 @@ public class ProDao {
 			String rst = "";
 			connectDB();
 			
-			String sql = String.format("select passwd from proreview where revno = '%s'", no);
+			String sql = String.format("select passwd from proqna where qnano = '%s'", no);
 			rs = stmt.executeQuery(sql);
 			
 			while(rs.next()) {
@@ -167,11 +165,11 @@ public class ProDao {
 			return rst;
 		}
 		
-		public int delPRV(String no) throws Exception {
+		public int delQNA(String no) throws Exception {
 			int rst = 0;
 			connectDB();		
 			
-			String sql = String.format("delete from proreview where revno='%s'",no);
+			String sql = String.format("delete from proqna where qnano='%s'",no);
 			rst = stmt.executeUpdate(sql);	
 			
 			closeDB();
@@ -179,12 +177,12 @@ public class ProDao {
 		}
 		
 		
-		public int saveBoard(ProReviewVo provo) throws Exception {
+		public int saveBoard(ProQnaVo provo) throws Exception {
 			int rst=0;
 			connectDB();
 			StringBuffer sb = new StringBuffer("");
-			sb.append("insert into proreview (pno,title,id,passwd,contents,attach1,score,regdate)");
-			sb.append("\n values ( ?, ?, ?, ?, ?, ?, ?, now() ) ");
+			sb.append("insert into proqna (pno,title,id,passwd,contents,regdate)");
+			sb.append("\n values ( ?, ?, ?, ?, ?, now() ) ");
 			String sql = sb.toString();
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, provo.getPno());
@@ -192,13 +190,8 @@ public class ProDao {
 			pstmt.setString(3, provo.getId());
 			pstmt.setString(4, provo.getPasswd());
 			pstmt.setString(5, provo.getContents());
-			pstmt.setString(6, provo.getAttach1());
-			pstmt.setInt(7, provo.getScore());
 			rst = pstmt.executeUpdate();
 			closeDB();
 			return rst;
 		}
-		
-		
-		
 }

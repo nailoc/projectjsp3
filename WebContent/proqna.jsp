@@ -42,6 +42,30 @@ pageEncoding="UTF-8"%>
 <script>
 
 function bbs_write() {
+	
+	proname = document.getElementById("proname").value;
+	title = document.getElementById("title").value;
+	writer = document.getElementById("writer").value;
+	passwd = document.getElementById("passwd").value;
+	
+	if(proname=="") {
+		alert("상품명을 입력하세요");
+		return;
+	}
+	if(title=="") {
+		alert("제목을 입력하세요");
+		return;
+	}
+	if(writer=="") {
+		alert("작성자를 입력하세요");
+		return;
+	}
+	if(passwd=="") {
+		alert("비밀번호를 입력하세요");
+		return;
+	}
+	
+	
 	frm = document.getElementById("frm_write");
 	frm.submit();
 }

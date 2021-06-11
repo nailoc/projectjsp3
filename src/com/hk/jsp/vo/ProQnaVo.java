@@ -6,6 +6,7 @@ public class ProQnaVo {
 	private String pno;
 	private String id;
 	private String passwd;
+	private String title;	
 	private String contents;
 	private String regdate;
     private int views;
@@ -36,6 +37,12 @@ public class ProQnaVo {
 	}
 	public void setPasswd(String passwd) {
 		this.passwd = passwd;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
 	}
 	public String getContents() {
 		return contents;

@@ -25,11 +25,11 @@ public class BoardDao {
 	
 	private void connectDB() throws Exception {
 		Class.forName(driveName);
-		System.out.println("靛扼捞宏 肺爹 己傍");
+		System.out.println("霌滊澕鞚措矂搿滊敥靹标车");
 		if(conn==null) {
 			conn=DriverManager.getConnection(url, user, password);
 			stmt=conn.createStatement();
-			System.out.println("坷扼努 立加 己傍");
+			System.out.println("DB 鞝戩啀 靹标车");
 		}
 	}
 	
@@ -40,9 +40,9 @@ public class BoardDao {
 			if(stmt!=null) { stmt.close(); stmt=null; }
 			if(pstmt!=null) { pstmt.close(); pstmt=null; }
 			if(rs!=null) { rs.close(); rs=null; }
-			System.out.println("坷扼努 立加 辆丰");
+			System.out.println("DB 鞝戩啀 膦呺 鞕勲");
 		}catch(Exception e) {
-			System.out.println("辆丰坷幅");
+			System.out.println("DB 鞝戩啀 膦呺 鞁ろ尐");
 		}
 		
 	}

@@ -19,7 +19,26 @@ pageEncoding="UTF-8"%>
 		String writer = request.getParameter("writer");
 		String passwd = request.getParameter("passwd");
 		String contents = request.getParameter("contents");
+		
+		ProQnaVo writeVo = new ProQnaVo();
+		
+		writeVo.setPno(proname);
+		writeVo.setTitle(title);
+		writeVo.setId(writer);
+		writeVo.setPasswd(passwd); 
+		writeVo.setContents(contents);
+		
+		ProQnaDao proqnadao = ProQnaDao.getInstance();
+		int result = proqnadao.saveBoard(writeVo);
+		
+		if(result==1) {
+			out.println("<script>alert('글저장 성공'); location.href='proqnalist.jsp'; </script>");
+		} else {
+			out.println("<script>alert('글저장 실패'); location.href='proqna.jsp'; </script>");
+		}
+		
 	%>
+	
 </body>
 <script>
 

@@ -13,14 +13,15 @@ pageEncoding="UTF-8"%>
 </head>
 <style></style>
 <body>
-	<h2>공지사항 상세내용</h2>
+<h2>상품문의 상세내용</h2>
 	
 	<%
-	String no = request.getParameter("no");
-	BoardDao bodao = BoardDao.getInstance();
+	String qnano = request.getParameter("qnano");
+	String pno = request.getParameter("pno");
+	ProQnaDao proqnadao = ProQnaDao.getInstance();
 	
-	bodao.increaseBoardNo(no);	
-	BoardVo rowshow = bodao.getBoardByNo(no);
+	proqnadao.increaseProQnaNo(qnano);	
+	ProQnaVo rowshow = proqnadao.getProQnaByNoPno(qnano,pno);
 	%>
 	
 	
@@ -29,14 +30,18 @@ pageEncoding="UTF-8"%>
 	
 				
 			<div>
-				<div>번호</div>
-				<div><%= rowshow.getNo() %></div>
-				
+				<div>상품후기 번호</div>
+				<div><%= rowshow.getQnano() %></div>				
+			</div>
+			
+			<div>
+				<div>상품번호</div>
+				<div><%= rowshow.getPno() %></div>				
 			</div>
 		
 			<div>
 				<div>작성자</div>
-				<div><%=rowshow.getWriter() %></div>
+				<div><%=rowshow.getId() %></div>
 			</div>
 			
 			<div>
@@ -47,26 +52,14 @@ pageEncoding="UTF-8"%>
 			<div>
 				<div>조회수</div>
 				<div><%=rowshow.getViews() %></div>
-			</div>
+			</div>			
 							
 			<div>
 				<div>내용</div>	
 				<div><%= rowshow.getContents() %></div>
 			</div>
-				
-			<div>
-				<label for="attach1">
-					<span>첨부파일1</span>
-				</label>
-				<div>
-					<p><%= rowshow.getAttach1() %></p>
-					<!-- 이미지 경우 ↓ -->
-					<img src="upload/<%= rowshow.getAttach1() %>" alt="첨부파일 이미지">
-				</div>					
-			</div>
-			 
-			 <!-- 관리자 세션 받아오면 버튼 활성화 -->	
-			 <!-- 따로 처음부터 세션을 가져와 세션이있으면 글작성이 포함된 페이지를 작성할수 있는 새로운 페이지를 만들수도 있음 -->		 
+							
+			
 			 <button type="button" onclick="deleteB()">삭제하기</button>
 			 
 		<div class="left">
@@ -81,9 +74,9 @@ pageEncoding="UTF-8"%>
 <script>
 
 function deleteB() {
-	ok = confirm("게시글을 삭제하시겠습니까 ? " , "");
+	ok = confirm("글을 삭제하시겠습니까 ? " , "");
 	if(ok==true) {
-		location.href="delBpro.jsp?no="+<%= rowshow.getNo() %>;
+		location.href="delQnapro.jsp?qnano="+<%= rowshow.getQnano() %>;
 	} else {
 		history.back();
 	}
