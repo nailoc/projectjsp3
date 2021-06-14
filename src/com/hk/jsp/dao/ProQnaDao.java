@@ -65,6 +65,8 @@ public class ProQnaDao {
 				provo.setViews(rs.getInt("views"));
 				provo.setPrivateyn(rs.getString("privateyn"));
 				provo.setAvaliable(rs.getString("avaliable"));
+				provo.setComents(rs.getString("coments"));
+				
 				rst.add(provo);
 			}		
 			
@@ -92,6 +94,8 @@ public class ProQnaDao {
 				provo.setViews(rs.getInt("views"));
 				provo.setPrivateyn(rs.getString("privateyn"));
 				provo.setAvaliable(rs.getString("avaliable"));
+				provo.setComents(rs.getString("coments"));
+				
 				rst.add(provo);
 			}
 			
@@ -122,6 +126,8 @@ public class ProQnaDao {
 				rst.setViews(rs.getInt("views"));
 				rst.setPrivateyn(rs.getString("privateyn"));
 				rst.setAvaliable(rs.getString("avaliable"));
+				rst.setComents(rs.getString("coments"));
+				
 			}
 			closeDB();
 			return rst;
@@ -144,6 +150,7 @@ public class ProQnaDao {
 				rst.setViews(rs.getInt("views"));
 				rst.setPrivateyn(rs.getString("privateyn"));
 				rst.setAvaliable(rs.getString("avaliable"));
+				rst.setComents(rs.getString("coments"));
 			}
 			closeDB();
 			return rst;
@@ -194,4 +201,27 @@ public class ProQnaDao {
 			closeDB();
 			return rst;
 		}
+		
+		public int saveAnswer(String cont, String no)  throws Exception {
+			int rst = 0;
+			connectDB();
+			
+			String sql = String.format("update proqna set coments = '%s' where qnano = '%s'",cont,no);
+			rst = stmt.executeUpdate(sql);
+					
+			closeDB();
+			return rst;
+		}
+		
+		public int delAnswer(String no)  throws Exception {
+			int rst = 0;
+			connectDB();			
+
+			String sql = String.format("update proqna set coments = null where qnano = '%s'",no);
+			rst = stmt.executeUpdate(sql);
+					
+			closeDB();
+			return rst;
+		}
+		
 }
