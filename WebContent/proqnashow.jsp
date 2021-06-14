@@ -30,7 +30,7 @@ pageEncoding="UTF-8"%>
 	
 				
 			<div>
-				<div>상품후기 번호</div>
+				<div>상품문의 번호</div>
 				<div><%= rowshow.getQnano() %></div>				
 			</div>
 			
@@ -58,17 +58,24 @@ pageEncoding="UTF-8"%>
 				<div>내용</div>	
 				<div><%= rowshow.getContents() %></div>
 			</div>
-							
 			
-			 <button type="button" onclick="deleteB()">삭제하기</button>
+			<div>
+				<div>코멘트 </div>
+				<div><%= rowshow.getComents() %></div>
+			</div>
+			
+		
+		
+		 <button type="button" onclick="answer()">코멘트 달기</button>
+		 <button type="button" onclick="delA()">코멘트 삭제하기</button>						
+			
+		 <button type="button" onclick="deleteB()">글삭제하기</button>
 			 
 		<div class="left">
 			<button type="button" onclick="history.back()">이전글</button>
 		</div>
 		
-		<div class="right">
-			<button>다음글</button>
-		</div>
+		
 	
 </body>
 <script>
@@ -80,6 +87,14 @@ function deleteB() {
 	} else {
 		history.back();
 	}
+}
+
+function answer() {
+	location.href="answerW.jsp?qnano="+<%= rowshow.getQnano() %>;
+}
+
+function delA() {
+	location.href="answerDel.jsp?qnano="+<%= rowshow.getQnano() %>;
 }
 
 </script>

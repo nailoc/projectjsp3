@@ -12,7 +12,7 @@ public class ProQnaVo {
     private int views;
     private String privateyn;
     private String avaliable;
-    
+    private String coments;
     
 	public int getQnano() {
 		return qnano;
@@ -73,6 +73,12 @@ public class ProQnaVo {
 	}
 	public void setAvaliable(String avaliable) {
 		this.avaliable = avaliable;
+	}
+	public String getComents() {
+		return coments;
+	}
+	public void setComents(String coments) {
+		this.coments = coments;
 	}
 	
 }
