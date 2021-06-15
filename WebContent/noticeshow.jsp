@@ -65,8 +65,7 @@ pageEncoding="UTF-8"%>
 				</div>					
 			</div>
 			 
-			 <!-- 관리자 세션 받아오면 버튼 활성화 -->	
-			 <!-- 따로 처음부터 세션을 가져와 세션이있으면 글작성이 포함된 페이지를 작성할수 있는 새로운 페이지를 만들수도 있음 -->		 
+			<!-- 관리자 세션시에만 보여지는 버튼 -->		 
 			 <button type="button" onclick="deleteB()">삭제하기</button>
 			 
 		<div class="left">

@@ -75,6 +75,9 @@ pageEncoding="UTF-8"%>
 				</div>					
 			</div>
 			
+		<!-- 관리자 세션시에만 보여지는 버튼 -->	
+		<button type="button" onclick="del()">관리자 권한으로 삭제</button>
+			
 			 <button type="button" onclick="deleteB()">삭제하기</button>
 			 
 		<div class="left">
@@ -92,6 +95,15 @@ function deleteB() {
 	ok = confirm("글을 삭제하시겠습니까 ? " , "");
 	if(ok==true) {
 		location.href="delPRVpro.jsp?revno="+<%= rowshow.getRevno() %>;
+	} else {
+		history.back();
+	}
+}
+
+function del() {
+	ok = confirm("글을 삭제 ? (관리자) " , "");
+	if(ok==true) {
+		location.href="delPRVAdmin.jsp?revno="+<%= rowshow.getRevno() %>;
 	} else {
 		history.back();
 	}

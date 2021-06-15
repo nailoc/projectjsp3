@@ -65,10 +65,13 @@ pageEncoding="UTF-8"%>
 			</div>
 			
 		
-		
+		<!-- 관리자 세션시에만 보여지는 버튼 -->	
 		 <button type="button" onclick="answer()">코멘트 달기</button>
+		<!-- 관리자 세션시에만 보여지는 버튼 -->
 		 <button type="button" onclick="delA()">코멘트 삭제하기</button>						
-			
+		<!-- 관리자 세션시에만 보여지는 버튼 -->
+		 <button type="button" onclick="del()">관리자 권한으로 삭제</button>
+		
 		 <button type="button" onclick="deleteB()">글삭제하기</button>
 			 
 		<div class="left">
@@ -97,5 +100,13 @@ function delA() {
 	location.href="answerDel.jsp?qnano="+<%= rowshow.getQnano() %>;
 }
 
+function del() {
+	ok = confirm("글을 삭제 ? (관리자) " , "");
+	if(ok==true) {
+		location.href="delQNAadmin.jsp?qnano="+<%= rowshow.getQnano() %>;
+	} else {
+		history.back();
+	}
+}
 </script>
 </html>
