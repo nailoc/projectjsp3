@@ -56,7 +56,7 @@ pageEncoding="UTF-8"%>
 				
 			<div>
 				<label for="attach1">
-					<span>첨부파일1</span>
+					<span>첨부파일</span>
 				</label>
 				<div>
 					<p><%= rowshow.getAttach1() %></p>
