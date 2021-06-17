@@ -290,7 +290,7 @@ public class CartDao extends DBDao{
 				if(product != 0) { // 회원 포인트 적립
 					int point = (int)(Integer.valueOf(proPrice)*0.01);
 					System.out.println("디버그테스트1");
-					sql = String.format("update member2 set point = (point + %d) where id = '%s'", point, id);
+					sql = String.format("update member set point = (point + %d) where id = '%s'", point, id);
 					System.out.println("디버그테스트2");
 					stmt.executeUpdate(sql);
 					
