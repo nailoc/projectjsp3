@@ -22,7 +22,7 @@ pageEncoding="UTF-8"%>
 		<input type="text" id="proname" name="proname" value="">  
 		<p>제목</p>      
 		<input type="text" id="title" name="title" value="">
-		<p>작성자</p> 
+		<p>ID (작성자)</p> 
 		<input type="text" id="writer" name="writer" value="">
 		<p>비밀번호</p> 
 		<input type="password" id="passwd" name="passwd" value=""> 
