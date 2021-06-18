@@ -6,8 +6,11 @@
 .slideImgBox {
 	height: 540px;
 	position: relative;
+	left: 0;
+	right: 0;
 	border-bottom: 1px solid lightgray;
-	margin-bottom: 80px;
+	overflow: hidden;
+	margin: 0 auto 80px auto;
 }
 .slideImg {
 	position: relative;
