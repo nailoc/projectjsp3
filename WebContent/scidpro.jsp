@@ -10,14 +10,14 @@
 <body>
 
 <%
-
 String email = request.getParameter("email");
 String name = request.getParameter("name");
 MemberDao memdao = MemberDao.getInstance();
-String searchid = memdao.ScId(email, name);
+String searchedid = memdao.ScId(email, name);
 
+out.println("<h3>아이디 찾기</h3>");
+out.print(searchedid);
 %>
-<%= searchid %>
 </body>
 <script></script>
 </html>

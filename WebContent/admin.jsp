@@ -20,7 +20,10 @@ border:1px solid black;
 </style>
 </head>
 <body>
-
+<% if(session.getAttribute("userid") == null) {
+	out.print("<script>alert('로그인이 필요합니다!');</script>");
+	response.sendRedirect("login.jsp");
+} else { %>
 <!-- 회원관리 관리자 페이지/세분화 필요 -->
 
 
@@ -56,7 +59,7 @@ border:1px solid black;
 		<td><%=vo.getPhn() %></td>
 	</tr>
 <% 
-}
+} }
 %>
 </table>
 <button type="submit" onclick="javascript: form.action='admin_modify.jsp';">회원수정</button>

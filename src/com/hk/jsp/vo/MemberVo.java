@@ -78,4 +78,13 @@ public void setEmail(String email) {
    this.email = email;
 }
 
+public String nullToString(String input) {
+	String ret = "";
+	if(input!=null) {
+		ret=input;
+	}
+	return ret;
+	
+}
+
 }

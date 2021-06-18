@@ -6,6 +6,13 @@
 <meta charset="UTF-8">
 </head>
 <body>
+<%
+if(session.getAttribute("userid") == null) {
+	out.print("<script>alert('로그인이 필요합니다!');</script>");
+	response.sendRedirect("login.jsp");
+} else {
+
+%>
 <h3>비밀번호 변경</h3>
 <form id="pschange" action="modify_pspro.jsp" method="GET">
 <input type="password" placeholder="바꿀 비밀번호" id="pw" name="pw">
@@ -25,6 +32,6 @@ function change() {
 		return;
 	}
 }
-
+<% } %>
 </script>
 </html>

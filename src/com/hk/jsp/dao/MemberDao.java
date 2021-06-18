@@ -15,11 +15,15 @@ import com.hk.jsp.vo.UserVo;
 
 
 public class MemberDao {
-	static String driveName = "com.mysql.jdbc.Driver";
-	static String url = "jdbc:mysql://kclh9b.freehongs.net:3306/kclh9b";
-	static String user = "kclh9b";
-	static String password = "Nev%U_aPfl*n";
-	
+	/*
+	 * static String driveName = "com.mysql.jdbc.Driver"; static String url =
+	 * "jdbc:mysql://kclh9b.freehongs.net:3306/kclh9b"; static String user =
+	 * "kclh9b"; static String password = "Nev%U_aPfl*n";
+	 */
+	private static String driveName = "com.mysql.jdbc.Driver";
+	private static 	String url = "jdbc:mysql://localhost:3306/project";
+	private static String user = "project";
+	private static String password = "1234";
 	private static Connection conn = null;
 	private static Statement stmt = null;
 	private static PreparedStatement pstmt = null;
@@ -134,7 +138,7 @@ public class MemberDao {
 			rst.setName(rs.getString("name"));
 			rst.setPasswd(rs.getString("passwd"));
 			rst.setEmail(rs.getString("email"));
-			rst.setAddress(rs.getString("address1"));
+			rst.setAddress(rs.getString("address"));
 	 		rst.setAddress2(rs.getString("address2"));
 		}
 		closeDB();

@@ -26,8 +26,8 @@ if(session.getAttribute("userid") == null) {
 		<button type="button" onclick="login();">로그인</button>
 		</form>
 		<button onclick="location.href='reg.jsp' ">회원가입</button>
-		<button onclick="scid.jsp">아이디 찾기</button>
-		<button onclick="scpw.jsp">비밀번호 찾기</button>
+		<button onclick="location.href='scid.jsp'">아이디 찾기</button>
+		<button onclick="location.href='scpw.jsp'">비밀번호 찾기</button>
 <%
 } else {
 	out.print("<script>alert('로그인된 상태입니다!');</script>");

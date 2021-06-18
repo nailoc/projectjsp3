@@ -10,9 +10,8 @@
 <body>
 <%
 if(session.getAttribute("userid")==null) { // 세션이 없다면
-	out.println("<script>alert('로그인되지 않았습니다'); location.href='login.jsp'</script>");}
-
-
+	out.println("<script>alert('로그인되지 않았습니다'); location.href='login.jsp'</script>");
+}
 	String id = (String)session.getAttribute("userid");
 	MemberVo mev = new MemberVo();
 	MemberDao mem = MemberDao.getInstance();

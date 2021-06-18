@@ -9,6 +9,10 @@
 </head>
 <body>
 <%
+if(session.getAttribute("userid") == null) {
+	out.print("<script>alert('로그인이 필요합니다!');</script>");
+	response.sendRedirect("login.jsp");
+} else {
 		String id = request.getParameter("id");
 		String passwd = request.getParameter("passwd");
 		String zipcode = request.getParameter("zipcode");
@@ -30,6 +34,7 @@
 		MemberDao memdao = MemberDao.getInstance();
 		memdao.adminChange(memvo);
 		out.print("<script> alert('변경 완료'); location.href='admin.jsp'; </script>");
+}
 	%>
 </body>
 <script></script>

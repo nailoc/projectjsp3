@@ -4,8 +4,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>javaweb13</title>
-<link rel="stylesheet" href="css/style.css"></link>
+<%
+if(session.getAttribute("userid") == null) {
+	out.print("<script>alert('로그인이 필요합니다!');</script>");
+	response.sendRedirect("login.jsp");
+} else {
+%>
 </head>
 <body>
 <form id="emailchange" action="modify_emailpro.jsp" method="GET">
@@ -20,6 +24,6 @@ function changeE() {
 		email = document.getElementById("email").value;
 		emailchange = document.getElementById("emailchange");
 		emailchange.submit()
-}
+} <% }%>
 </script>
 </html>

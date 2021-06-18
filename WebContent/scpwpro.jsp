@@ -16,10 +16,11 @@ String id = request.getParameter("id");
 MemberDao memdao = MemberDao.getInstance();
 String searchpw = memdao.ScPw(id, email);
 
+out.print("비밀번호 찾기");
+out.print(searchpw);
 %>
 
-
-<%= searchpw %>
+	
 </body>
 <script></script>
 </html>

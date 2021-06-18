@@ -9,6 +9,8 @@
 </head>
 <body>
 	<%
+	
+	
 		try {
 		String id = request.getParameter("regid");
 		String pw = request.getParameter("regpw");

@@ -8,9 +8,13 @@
 </head>
 <body>
 	<%
+	if(session.getAttribute("userid") == null) {
+		out.print("<script>alert('로그인이 필요합니다!');</script>");
+		response.sendRedirect("login.jsp");
+	} else{
 		session.invalidate(); 
 		out.println("<script>	alert('로그아웃!');</script>");
-		response.sendRedirect("login.jsp");
+		response.sendRedirect("login.jsp");}
 	%>
 </body>
 </html>

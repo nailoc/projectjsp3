@@ -8,6 +8,7 @@
 <body>
 	
 	<%
+	if(session.getAttribute("userid") == null)  {
 	MemberDao mem = MemberDao.getInstance();
 	String id = request.getParameter("userid");
 	String pw = request.getParameter("userpw");
@@ -28,7 +29,12 @@
 			response.sendRedirect("mypage.jsp");
 		}
 			
+	} } else {
+		out.print("<script>alert('이미 로그인 되어 있습니다!');</script>");
+		response.sendRedirect("mypage.jsp");
 	}
+		
+
 	%>
 	<!-- 
 	out.println("<script>alert('로그인 되었습니다.'); location.href='index.jsp'</script>"); -->

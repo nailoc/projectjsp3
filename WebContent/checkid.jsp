@@ -10,6 +10,7 @@
 </head>
 <body>
 	<% 
+
 		out.println("<h3>중복체크화면</h3>");
 		String id = request.getParameter("id");
 		out.println("<h3>"+id+"</h3>");

@@ -6,7 +6,11 @@
 <head>
 <meta charset="UTF-8">
 </head>
-<% String id = request.getParameter("idck"); %>
+<% String id = request.getParameter("idck"); 
+if(session.getAttribute("userid") == null) {
+		out.print("<script>alert('로그인이 필요합니다!');</script>");
+		response.sendRedirect("login.jsp");
+	} else { %>
 <body>
 
 <form action="admin_modifypro.jsp" method="GET">
@@ -22,5 +26,6 @@
 		<button>변경</button>
 </form>
 </body>
+<%} %>
 <script></script>
 </html>
