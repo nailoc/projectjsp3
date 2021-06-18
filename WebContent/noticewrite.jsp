@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
+
 <%@ page import="com.hk.jsp.dao.*" %>
 <%@ page import="com.hk.jsp.vo.*" %>
 <%@ page import="com.hk.jsp.util.*" %>
@@ -13,6 +14,16 @@ pageEncoding="UTF-8"%>
 </head>
 <style></style>
 <body>
+	<%
+	try {
+	String id = (String)session.getAttribute("userid");	
+		if(id==null) {
+			out.println("<script> alert('관리자가 아닙니다'); location.href='noticelist.jsp';</script>");
+		}	
+	} catch(Exception e) {
+		
+	}
+	%>
 
 	<h2>공지사항 작성</h2>
 

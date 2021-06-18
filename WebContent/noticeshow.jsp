@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
+
 <%@ page import="com.hk.jsp.dao.*" %>
 <%@ page import="com.hk.jsp.vo.*" %>
 <%@ page import="com.hk.jsp.util.*" %>
@@ -56,7 +57,7 @@ pageEncoding="UTF-8"%>
 				
 			<div>
 				<label for="attach1">
-					<span>첨부파일1</span>
+					<span>첨부파일</span>
 				</label>
 				<div>
 					<p><%= rowshow.getAttach1() %></p>
@@ -65,17 +66,25 @@ pageEncoding="UTF-8"%>
 				</div>					
 			</div>
 			 
-			 <!-- 관리자 세션 받아오면 버튼 활성화 -->	
-			 <!-- 따로 처음부터 세션을 가져와 세션이있으면 글작성이 포함된 페이지를 작성할수 있는 새로운 페이지를 만들수도 있음 -->		 
-			 <button type="button" onclick="deleteB()">삭제하기</button>
+			<!-- 관리자 세션시에만 보여지는 버튼 -->		
+			<%
+		try {
+		String id = (String)session.getAttribute("userid");	
+		if(id.equals("admin")) {
+		%> 
+	   	 <button type="button" onclick="del()">관리자 권한으로 삭제</button>
+		
+		 <button type="button" onclick="deleteB()">삭제하기</button>
+		 <%	} 
+		} catch(Exception e) {
+		
+		}%>
 			 
 		<div class="left">
-			<button type="button" onclick="history.back()">이전글</button>
+			<button type="button" onclick="history.back()">뒤로가기</button>
 		</div>
 		
-		<div class="right">
-			<button>다음글</button>
-		</div>
+		
 	
 </body>
 <script>
@@ -84,6 +93,15 @@ function deleteB() {
 	ok = confirm("게시글을 삭제하시겠습니까 ? " , "");
 	if(ok==true) {
 		location.href="delBpro.jsp?no="+<%= rowshow.getNo() %>;
+	} else {
+		history.back();
+	}
+}
+
+function del() {
+	ok = confirm("공지 삭제 (관리자) ? " , "");
+	if(ok==true) {
+		location.href="delBAdmin.jsp?no="+<%= rowshow.getNo() %>;
 	} else {
 		history.back();
 	}

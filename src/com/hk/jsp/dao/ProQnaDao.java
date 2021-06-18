@@ -17,6 +17,8 @@ public class ProQnaDao {
 	static String user = "kclh9b";
 	static String password = "Nev%U_aPfl*n";
 	
+	
+	
 	private static Connection conn = null;
 	private static Statement stmt = null;
 	private static PreparedStatement pstmt = null;
@@ -161,7 +163,7 @@ public class ProQnaDao {
 				rst.setAvaliable(rs.getString("avaliable"));
 				rst.setComents(rs.getString("coments"));
 				if(rs.getString("coments")==null) {
-					rst.setComents("ÄÚ¸àÆ®°¡ ¾ø½À´Ï´Ù");
+					rst.setComents("ì½”ë©˜íŠ¸ê°€ ì—†ìŠµë‹ˆë‹¤");
 				}
 			}			
 			

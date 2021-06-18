@@ -7,9 +7,11 @@ import com.hk.jsp.vo.*;
 public class BoardDao {
 	
 	static String driveName = "com.mysql.jdbc.Driver";
-	static String url = "jdbc:mysql://localhost:3306/jspweb";
-	static String user = "jsp";
-	static String password = "1234";
+	static String url = "jdbc:mysql://kclh9b.freehongs.net:3306/kclh9b";
+	static String user = "kclh9b";
+	static String password = "Nev%U_aPfl*n";
+	
+	
 	
 	private static Connection conn = null;
 	private static Statement stmt = null;
