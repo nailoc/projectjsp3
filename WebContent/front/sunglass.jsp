@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>상품목록</title>
-<link rel="stylesheet" href="../css/style_itemlist.css"></link>
+<link rel="stylesheet" href="../css/style_sunglass.css"></link>
 <style>
 	ul.item_list {
 		list-style: none;
@@ -21,16 +21,6 @@
 	a {
 		text-decoration: none;
 		color: #000;
-	}
-	a.img {
-		display: block;
-		width: 292.5px;
-		height: 292.5px;
-		background-size: 292.5px !important;
-		transition: all 0.2s ease;
-	}
-	a.active {
-		color: red !important;
 	}
 </style>
 </head>
@@ -89,61 +79,74 @@
 	
 	<%@ include file="header.jsp" %>
 	
-			<%
-			for(int i=0; i<bnameList.size(); i++) {
-				if(i==5) {
-			%>
-					<br>
-			<%
-				}
-			%>
-			<a class="<%=bnameList.get(i).equals(bname) ? "active" : "" %>" href="sunglass.jsp?bname=<%=bnameList.get(i)%>&kind=<%=kind %>"><%=bnameList.get(i).toUpperCase() %> <%=bnameCnt[i] %></a>
-		<%
-			}
-		%>
+	<div class="middle_contents">
+			<div class="itemlist_title">
+				<h2>패션 선글라스</h2>
+			</div>
+			<div class="category">
+				<%
+				for(int i=0; i<bnameList.size(); i++) {
+					if(i==5) {
+				%>
+			
+				<br>
+				<%
+					}
+				%>
+					
+					<a class="<%=bnameList.get(i).equals(bname) ? "active" : "" %>" href="sunglass.jsp?bname=<%=bnameList.get(i)%>&kind=<%=kind %>"><%=bnameList.get(i).toUpperCase() %> <%=bnameCnt[i] %></a>
+				
+				<%
+					}
+				%>
+			</div>
 		
-	</p>
-	<p>
-		<%
-			for(int i=0; i<sortList1.length; i++) {
-		%>
-			<a class="<%=sortList1[i].equals(sort) ? "active" : "" %>" href="sunglass.jsp?<%=selSort%>&sort=<%=sortList1[i]%>"><%=sortList2[i] %></a>
-		<%
-			}
-		%>
-	</p>
-	<div style="width:1250px;">
-		<ul class="item_list" style="width:100%;">
+			<div class="list_box">
 			<%
-				for(int i=0; i<row.size(); i++) {
+				for(int i=0; i<sortList1.length; i++) {
 			%>
-				<li style="width:25%;">
-					<div>
-						<div>
-							<a id="img" href="item.jsp?pno=<%=row.get(i).getPno()%>" class="img" style="background:url('<%=row.get(i).getMain_img1().replaceAll("\\\\","/")%>');" onmouseout="changeImg1(event,'<%=row.get(i).getMain_img1().replaceAll("\\\\","/")%>')" onmouseover="changeImg2(event,'<%=row.get(i).getMain_img2().replaceAll("\\\\","/")%>')">
-							</a>
-						</div><!-- img src="<%=row.get(i).getMain_img1() %>" style="width:292.5px;"-->
-						<div><a href="item.jsp?pno=<%=row.get(i).getPno()%>"><%= row.get(i).getName() %></a></div>
-					</div>
-					<div><%= String.format("%,d",row.get(i).getPrice())+"원" %></div>
-				</li>
+				<a class="<%=sortList1[i].equals(sort) ? "active" : "" %>" href="sunglass.jsp?<%=selSort%>&sort=<%=sortList1[i]%>"><%=sortList2[i] %></a>
 			<%
 				}
 			%>
-		</ul>
-		<br>
-		<%
-			for(int i=0; i<totalPage; i++) {
-		%>
-			<a class="<%= i+1 == Integer.parseInt(cPage) ? "active" : "" %>" href="itemlist.jsp?<%=nextPage%>&page=<%=i+1%>"><%=i+1 %></a>
-		<%
-			}
-		%>
+			</div>
+		
+		<div class="images" style="width:1100px;">
+			<ul class="item_list" style="width:100%;">
+				<%
+					for(int i=0; i<row.size(); i++) {
+				%>
+					<li style="width:25%;">
+						<div>
+							<div>
+								<a id="img" href="item.jsp?pno=<%=row.get(i).getPno()%>" class="img" style="background:url('<%=row.get(i).getMain_img1().replaceAll("\\\\","/")%>');" onmouseout="changeImg1(event,'<%=row.get(i).getMain_img1().replaceAll("\\\\","/")%>')" onmouseover="changeImg2(event,'<%=row.get(i).getMain_img2().replaceAll("\\\\","/")%>')">
+								</a>
+							</div><!-- img src="<%=row.get(i).getMain_img1() %>" style="width:292.5px;"-->
+							<div class="goods"><a href="item.jsp?pno=<%=row.get(i).getPno()%>"><%= row.get(i).getName() %></a></div>
+						</div>
+						<div class="price"><%= String.format("%,d",row.get(i).getPrice())+"원" %></div>
+					</li>
+				<%
+					}
+				%>
+			</ul>
+			<br>
+			<div class="number">
+			<%
+				for(int i=0; i<totalPage; i++) {
+			%>
+				<a class="<%= i+1 == Integer.parseInt(cPage) ? "active" : "" %>" href="sunglass.jsp?<%=nextPage%>&page=<%=i+1%>"><%=i+1 %></a>
+			<%
+				}
+			%>
+			</div>
+		</div>
 	</div>
 	
 	<%@ include file="footer.jsp" %>
 	
 </body>
+<script src="js/jquery-3.6.0.min.js"></script>
 <script>
 	function changeImg2(event,img2) {
 		event.target.style.background = "url('"+img2+"')" ;
@@ -152,5 +155,16 @@
 	function changeImg1(event,img1) {
 		event.target.style.background = "url('"+img1+"')";
 	}
+	
+	$(document).ready(function(){
+		$("ul.menu li").hover(
+			function(){ 
+				$('ul:not(:animated)',this).stop().show();
+			},
+			function(){ 
+				$('ul',this).stop().hide();
+			}
+		);
+	});
 </script>
 </html>

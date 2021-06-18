@@ -56,7 +56,7 @@
 							<li><a href="">POLAROID</a></li>
 						</ul>
 					</li>
-					<li><a href="">안경테</a>
+					<li><a href="sunglass.jsp?kind=20">안경테</a>
 						<ul class="sub">
 							<li><a href="">FENDI</a></li>
 							<li><a href="">DIOR</a></li>
