@@ -1,0 +1,241 @@
+	/* img, infoBox */
+	div.contentBox {
+		width: 1250px;
+		margin: 0 auto;
+		margin-top: 80px;
+	}
+	div.imgBox {
+		float: left;
+		margin-left: 50px;
+	}
+	a#mainImg {
+		display: block;
+		width: 500px;
+		height: 500px;
+		background-size: 500px !important;
+		cursor: default;
+		transition: all 0.2s ease;
+	}
+	div.infoBox {
+		width: 556px;
+		float: right;
+		margin-right: 50px;
+	}
+	div.infoTitle {
+		border-bottom: 1px solid lightgray;
+	}
+	div.infoList {
+		border-bottom: 1px solid lightgray;
+		margin-bottom: 40px;
+		padding: 15px 0 15px 0;
+	}
+	div.infoList dl dt {
+		float: left;
+		font-size: 12px;
+		width: 80px;
+		margin: 0 10px 0 0;
+	}
+	div.infoList dl dd {
+		font-size: 12px;
+	}
+	sapn.item_mileage {
+		display: block;
+		background: url('images/product/icon_mileage.gif') no-repeat 0 2px;;
+	}
+	div.quantity {
+		position: relative;
+		float: left;
+		top: 5px;
+		margin: 0 20px 0 10px;
+	}
+	input#quantity {
+		width: 60px;
+		height: 40px;
+		box-sizing: border-box;
+		text-align: center;
+		padding: 5px 10px 5px 10px;
+		font-size: 18px;
+		border: 1.5px solid gray;
+		margin: 0;
+		overflow: visible;
+		border-radius: 8px;
+	}
+	button#quantity_minus, button#quantity_plus {
+		box-sizing: border-box;
+		margin: 0;
+		width: 30px;
+		height: 40px;
+		font-size: 18px;
+		overflow: visible;
+		border: 0px solid lightgray;
+		background-color: #fff;
+		cursor: pointer;
+	}
+	div.choiceBtn div.btnAddDirect button {
+		float: left;
+		width: 170px;
+		height: 52px;
+		margin-right: 20px;
+		background-color: #666;
+		font-size: 20px;
+		font-weight: bold;
+		color: #fff;
+		border: none;
+		cursor: pointer;
+	}
+	div.itemSnap {
+		clear: both;
+		overflow: auto;
+		position: relative;
+		top: 20px;
+		left: 75px;
+		padding: 5px;
+	}
+	div.itemSnap a {
+		display: block;
+		width: 80px;
+		height: 80px;
+		background-color: orange;
+		background-size: 80px !important;
+		cursor: pointer;
+		float: left;
+		margin-right: 10px;
+	}
+	div.itemSnap a#mainImg1 {
+	}
+	div.itemSnap a:hover {
+		outline: black solid thin;
+	}
+	
+	/* detail & ex */
+	div.goodsTab {
+		padding: 80px 0 0 0;
+		border-bottom: 1px solid #bbb;
+	}
+	div.goodsTab div ul {
+		position: relative;
+		bottom: -3px;
+		list-style: none;
+		margin: 0 auto;
+		padding: 16px 0 0 0;
+		height: 42px;
+		width: 870px;
+		border-bottom: 1px solid #fff;
+	}
+	div.goodsTab div ul li {
+		float: left;
+		width: 174px;
+		text-align: center;
+		position: relative;
+	}
+	div.goodsTab div ul li.on {
+		margin-top: -16px;
+		z-index:5;
+	}
+	div.goodsTab div ul li a {
+		display: block;
+	    margin: 0 0 0 -1px;
+	    padding: 10px 0 12px 0;
+	    color: #999999;
+	    font-size: 13px;
+	    border: 1px solid #dadada;
+	    border-bottom: 1px solid #bbbbbb;
+	    background: #ffffff;
+	    text-decoration: none;
+	}
+	div.goodsTab div ul li.on a {
+		padding-top: 18px;
+	    margin-top: 8px;
+	    color: #333333;
+	    font-weight: bold;
+	    border: 1px solid #bbbbbb;
+	    border-bottom: 1px solid #ffffff;
+	}
+	div.detailBox {
+		margin: 0 auto;
+		text-align: center;
+	}
+	div.delContent, div.exContent {
+		padding-left: 50px;
+	}
+	
+	/* delivery */
+	div#delivery p, div#exchange p {
+		margin: 0 0 3px 0;
+		font-size: 12px;
+	}
+	div#detail h3, div#delivery h3, div#exchange h3, div#reviews h3, div#qna h3 {
+		padding: 35px 0 10px 0;
+	}
+	
+	/* review, qna */
+	div.revContent, div.qnaContent {
+		min-height: 200px;
+		position: relative;
+	}
+	/* 버튼 */
+	div.btnReview, div.btnQna {
+		position: absolute;
+		top: 25px;
+		right: 0;
+	}
+	div.btnReview a, div.btnQna a {
+		min-width: 120px;
+		padding: 12px 20px;
+		font-size: 12px;
+		font-weight: bold;
+		text-decoration: none;
+	}
+	
+	table.reviewTable, table.qnaTable {
+		width: 100%;
+		border-top: 1px solid gray;
+		border-collapse: collapse;
+		font-size: 12px;
+	}
+	table.reviewTable tr.reviewRow, table.qnaTable tr.qnaRow {
+		height: 47px;
+		border-bottom: 1px solid lightgray;
+	}
+	table.reviewTable tr td, table.qnaTable tr td {
+		padding: 13px 10px 15px 18px;
+	}
+	table.reviewTable tr.reviewRow td.star, table.qnaTable tr.qnaRow td.star {
+		text-align: center;
+	}
+	
+	
+	/* 리뷰디테일 */
+	table.reviewTable tr.reviewDetail {
+		display: none;
+	}
+	table.reviewTable tr.reviewDetail td.revDetailBox {
+		background-color: rgb(248,248,248);
+	}
+	td.revDetailBox div.revContent {
+		float: right;
+		width: 84%;
+		padding: 0 30px 0 0;
+		
+	}
+	td.revDetailBox div.revContent div.revView {
+		
+	}
+	
+	/* 리뷰댓글 */
+	div.commentList {
+		width: 90%;
+	}
+	div.commentList>ul {
+		width: 100%;
+		border-top: 2px solid lightgray;
+		border-bottom: 1px solid lightgray;
+		list-style: none;
+	}
+	div.commentList>ul li {
+		padding: 15px 0 15px 0;
+	} 
+	.no_data {
+		padding: 30px 30px 30px 30px !important;
+		text-align: center;
+	}
