@@ -11,7 +11,6 @@ private String phn;
 private String email;
 private int point;
 
-
 public int getPoint() {
    return point;
 }
