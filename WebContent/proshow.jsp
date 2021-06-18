@@ -82,13 +82,14 @@ pageEncoding="UTF-8"%>
 		String id = (String)session.getAttribute("userid");	
 		if(id.equals("admin")) {
 		%>	
-		<button type="button" onclick="del()">관리자 권한으로 삭제</button>
+		<button type="button" onclick="del()">관리자 권한으로 삭제</button>		
 		
-		 <button type="button" onclick="deleteB()">삭제하기</button>
 		<%	} 
 		} catch(Exception e) {
 		
 		}%>
+		
+		<button type="button" onclick="deleteB()">삭제하기</button>
 			 
 		<div class="left">
 			<button type="button" onclick="history.back()">이전글</button>
