@@ -12,7 +12,6 @@ import java.util.List;
 import com.hk.jsp.vo.MemberVo;
 import com.hk.jsp.vo.UserVo;
 
-
 public class MemberDao {
 	
 	 static String driveName = "com.mysql.jdbc.Driver"; 
