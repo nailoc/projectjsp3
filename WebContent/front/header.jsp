@@ -19,7 +19,7 @@
 						</ul>
 					</div>
 				</li>
-				<li><a href="">장바구니(0)</a>
+				<li><a href="cart.jsp">장바구니(0)</a>
 					<span class="txt_bar"></span>
 				</li>
 				<li><a href="notice.jsp">공지사항</a>
@@ -33,15 +33,17 @@
 					<img src="images/logo.png">
 				</div>
 				
-				<div class="top_search">
-					<input type="text">
-					<input type="submit" value="검색">
-				</div>
+				<form method="get" action="sunglass.jsp">
+					<div class="top_search">
+						<input type="text" name="keyword" value="">
+						<input type="submit" value="검색">
+					</div>
+				</form>
 				
 				<nav>
 				<ul class="menu">
 					<li><a href="introduce.jsp">회사소개</a></li>
-					<li><a href="">패션 선글라스</a>
+					<li><a href="sunglass.jsp">패션 선글라스</a>
 						<ul class="sub">
 							<li><a href="">FENDI</a></li>
 							<li><a href="">DIOR</a></li>

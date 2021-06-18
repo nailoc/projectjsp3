@@ -2,8 +2,8 @@
 	<div class="bottom-contents">
 		<div class="bottom1">
 			<div class="tabwrap">
-				<ul class="tabs group">
-					<li><a class="active" href="">NOTICE</a></li>
+				<ul class="tabs">
+					<li><a class="name" href="">NOTICE</a></li>
 				</ul>
 				<div id="panelsbo">
 					<div id="one">
@@ -20,8 +20,8 @@
 		</div>
 		<div class="bottom2">
 			<div class="tabwrap">
-				<ul class="tabs group">
-					<li><a class="active" href="">REVIEW</a></li>
+				<ul class="tabs">
+					<li><a class="name" href="">REVIEW</a></li>
 				</ul>
 				<div id="panelsbo">
 					<div id="one">
