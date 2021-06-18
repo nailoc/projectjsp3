@@ -22,7 +22,7 @@
 		
 		int proPrice = 0;
 		for(int i=0; i<row.size(); i++) {
-			proPrice+=row.get(i).getPrice();
+			proPrice+=row.get(i).getTotalPrice();
 		}
 		int deliFee = 0;
 		if(proPrice < 50000) {
