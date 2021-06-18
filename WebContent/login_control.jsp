@@ -18,7 +18,7 @@
 	if(result==0) {
 		out.println("<script>alert('아이디를 확인해 주세요.');  location.href='login.jsp'</script>");
 	}else if(result==-1) {
-		out.println("<script>alert('비밀번호를 확인해 주세요.');  location.href='login';</script>");
+		out.println("<script>alert('비밀번호를 확인해 주세요.');  location.href='login,jsp';</script>");
 	}else if(result==1) {
 		session.setAttribute("userid", id);
 		session.setMaxInactiveInterval(10*60);
