@@ -207,7 +207,7 @@ public class CartDao extends DBDao{
 				civ.setPno(rs.getInt("pno"));
 				civ.setName(rs.getString("name"));
 				civ.setQuantity(rs.getInt("quantity"));
-				civ.setTotalPrice(rs.getInt("totalPrice"));
+				civ.setPrice(rs.getInt("price"));
 				civ.setMain_img1(rs.getString("main_img1"));
 				result.add(civ);
 			}
