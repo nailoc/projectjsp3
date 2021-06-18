@@ -17,7 +17,7 @@
 </head>
 <body>
 		<form id="reg" action="reg_control.jsp" method="GET">
-		<input type="text" id="regid" name="regid" placeholder="회원아이디">
+		<input type="text" id="regid" name="regid" placeholder="회원아1이디">
 		<input type="button" id="checkid" value="중복확인" onclick="chkid()"><p>
 		<input type="password" id="regpw" name="regpw" placeholder="회원비밀번호"><p>
 		<input type="text" name="name" placeholder="이름"><p>
