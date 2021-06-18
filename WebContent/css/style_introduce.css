@@ -1,7 +1,7 @@
 body {
-	font-family: Roboto,Arial,'Nanum Gothic' ,나눔고딕, 돋움, Malgun Gothic,"맑은 고딕",AppleGothic,Dotum,"돋움",sans-serif;
 	line-height: 1.5;
-	color: #555;
+    font-family: Roboto,Arial,'Nanum Gothic' , Malgun Gothic,AppleGothic,Dotum,sans-serif;
+    color: #555;
 }
 
 strong {
@@ -16,6 +16,67 @@ div.top-contents {
 	width: 100%;
 	height: 400px;
 	margin: 0 auto;
+}
+
+.top_member_box {
+	position: absolute;
+	right: 500px;
+	margin-top: 9px;
+}
+
+.top_member_box li {
+	float: left;
+}
+
+.top_member_box li a {
+	display: inline-block;
+	padding: 4px 0 4px 10px;
+	color: #888888;
+	font-size: 11px;
+}
+
+.mypage_contents ul {
+	float: left;
+	padding: 5px;
+	margin-top: -5px;
+	position: absolute;
+	z-index: 99;
+	overflow: auto;
+	background-color: #ffffff;
+	width: 65px;
+	display: none;
+	border: 1px solid #333;
+}
+
+.top_search {
+	position: absolute;
+	width: 390px;
+	padding: 20px;
+	margin-left: 700px;
+	background: none;
+	height: 50px;
+}
+
+.top_search input[type="text"] {
+	width: 80%;
+	height: 45px;
+}
+
+.top_search input[type="submit"] {
+	position: absolute;
+	top: 20px;
+	right: 40px;
+	width: 50px;
+	height: 50px;
+	border: 1px solid #555;
+	background-color: #555;
+	color: #ffffff;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.top_search input[type="submit"]:hover {
+	background-color: black;
 }
 
 div.top-text {
@@ -113,7 +174,7 @@ div.middle-contents h2 {
 
 div.introduce {
 	font-size: 12px;
-	font-family: 굴림,gulim;
+	font-family: 援대┝,gulim;
 	border-top: 1px solid lightgray;
 	margin-left: 400px;
 	margin-right: 400px;

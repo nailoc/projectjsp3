@@ -4,16 +4,6 @@ body {
     color: #555;
 }
 
-h2 {
-    display: block;
-    font-size: 1.5em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-}
-
 strong {
 	font-weight: bold;
 }
@@ -26,6 +16,67 @@ div.top-contents {
 	width: 100%;
 	height: 400px;
 	margin: 0 auto;
+}
+
+.top_member_box {
+	position: absolute;
+	right: 500px;
+	margin-top: 9px;
+}
+
+.top_member_box li {
+	float: left;
+}
+
+.top_member_box li a {
+	display: inline-block;
+	padding: 4px 0 4px 10px;
+	color: #888888;
+	font-size: 11px;
+}
+
+.mypage_contents ul {
+	float: left;
+	padding: 5px;
+	margin-top: -5px;
+	position: absolute;
+	z-index: 99;
+	overflow: auto;
+	background-color: #ffffff;
+	width: 65px;
+	display: none;
+	border: 1px solid #333;
+}
+
+.top_search {
+	position: absolute;
+	width: 390px;
+	padding: 20px;
+	margin-left: 700px;
+	background: none;
+	height: 50px;
+}
+
+.top_search input[type="text"] {
+	width: 80%;
+	height: 45px;
+}
+
+.top_search input[type="submit"] {
+	position: absolute;
+	top: 20px;
+	right: 40px;
+	width: 50px;
+	height: 50px;
+	border: 1px solid #555;
+	background-color: #555;
+	color: #ffffff;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.top_search input[type="submit"]:hover {
+	background-color: black;
 }
 
 div.top-text {
