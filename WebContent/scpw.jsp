@@ -12,6 +12,7 @@
 <input type="text" name="email" id="email" placeholder="이메일을 입력해 주세요.">
 
 <button onclick="scpw()">비밀번호 찾기</button>
+<button onclick="location.href='admin.jsp'">돌아가기</button>
 </form>
 
 </body>

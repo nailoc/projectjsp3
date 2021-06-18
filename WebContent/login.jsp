@@ -30,8 +30,7 @@ if(session.getAttribute("userid") == null) {
 		<button onclick="location.href='scpw.jsp'">비밀번호 찾기</button>
 <%
 } else {
-	out.print("<script>alert('로그인된 상태입니다!');</script>");
-	response.sendRedirect("mypage.jsp");
+	out.println("<script> alert('이미 로그인된 상태입니다!'); location.href='mypage.jsp';</script>");
 }
 %>
 </body>

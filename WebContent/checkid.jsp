@@ -27,7 +27,6 @@
 </body>
 <script>
 
-
 	function closeChkIdWin(result) {
 		
 		opener.document.getElementById("checkid_ok").value= result;

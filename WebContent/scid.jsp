@@ -18,6 +18,7 @@
 <input type="text" name="email" id="email" placeholder="이메일을 입력해 주세요."><p>
 <input type="text" name="name" id="name" placeholder="이름을 입력해 주세요."><p>
 <button onclick="scid()">아이디 찾기</button>
+<button onclick="location.href='login.jsp'">돌아가기</button>
 </form>
 </body>
 <script>

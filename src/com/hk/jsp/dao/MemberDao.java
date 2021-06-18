@@ -20,6 +20,12 @@ public class MemberDao {
 	 static String url ="jdbc:mysql://kclh9b.freehongs.net:3306/kclh9b"; 
 	 static String user ="kclh9b"; 
 	 static String password = "Nev%U_aPfl*n";
+	 
+	/*
+	 * private static String driveName = "com.mysql.jdbc.Driver"; private static
+	 * String url = "jdbc:mysql://localhost:3306/project"; private static String
+	 * user = "project"; private static String password = "1234";
+	 */
 	private static Connection conn = null;
 	private static Statement stmt = null;
 	private static PreparedStatement pstmt = null;

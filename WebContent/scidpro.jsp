@@ -8,7 +8,6 @@
 <meta charset="UTF-8">
 </head>
 <body>
-
 <%
 String email = request.getParameter("email");
 String name = request.getParameter("name");

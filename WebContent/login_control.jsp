@@ -30,8 +30,7 @@
 		}
 			
 	} } else {
-		out.print("<script>alert('이미 로그인 되어 있습니다!');</script>");
-		response.sendRedirect("mypage.jsp");
+		out.println("<script> alert('이미 로그인된 상태입니다'); location.href='mypage.jsp';</script>");;
 	}
 		
 

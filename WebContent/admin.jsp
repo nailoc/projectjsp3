@@ -26,7 +26,6 @@ border:1px solid black;
 } else { %>
 <!-- 회원관리 관리자 페이지/세분화 필요 -->
 
-
 <h3>관리자 페이지입니다.</h3>
 회원관리 :
 <form action="" method="post">

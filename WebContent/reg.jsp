@@ -11,7 +11,6 @@
     mem.setAddress2(mem.nullToString(mem.getAddress2()));
 %>
 
-
 <head>
 <meta charset="UTF-8">
 <style>
