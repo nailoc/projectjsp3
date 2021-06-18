@@ -18,8 +18,8 @@ public class DBDao {
 	protected static String password = "Nev%U_aPfl*n";
 	
 	protected static Connection conn = null;
-	protected static Statement stmt = null; // 복잡한 경우 PreparedStatement 전환 가능성
-	protected static Statement stmt2 = null; // 복잡한 경우 PreparedStatement 전환 가능성
+	protected static Statement stmt = null; 
+	protected static Statement stmt2 = null; 
 	protected static PreparedStatement pstmt = null;
 	protected static ResultSet rs = null;
 	protected static ResultSet rs2 = null;
@@ -34,11 +34,11 @@ public class DBDao {
 	
 	protected void connectDB() {
 		try {
-			if(conn==null) { // 접속이 안되었으면
+			if(conn==null) { 
 				conn=DriverManager.getConnection(url, user, password);
 				stmt = conn.createStatement();
 				stmt2 = conn.createStatement();
-				System.out.println("디비접속");
+				System.out.println("MYSQL connect");
 			}
 		}catch(Exception e) {
 			e.printStackTrace();

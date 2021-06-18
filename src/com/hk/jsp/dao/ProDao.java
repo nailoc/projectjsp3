@@ -31,11 +31,11 @@ public class ProDao {
 	
 	private void connectDB() throws Exception {
 		Class.forName(driveName);
-		System.out.println("드라이버로딩성공");
+		System.out.println("MYSQL connect");
 		if(conn==null) {
 			conn=DriverManager.getConnection(url, user, password);
 			stmt=conn.createStatement();
-			System.out.println("DB 접속 성공");
+			System.out.println("DB connect");
 		}
 	}
 	
@@ -46,9 +46,9 @@ public class ProDao {
 			if(stmt!=null) { stmt.close(); stmt=null; }
 			if(pstmt!=null) { pstmt.close(); pstmt=null; }
 			if(rs!=null) { rs.close(); rs=null; }
-			System.out.println("DB 접속 종료 완료");
+			System.out.println("DB close");
 		}catch(Exception e) {
-			System.out.println("DB 접속 종료 실패");
+			System.out.println("DB close exception");
 		}
 		
 	}

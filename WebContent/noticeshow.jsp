@@ -65,16 +65,23 @@ pageEncoding="UTF-8"%>
 				</div>					
 			</div>
 			 
-			<!-- 관리자 세션시에만 보여지는 버튼 -->		 
-			 <button type="button" onclick="deleteB()">삭제하기</button>
+			<!-- 관리자 세션시에만 보여지는 버튼 -->		
+			<%
+		try {
+		String id = (String)session.getAttribute("userid");	
+		if(id.equals("admin")) {
+		%> 
+		 <button type="button" onclick="deleteB()">삭제하기</button>
+		 <%	} 
+		} catch(Exception e) {
+		
+		}%>
 			 
 		<div class="left">
-			<button type="button" onclick="history.back()">이전글</button>
+			<button type="button" onclick="history.back()">뒤로가기</button>
 		</div>
 		
-		<div class="right">
-			<button>다음글</button>
-		</div>
+		
 	
 </body>
 <script>

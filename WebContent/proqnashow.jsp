@@ -65,12 +65,19 @@ pageEncoding="UTF-8"%>
 			</div>
 			
 		
-		<!-- 관리자 세션시에만 보여지는 버튼 -->	
-		 <button type="button" onclick="answer()">코멘트 달기</button>
 		<!-- 관리자 세션시에만 보여지는 버튼 -->
-		 <button type="button" onclick="delA()">코멘트 삭제하기</button>						
-		<!-- 관리자 세션시에만 보여지는 버튼 -->
+		<%
+		try {
+		String id = (String)session.getAttribute("userid");	
+		if(id.equals("admin")) {
+		%>		
+		 <button type="button" onclick="answer()">코멘트 달기</button>		
+		 <button type="button" onclick="delA()">코멘트 삭제하기</button>	
 		 <button type="button" onclick="del()">관리자 권한으로 삭제</button>
+		<%	} 
+		} catch(Exception e) {
+		
+		}%> 
 		
 		 <button type="button" onclick="deleteB()">글삭제하기</button>
 			 

@@ -70,13 +70,13 @@ public class CartDao extends DBDao{
 		}
 		return result;
 	}
-	
-	public String getNext() { //카트 다음번호 가져오기
+		
+	public String getNext() { //移댄듃 �떎�쓬踰덊샇 媛��졇�삤湲�
 		String curCno = getCno();
 		String cartDate = getDate().substring(6, 8);
 		String cartNum = "";
 		String result = "";
-		if(curCno.equals("none")) { // 생성된 카트번호가 없을 시
+		if(curCno.equals("none")) { // �깮�꽦�맂 移댄듃踰덊샇媛� �뾾�쓣 �떆
 			result = getDate().substring(6,8)+"001";
 		}else {
 			if(curCno.substring(0, 2).equals(cartDate)) { //06021 -> 21 + 1 -> 22
@@ -95,26 +95,26 @@ public class CartDao extends DBDao{
 		try {
 			connectDB();
 			String cnoById = getCnoById(id);
-			if(cnoById.equals("none")) { // "none"반환시 활성화된 카트가 없으므로 카트를 새로 만들어준다.
+			if(cnoById.equals("none")) { // "none"諛섑솚�떆 �솢�꽦�솕�맂 移댄듃媛� �뾾�쑝誘�濡� 移댄듃瑜� �깉濡� 留뚮뱾�뼱以��떎.
 				String sql = ("insert into cart (cno, id, regdate) values (?, ?, now())");
 				pstmt = conn.prepareStatement(sql);
 				pstmt.setString(1, getNext());
 				pstmt.setString(2, id);
 				int insert = pstmt.executeUpdate();
 				if(insert!=0) {
-					result = addCart(id, pno, quantity); // 활성화된 카트가 새로 만들어졌으므로 재귀함수에서 하위 else문을 타 아이템이 추가된다.
+					result = addCart(id, pno, quantity); // �솢�꽦�솕�맂 移댄듃媛� �깉濡� 留뚮뱾�뼱議뚯쑝誘�濡� �옱洹��븿�닔�뿉�꽌 �븯�쐞 else臾몄쓣 �� �븘�씠�뀥�씠 異붽��맂�떎.
 				}else {
-					System.out.println("카트 생성 실패");
+					System.out.println("移댄듃 �깮�꽦 �떎�뙣");
 					result = -2;
 					return result;
 				}
-			}else { // 0이 아니라면 활성화된 카트가 있는 경우이므로 아이템만 추가해준다
+			}else { // 0�씠 �븘�땲�씪硫� �솢�꽦�솕�맂 移댄듃媛� �엳�뒗 寃쎌슦�씠誘�濡� �븘�씠�뀥留� 異붽��빐以��떎
 				String selItem = String.format("select quantity from cartItem where cno = %s and pno = %s", cnoById, pno);
 				rs = stmt.executeQuery(selItem);
-				if(rs.next()) { // 이미 있는 아이템의 경우 숫자만 갱신
+				if(rs.next()) { // �씠誘� �엳�뒗 �븘�씠�뀥�쓽 寃쎌슦 �닽�옄留� 媛깆떊
 					String updateItem = String.format("update cartItem set quantity = quantity+%s where cno = '%s' and pno = %s",quantity, cnoById, pno);
 					result = stmt.executeUpdate(updateItem);
-				}else { // 없는 아이템이면 추가
+				}else { // �뾾�뒗 �븘�씠�뀥�씠硫� 異붽�
 					String itemInsert = String.format("insert into cartItem (cno, pno, quantity) values ('%s', %s, %s)", cnoById, pno, quantity);
 					result = stmt.executeUpdate(itemInsert);					
 				}
@@ -139,7 +139,7 @@ public class CartDao extends DBDao{
 			if(result!=0) {
 				String countItem = String.format("select count(*) cnt from cartItem where cno='%s'",cnoById);
 				rs = stmt.executeQuery(countItem);
-				//카트아이템이 비었다면 카트번호를 지운다
+				//移댄듃�븘�씠�뀥�씠 鍮꾩뿀�떎硫� 移댄듃踰덊샇瑜� 吏��슫�떎
 				if(rs.next()) {
 					int count = rs.getInt("cnt");
 					if(count==0) {
@@ -248,12 +248,12 @@ public class CartDao extends DBDao{
 	public int orderCart(String id, String proPrice, String deliFee, String endPrice, String deliway, String payway, String etc) {
 		int result = 0;
 		try {
-			//오더테이블 삽입
+			//�삤�뜑�뀒�씠釉� �궫�엯
 			connectDB();
 			CartDao cartdao = CartDao.getInstance();
 			String cnoById = cartdao.getCnoById(id);
 			StringBuffer dno = new StringBuffer("");
-			//배달번호 난수 생성 (외래키로 받아와야겠지만 건너뛰는걸로)
+			//諛곕떖踰덊샇 �궃�닔 �깮�꽦 (�쇅�옒�궎濡� 諛쏆븘���빞寃좎�留� 嫄대꼫�쎇�뒗嫄몃줈)
 			for(int i=0; i<3; i++) {
 				int temp = (int)((Math.random()*9000)+1000);
 				if(i==0) {
@@ -264,7 +264,7 @@ public class CartDao extends DBDao{
 			}
 			StringBuffer sb = new StringBuffer("");
 			sb.append("insert into orderTable (ono, cno, proPrice, deliFee, price, dno, id, regdate, deliway, payway, paystate, etc)");
-			sb.append(" values(?, ?, ?, ?, ?, ?, ?, now(), ?, ?, '입금확인', ?)");
+			sb.append(" values(?, ?, ?, ?, ?, ?, ?, now(), ?, ?, '�엯湲덊솗�씤', ?)");
 			String sql = sb.toString();
 			pstmt = conn.prepareStatement(sql);
 			String curDate = getDate();
@@ -279,7 +279,7 @@ public class CartDao extends DBDao{
 			pstmt.setString(9, payway);
 			pstmt.setString(10, etc);
 			int order = pstmt.executeUpdate();
-			if(order != 0) { // product 업데이트 (재고, 팔린갯수)
+			if(order != 0) { // product �뾽�뜲�씠�듃 (�옱怨�, �뙏由곌갗�닔)
 				sb = new StringBuffer("");
 				sb.append("update product p join cartItem c on p.pno = c.pno set p.quantity = (p.quantity - c.quantity)");
 				sb.append("\n ,p.sell_count = (p.sell_count+c.quantity) where c.cno = ?");
@@ -287,15 +287,15 @@ public class CartDao extends DBDao{
 				pstmt = conn.prepareStatement(sql);
 				pstmt.setString(1, cnoById);
 				int product = pstmt.executeUpdate();
-				if(product != 0) { // 회원 포인트 적립
+				if(product != 0) { // �쉶�썝 �룷�씤�듃 �쟻由�
 					int point = (int)(Integer.valueOf(proPrice)*0.01);
-					System.out.println("디버그테스트1");
+					System.out.println("�뵒踰꾧렇�뀒�뒪�듃1");
 					sql = String.format("update member set point = (point + %d) where id = '%s'", point, id);
-					System.out.println("디버그테스트2");
+					System.out.println("�뵒踰꾧렇�뀒�뒪�듃2");
 					stmt.executeUpdate(sql);
 					
 					
-					result = cartdao.cartDeative(cnoById);	//카트 비활성화				
+					result = cartdao.cartDeative(cnoById);	//移댄듃 鍮꾪솢�꽦�솕				
 				}
 			}
 		}catch(Exception e) {

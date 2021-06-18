@@ -79,7 +79,17 @@ pageEncoding="UTF-8"%>
 		%>
 	</table>
 	<!-- 관리자 세션시에만 보여지는 버튼 -->
+	
+	<%
+	try {
+	String id = (String)session.getAttribute("userid");	
+	if(id.equals("admin")) {
+	%>
 	<button type="button" onclick="location.href='noticewrite.jsp'">글작성</button>	
+	<%	} 
+	} catch(Exception e) {
+		
+	}%>
 	
 	<div>
 		<form id="form2" method="GET" action="noticelist.jsp">
