@@ -6,10 +6,16 @@ import com.hk.jsp.vo.*;
 
 public class ProQnaDao {
 	
+	/*
+	 * static String driveName = "com.mysql.jdbc.Driver";
+	 * static String url = "jdbc:mysql://localhost:3306/jspweb";
+	 * static String user = "jsp";
+	 * static String password = "1234";
+	 */
 	static String driveName = "com.mysql.jdbc.Driver";
-	static String url = "jdbc:mysql://localhost:3306/jspweb";
-	static String user = "jsp";
-	static String password = "1234";
+	static String url = "jdbc:mysql://kclh9b.freehongs.net:3306/kclh9b";
+	static String user = "kclh9b";
+	static String password = "Nev%U_aPfl*n";
 	
 	private static Connection conn = null;
 	private static Statement stmt = null;
@@ -25,11 +31,11 @@ public class ProQnaDao {
 	
 	private void connectDB() throws Exception {
 		Class.forName(driveName);
-		System.out.println("드라이버로딩성공");
+		System.out.println("MYSQL connect");
 		if(conn==null) {
 			conn=DriverManager.getConnection(url, user, password);
 			stmt=conn.createStatement();
-			System.out.println("DB 접속 성공");
+			System.out.println("DB connect");
 		}
 	}
 	
@@ -40,9 +46,9 @@ public class ProQnaDao {
 			if(stmt!=null) { stmt.close(); stmt=null; }
 			if(pstmt!=null) { pstmt.close(); pstmt=null; }
 			if(rs!=null) { rs.close(); rs=null; }
-			System.out.println("DB 접속 종료 완료");
+			System.out.println("DB close");
 		}catch(Exception e) {
-			System.out.println("DB 접속 종료 실패");
+			System.out.println("DB close exception");
 		}
 		
 	}
@@ -125,8 +131,11 @@ public class ProQnaDao {
 				rst.setRegdate(rs.getString("regdate"));
 				rst.setViews(rs.getInt("views"));
 				rst.setPrivateyn(rs.getString("privateyn"));
-				rst.setAvaliable(rs.getString("avaliable"));
+				rst.setAvaliable(rs.getString("avaliable"));				
 				rst.setComents(rs.getString("coments"));
+				if(rs.getString("coments")==null) {
+					rst.setComents("");
+				}
 				
 			}
 			closeDB();
@@ -151,7 +160,11 @@ public class ProQnaDao {
 				rst.setPrivateyn(rs.getString("privateyn"));
 				rst.setAvaliable(rs.getString("avaliable"));
 				rst.setComents(rs.getString("coments"));
-			}
+				if(rs.getString("coments")==null) {
+					rst.setComents("�ڸ�Ʈ�� �����ϴ�");
+				}
+			}			
+			
 			closeDB();
 			return rst;
 			

@@ -6,48 +6,43 @@ import com.hk.jsp.vo.UserVo;
 
 public class UserDao {
 	
-		// 접속정보
-		static String driveName = "com.mysql.jdbc.Driver";
+			static String driveName = "com.mysql.jdbc.Driver";
 		static String url = "jdbc:mysql://localhost:3306/jspweb";
 		static String user = "jsp";
 		static String password = "1234";
 
 		private static Connection conn = null;
-		private static Statement stmt = null;	// 복잡한경우 PreparedStatement 전환 가능
+		private static Statement stmt = null;
 		private static PreparedStatement pstmt = null;
 		private static ResultSet rs = null;
 		private static UserDao instance = null;
 		
-		// 싱글톤
-		public static UserDao getInstance() {
+			public static UserDao getInstance() {
 			if(instance==null) {
 				instance = new UserDao();
 			}
 			return instance;			
 		}		
 		
-		// 초기화 블럭
 		{
 			try {
 			Class.forName(driveName);
-			System.out.println("드라이버 로딩 성공");
+			System.out.println("MYSQL connect");
 			} catch(Exception e) {
-			System.out.println("드라이버 로딩 실패");
+			System.out.println("MYSQL connect exception");
 			}
 		}
 		
-		// 접속
-		private void connectDB() throws Exception {
+			private void connectDB() throws Exception {
 
 			if(conn==null) {
 				conn=DriverManager.getConnection(url, user, password);
 				stmt = conn.createStatement();
-				System.out.println("데이터베이스 접속 성공");
+				System.out.println("DB connect");
 			}
 			
 		}
 
-		// 종료
 		private void closeDB() {
 			
 			try {
@@ -68,18 +63,17 @@ public class UserDao {
 					rs.close();
 					rs=null;
 				}
-				System.out.println("데이터베이스 접속 종료");
+				System.out.println("DB close");
 				
 			} catch(SQLException e) {
-				System.out.println("데이터베이스 쿼리 오류 : " + e.getMessage());
+				System.out.println("DB SQL exception : " + e.getMessage());
 			} catch(Exception e2) {
-				System.out.println("데이터베이스 접속 오류 : " + e2.getMessage());
+				System.out.println("DB close exception : " + e2.getMessage());
 			} 
 			
 		}
 		
 		
-		// 접속및 종료 테스트
 		public void testDB() throws Exception {
 			connectDB();
 			closeDB();
@@ -153,7 +147,7 @@ public class UserDao {
 						rst = -1;	// pw 틀림
 					}
 				} else {
-					rst = 0;	// id 틀림				
+					rst = 0;	// id 틀림			
 				}		
 				
 			closeDB();
@@ -175,7 +169,7 @@ public class UserDao {
 			return rst;
 		}
 		
-		// 아이디 찾기
+		// 아이디찾기
 		public String forgotId(String id, String email) throws Exception {
 			String rst= "";			
 			connectDB();
