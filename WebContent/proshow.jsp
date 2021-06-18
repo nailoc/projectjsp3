@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
+
 <%@ page import="com.hk.jsp.dao.*" %>
 <%@ page import="com.hk.jsp.vo.*" %>
 <%@ page import="com.hk.jsp.util.*" %>
@@ -75,7 +76,20 @@ pageEncoding="UTF-8"%>
 				</div>					
 			</div>
 			
-			 <button type="button" onclick="deleteB()">삭제하기</button>
+		<!-- 관리자 세션시에만 보여지는 버튼 -->
+		<%
+		try {
+		String id = (String)session.getAttribute("userid");	
+		if(id.equals("admin")) {
+		%>	
+		<button type="button" onclick="del()">관리자 권한으로 삭제</button>		
+		
+		<%	} 
+		} catch(Exception e) {
+		
+		}%>
+		
+		<button type="button" onclick="deleteB()">삭제하기</button>
 			 
 		<div class="left">
 			<button type="button" onclick="history.back()">이전글</button>
@@ -92,6 +106,15 @@ function deleteB() {
 	ok = confirm("글을 삭제하시겠습니까 ? " , "");
 	if(ok==true) {
 		location.href="delPRVpro.jsp?revno="+<%= rowshow.getRevno() %>;
+	} else {
+		history.back();
+	}
+}
+
+function del() {
+	ok = confirm("글을 삭제 ? (관리자) " , "");
+	if(ok==true) {
+		location.href="delPRVAdmin.jsp?revno="+<%= rowshow.getRevno() %>;
 	} else {
 		history.back();
 	}

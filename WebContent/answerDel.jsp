@@ -13,7 +13,16 @@ pageEncoding="UTF-8"%>
 </head>
 <style></style>
 <body>
-
+	<%
+	try {
+	String id = (String)session.getAttribute("userid");	
+		if(id==null) {
+			out.println("<script> alert('관리자가 아닙니다'); location.href='proqnalist.jsp';</script>");
+		}	
+	} catch(Exception e) {
+		
+	}
+	%>
 	<%
 	String qnano = request.getParameter("qnano");
 	

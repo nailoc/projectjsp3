@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
+
 <%@ page import="com.hk.jsp.dao.*" %>
 <%@ page import="com.hk.jsp.vo.*" %>
 <%@ page import="com.hk.jsp.util.*" %>
@@ -65,10 +66,20 @@ pageEncoding="UTF-8"%>
 			</div>
 			
 		
+		<!-- 관리자 세션시에만 보여지는 버튼 -->
+		<%
+		try {
+		String id = (String)session.getAttribute("userid");	
+		if(id.equals("admin")) {
+		%>		
+		 <button type="button" onclick="answer()">코멘트 달기</button>		
+		 <button type="button" onclick="delA()">코멘트 삭제하기</button>	
+		 <button type="button" onclick="del()">관리자 권한으로 삭제</button>
+		<%	} 
+		} catch(Exception e) {
 		
-		 <button type="button" onclick="answer()">코멘트 달기</button>
-		 <button type="button" onclick="delA()">코멘트 삭제하기</button>						
-			
+		}%> 
+		
 		 <button type="button" onclick="deleteB()">글삭제하기</button>
 			 
 		<div class="left">
@@ -90,12 +101,30 @@ function deleteB() {
 }
 
 function answer() {
-	location.href="answerW.jsp?qnano="+<%= rowshow.getQnano() %>;
+	ok = confirm("코멘트 작성 ? " , "");
+	if(ok==true) {
+		location.href="answerW.jsp?qnano="+<%= rowshow.getQnano() %>;
+	} else {
+		history.back();
+	}
 }
 
 function delA() {
-	location.href="answerDel.jsp?qnano="+<%= rowshow.getQnano() %>;
+	ok = confirm("코멘트 삭제 ? " , "");
+	if(ok==true) {
+		location.href="answerDel.jsp?qnano="+<%= rowshow.getQnano() %>;
+	} else {
+		history.back();
+	}
 }
 
+function del() {
+	ok = confirm("글을 삭제 ? (관리자) " , "");
+	if(ok==true) {
+		location.href="delQNAadmin.jsp?qnano="+<%= rowshow.getQnano() %>;
+	} else {
+		history.back();
+	}
+}
 </script>
 </html>
