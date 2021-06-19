@@ -14,10 +14,10 @@
 	
 	<div class="middle-contents">
 		<div class="location_wrap">
-			<div class="location_cont">
+			<div class="location_cont"> 
 				<em>HOME</em>
 				<span> > </span>
-				<div class="location_select">
+				<div class="location_select"> 
 					<select>
 						<option>악세서리</option>
 						<option>패션 선글라스</option>
