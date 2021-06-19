@@ -6,6 +6,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%@ include file="front/header.jsp" %>
 	<%
 	if(session.getAttribute("userid") == null) {
 		out.println("<script> alert('로그인이 필요합니다!'); location.href='login.jsp';</script>");
@@ -14,5 +15,6 @@
 		out.println("<script>	alert('로그아웃!');</script>");
 		response.sendRedirect("login.jsp");}
 	%>
+<%@ include file="front/footer.jsp" %>
 </body>
 </html>

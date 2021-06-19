@@ -21,7 +21,6 @@
 		out.println("<script>alert('비밀번호를 확인해 주세요.');  location.href='login.jsp';</script>");
 	}else if(result==1) {
 		session.setAttribute("userid", id);
-		session.setMaxInactiveInterval(10*60);
 		out.println("<script>alert('로그인 되었습니다.');</script>");
 		if(session.getAttribute("userid").equals("admin")) {
 			out.println("<script>alert('관리자 계정으로 로그인합니다.');</script>");

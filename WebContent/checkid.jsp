@@ -4,8 +4,6 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>jspweb13</title>
-<link rel="stylesheet" href="css/style.css"></link>
 <style></style>
 </head>
 <body>

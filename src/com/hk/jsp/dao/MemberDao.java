@@ -16,7 +16,7 @@ import com.hk.jsp.vo.UserVo;
 public class MemberDao {
 	
 	 static String driveName = "com.mysql.jdbc.Driver"; 
-	 static String url ="jdbc:mysql://kclh9b.freehongs.net:3306/kclh9b"; 
+	 static String url ="jdbc:mysql://kclh9b.freehongs.net:3306/kclh9b?autoReconnect=true&validationQuery=select 1";
 	 static String user ="kclh9b"; 
 	 static String password = "Nev%U_aPfl*n";
 	 
@@ -29,6 +29,7 @@ public class MemberDao {
 	private static Statement stmt = null;
 	private static PreparedStatement pstmt = null;
 	private static ResultSet rs = null;
+	
 
 	private static MemberDao instance = null;
 	public static MemberDao getInstance() {
