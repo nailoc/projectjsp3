@@ -111,7 +111,7 @@
 			%>
 			</div>
 		
-		<div class="images" style="width:1100px;">
+		<div class="images" style="width:1250px;">
 			<ul class="item_list" style="width:100%;">
 				<%
 					for(int i=0; i<row.size(); i++) {

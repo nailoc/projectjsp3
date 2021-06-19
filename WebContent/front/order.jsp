@@ -115,6 +115,8 @@
 	
 	<%@ include file="header.jsp" %>
 	
+	<div class=""></div>
+	
 	<div class="orWrapper">
 	<%
 		if(row.size()==0) {
@@ -183,6 +185,7 @@
 	<%@ include file="footer.jsp" %>	
 		
 </body>
+<script src="js/jquery-3.6.0.min.js"></script>
 <script>
 	function toReview(pno) {
 		location.href="item.jsp?pno="+pno+"#reviews";
@@ -211,5 +214,16 @@
 		}
 	};
 	*/
+	
+	$(document).ready(function(){
+		$("ul.menu li").hover(
+			function(){ 
+				$('ul:not(:animated)',this).stop().show();
+			},
+			function(){ 
+				$('ul',this).stop().hide();
+			}
+		);
+	});
 </script>
 </html>

@@ -2,29 +2,35 @@
 	<div class="top-contents">
 		<div class="header_top">
 			<ul class="top_member_box">
-				<%
+			<%
 			if(session.getAttribute("userid") == null) {
 			%>
-				<li><a href="login.jsp">로그인</a>
+				<li><a href="">로그인</a>
 					<span class="txt_bar"></span>
 				</li>
-				<li><a href="reg.jsp">회원가입</a>
+				<li><a href="">회원가입</a>
 					<span class="txt_bar"></span>
 				</li>
 				<%} else { %>	
-				<li><a href="logout.jsp">로그아웃</a>
+				<li><a href="">로그아웃</a>
 					<span class="txt_bar"></span>
 				</li>
-				<li><a href="mypage.jsp">마이페이지</a>
+				<li><a href="">마이페이지</a>
 					<span class="txt_bar"></span>
 				</li>
 				<%}%>
 				<li>
 					<div class="mypage_contents">
-						<span><a href="order.jsp">주문조회</a></span>
+						<span><a href="">이용현황</a></span>
+						<ul>
+							<li><a href="">주문조회</a></li>
+							<li><a href="">내정보수정</a></li>
+							<li><a href="">찜리스트</a></li>
+							<li><a href="guide_write.jsp">1:1문의</a></li>
+						</ul>
 					</div>
 				</li>
-				<li><a href="cart.jsp">장바구니</a>
+				<li><a href="cart.jsp">장바구니(0)</a>
 					<span class="txt_bar"></span>
 				</li>
 				<li><a href="notice.jsp">공지사항</a>
@@ -35,7 +41,7 @@
 		<div class="top-text">
 			<header>
 				<div id="logo">
-					<img src="images/logo.png">
+					<img src="front/images/logo.png">
 				</div>
 				
 				<form method="get" action="sunglass.jsp">
@@ -50,28 +56,27 @@
 					<li><a href="introduce.jsp">회사소개</a></li>
 					<li><a href="sunglass.jsp">패션 선글라스</a>
 						<ul class="sub">
-							<li><a href="sunglass.jsp?bname=fendi&kind=10">FENDI</a></li>
-							<li><a href="sunglass.jsp?bname=dior&kind=10">DIOR</a></li>
-							<li><a href="sunglass.jsp?bname=jimmy&kind=10">JIMMY CHOO</a></li>
-							<li><a href="sunglass.jsp?bname=maxmara&kind=10">MAXMARA</a></li>
-							<li><a href="sunglass.jsp?bname=carrera&kind=10">CARRERA</a></li>
-							<li><a href="sunglass.jsp?bname=givenchy&kind=10">CIVENCHY</a></li>
-							<li><a href="sunglass.jsp?bname=hugo&kind=10">HUGO BOSS</a></li>
-							<li><a href="sunglass.jsp?bname=tommy&kind=10">TOMMY HILFIGER</a></li>
-							<li><a href="sunglass.jsp?bname=polaroid&kind=10">POLAROID</a></li>
+							<li><a href="">FENDI</a></li>
+							<li><a href="">DIOR</a></li>
+							<li><a href="">JIMMY CHOO</a></li>
+							<li><a href="">MAXMARA</a></li>
+							<li><a href="">CARRERA</a></li>
+							<li><a href="">CIVENCHY</a></li>
+							<li><a href="">HUGO BOSS</a></li>
+							<li><a href="">TOMMY HILFIGER</a></li>
+							<li><a href="">POLAROID</a></li>
 						</ul>
 					</li>
 					<li><a href="sunglass.jsp?kind=20">안경테</a>
 						<ul class="sub">
-							<li><a href="sunglass.jsp?bname=fendi&kind=20">FENDI</a></li>
-							<li><a href="sunglass.jsp?bname=dior&kind=20">DIOR</a></li>
-							<li><a href="sunglass.jsp?bname=jimmy&kind=20">JIMMY CHOO</a></li>
-							<li><a href="sunglass.jsp?bname=maxmara&kind=20">MAXMARA</a></li>
-							<li><a href="sunglass.jsp?bname=carrera&kind=20">CARRERA</a></li>
-							<li><a href="sunglass.jsp?bname=givenchy&kind=20">CIVENCHY</a></li>
-							<li><a href="sunglass.jsp?bname=hugo&kind=20">HUGO BOSS</a></li>
-							<li><a href="sunglass.jsp?bname=tommy&kind=20">TOMMY HILFIGER</a></li>
-							<li><a href="sunglass.jsp?bname=polaroid&kind=20">POLAROID</a></li>
+							<li><a href="">FENDI</a></li>
+							<li><a href="">DIOR</a></li>
+							<li><a href="">JIMMY CHOO</a></li>
+							<li><a href="">MAXMARA</a></li>
+							<li><a href="">CARRERA</a></li>
+							<li><a href="">CIVENCHY</a></li>
+							<li><a href="">HUGO BOSS</a></li>
+							<li><a href="">TOMMY HILFIGER</a></li>
 						</ul>
 					</li>
 					<li><a href="accessory.jsp">악세서리</a>

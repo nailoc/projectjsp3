@@ -3,7 +3,7 @@
 		<div class="bottom1">
 			<div class="tabwrap">
 				<ul class="tabs">
-					<li><a class="name" href="">NOTICE</a></li>
+					<li><a class="name" href="notice.jsp">NOTICE</a></li>
 				</ul>
 				<div id="panelsbo">
 					<div id="one">
