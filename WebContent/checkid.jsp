@@ -25,12 +25,12 @@
 </body>
 <script>
 
-	function closeChkIdWin(result) {
-		
+	function closeChkIdWin(result		/* 
 		opener.document.getElementById("checkid_ok").value= result;
 		if(result!=0) {
 			opener.document.getElementById("regid").value="";
-		}
+		} */) {
+
 		self.close();
 	}
 
