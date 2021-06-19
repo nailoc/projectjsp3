@@ -15,7 +15,7 @@
 </head>
 <body>
 
-<%
+<% 
 if(session.getAttribute("userid") == null) {
 	
 %>

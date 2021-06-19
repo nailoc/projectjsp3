@@ -14,7 +14,7 @@
 				<%} else { %>	
 				<li><a href="logout.jsp">로그아웃</a>
 					<span class="txt_bar"></span>
-				</li>
+				</li> 
 				<li><a href="mypage.jsp">마이페이지</a>
 					<span class="txt_bar"></span>
 				</li> 

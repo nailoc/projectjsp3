@@ -6,7 +6,7 @@
 					<li><a class="name" href="notice.jsp">NOTICE</a></li>
 				</ul>
 				<div id="panelsbo">
-					<div id="one">
+					<div id="one"> 
 						<ul>
 							<li><a href="">[휴무안내] 10월 9일 한글날 휴무로 상담과 배송이 중단됩니다...</a></li>
 							<li><a href="">[휴무안내] 9월 29일(화) ~ 10월 4일(일) 추석휴무로...</a></li>

@@ -15,7 +15,7 @@
 	<div class="middle-contents">
 		
 		<div class="board">
-			<div class="board_title">
+			<div class="board_title"> 
 				<h2>상품후기</h2>
 			</div>
 			<div class="board_list">

@@ -13,7 +13,7 @@
 	<%@ include file="header.jsp" %>
 		
 	<div class="middle-contents"> 
-		
+		 
 		<div class="board">
 			<div class="board_title">
 				<h2>상품후기</h2>

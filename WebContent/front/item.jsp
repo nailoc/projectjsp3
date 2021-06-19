@@ -11,7 +11,7 @@
 <style></style>
 </head>
 <body>
-	<%
+	<% 
 		String pno = request.getParameter("pno");
 		ProductDao prodao = ProductDao.getInstance();
 		ProductVo row = prodao.getProductByPno(pno);

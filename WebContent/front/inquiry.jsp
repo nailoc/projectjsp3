@@ -14,7 +14,7 @@
 		
 	<div class="middle-contents">
 		
-		<div class="board">
+		<div class="board"> 
 			<div class="board_title">
 				<h2>상품문의</h2>
 			</div>

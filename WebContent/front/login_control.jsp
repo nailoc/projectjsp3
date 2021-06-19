@@ -14,7 +14,7 @@
 	String id = request.getParameter("userid");
 	String pw = request.getParameter("userpw");
 	int result = mem.loginck(id, pw);
-	
+	 
 	if(result==0) {
 		out.println("<script>alert('아이디를 확인해 주세요.');  location.href='login.jsp'</script>");
 	}else if(result==-1) {

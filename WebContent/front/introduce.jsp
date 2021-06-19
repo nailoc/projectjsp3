@@ -14,7 +14,7 @@
 	
 	<div class="middle-contents">
 		<h2>회사소개</h2>
-	</div>
+	</div> 
 	<div class="introduce">
 		<p>안녕하세요.</p>
 		<p>해외 명품 선글라스, 안경테 전문 쇼핑몰 2FACE(투페이스)입니다.</p>

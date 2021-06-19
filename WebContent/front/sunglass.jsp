@@ -17,7 +17,7 @@
 		margin-top: 10px;
 		margin-bottom: 30px;
 		height: 359.5px;
-	}
+	} 
 	a {
 		text-decoration: none;
 		color: #000;

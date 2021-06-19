@@ -14,7 +14,7 @@
 			<div class="member_wrap">
 				<div class="member_tit">
 					<h2>로그인</h2>
-				</div>
+				</div> 
 				<div class="member_cont">
 					<div class="member_login_box">
 						<h3>회원 로그인</h3>

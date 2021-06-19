@@ -17,7 +17,7 @@
 	/*z-index: -2;*/
 	transform: translate(-107px, -210px);
 }
-.slideImgNav {
+.slideImgNav { 
 	position: absolute;
 	bottom: 0;
 	left: 50%;

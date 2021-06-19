@@ -14,7 +14,7 @@
 		margin: 0 auto;
 	}
 	.orderBox{ 
-		padding: 10px 20px 15px 20px;
+		padding: 10px 20px 15px 20px; 
 		border: 1px solid lightgray;
 		margin-bottom: 30px;
 		border-radius: 10px;
