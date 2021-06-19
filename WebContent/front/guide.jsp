@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>팀프로젝트</title>
+<title>팀프로젝트</title> 
 <link rel="stylesheet" href="../css/style_guide.css"></link>
 <style></style>
 </head>

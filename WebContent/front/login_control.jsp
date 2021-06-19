@@ -8,7 +8,7 @@
 </head>
 <body>
 	
-	<%
+	<% 
 	if(session.getAttribute("userid") == null)  {
 	MemberDao mem = MemberDao.getInstance();
 	String id = request.getParameter("userid");

@@ -12,7 +12,7 @@
 
 	<%@ include file="header.jsp" %>
 		
-	<div class="middle-contents">
+	<div class="middle-contents"> 
 		<div class="location_wrap">
 			<div class="location_cont">
 				<em>HOME</em>

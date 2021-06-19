@@ -12,7 +12,7 @@
 </head>
 <body>
 	<%
-		String id = "user1";
+		String id = "user1"; 
 		CartDao cartdao = CartDao.getInstance();
 		List<CartItemVo> row = cartdao.getCartItemList(id);
 		

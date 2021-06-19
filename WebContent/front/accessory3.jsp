@@ -10,7 +10,7 @@
 <body>
 <!-- 상단 콘텐츠 -->
 
-	<%@ include file="header.jsp" %>
+	<%@ include file="header.jsp" %> 
 		
 	<div class="middle-contents">
 		<div class="location_wrap">

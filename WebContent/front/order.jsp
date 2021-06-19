@@ -13,7 +13,7 @@
 		width: 1000px;
 		margin: 0 auto;
 	}
-	.orderBox{
+	.orderBox{ 
 		padding: 10px 20px 15px 20px;
 		border: 1px solid lightgray;
 		margin-bottom: 30px;

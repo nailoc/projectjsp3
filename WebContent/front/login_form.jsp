@@ -5,9 +5,9 @@
 <meta charset="UTF-8">
 <title>jspweb13</title>
 <link rel="stylesheet" href="../css/style_login_form.css"></link>
-<style></style>
+<style></style> 
 </head>
-<body>
+<body> 
 	<%@ include file="header.jsp" %>
 		
 		<div class="content_box">

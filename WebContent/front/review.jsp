@@ -12,7 +12,7 @@
 	
 	<%@ include file="header.jsp" %>
 		
-	<div class="middle-contents">
+	<div class="middle-contents"> 
 		
 		<div class="board">
 			<div class="board_title">

@@ -16,7 +16,7 @@
 						</ul>
 					</div>
 				</div>
-			</div>
+			</div> 
 		</div>
 		<div class="bottom2">
 			<div class="tabwrap">

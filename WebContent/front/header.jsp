@@ -17,7 +17,7 @@
 				</li>
 				<li><a href="mypage.jsp">마이페이지</a>
 					<span class="txt_bar"></span>
-				</li>
+				</li> 
 				<%}%>
 				<li>
 					<div class="mypage_contents">

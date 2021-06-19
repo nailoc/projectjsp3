@@ -14,7 +14,7 @@
 	<div class="middle-contents">
 		
 		<div class="board">
-			<div class="board_title">
+			<div class="board_title"> 
 				<h2>이벤트 & 갤러리</h2>
 			</div>
 			<div class="board_list">

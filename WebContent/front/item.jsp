@@ -3,7 +3,7 @@
 <%@ page import="com.hk.jsp.vo.*" %>
 <%@ page import="java.util.*" %>
 <!DOCTYPE html>
-<html>
+<html> 
 <head>
 <meta charset="UTF-8">
 <title>상품페이지</title>

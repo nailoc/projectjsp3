@@ -11,7 +11,7 @@
 <!-- 상단 콘텐츠 -->
 
 	<%@ include file="header.jsp" %>
-		
+		 
 	<div class="middle-contents">
 		
 		<div class="board">

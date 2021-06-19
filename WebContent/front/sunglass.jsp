@@ -12,7 +12,7 @@
 	ul.item_list {
 		list-style: none;
 	}
-	ul.item_list li {
+	ul.item_list li { 
 		float: left;
 		margin-top: 10px;
 		margin-bottom: 30px;

@@ -12,7 +12,7 @@ if(session.getAttribute("userid") == null) {
 }
 else {
 %>
-<h3>마이페이지</h3>
+<h3>마이페이지</h3> 
 
 <button onclick="location.href='userinfo.jsp'">회원정보</button>
 <button onclick="location.href='delete.jsp'">회원탈퇴</button>

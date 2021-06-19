@@ -13,7 +13,7 @@
 	<%@ include file="header.jsp" %>
 	
 	<div class="middle-contents">
-		<div class="explain">
+		<div class="explain"> 
 			<p>안녕하세요.&nbsp;</p>
 			<p>펜디, 디올, 막스마라, 지미추, 지방시, 까레라, 토미힐피거, 휴고보스, 폴라로이드등의 선글라스 및 안경테를 생산/유통하고 있는 "<strong>사필로 그룹</strong>"의 한국 지사인 "<strong>사필로 코리아</strong>"<strong>공식 파트너</strong></p>
 			<p><strong><span style="color: rgb(255, 0, 0);">2FACE(투페이스)</span></strong>입니다.</p>

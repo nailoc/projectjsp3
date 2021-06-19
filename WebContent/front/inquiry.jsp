@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8"> 
 <title>팀프로젝트</title>
 <link rel="stylesheet" href="../css/style_inquiry.css"></link>
 <style></style>

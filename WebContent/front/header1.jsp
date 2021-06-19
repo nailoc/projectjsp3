@@ -4,7 +4,7 @@
 			<ul class="top_member_box">
 			<%
 			if(session.getAttribute("userid") == null) {
-			%>
+			%> 
 				<li><a href="">로그인</a>
 					<span class="txt_bar"></span>
 				</li>

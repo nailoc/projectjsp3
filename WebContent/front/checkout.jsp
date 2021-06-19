@@ -14,7 +14,7 @@
 	}
 </style>
 </head>
-<body>
+<body> 
 	<%
 		String id = "user1";
 		CartDao cartdao = CartDao.getInstance();
