@@ -24,6 +24,7 @@ if(session.getAttribute("userid")==null) { // 세션이 없다면
 이메일:<%= mev.getEmail() %><p><button onclick="location.href='modify_email.jsp'" >이메일 변경</button><p>
 비밀번호:<button onclick="location.href='modify_ps.jsp'" >비밀번호 변경</button><p>
 주소:<%= mev.getAddress()+"   "+mev.getAddress2() %><p>
+포인트:<%= mev.getPoint() %>
 </body>
 <script></script>
 </html>
