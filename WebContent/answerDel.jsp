@@ -9,10 +9,13 @@ pageEncoding="UTF-8"%>
 <head>
 <meta charset="UTF-8">
 <title>jspweb13</title>
-<link rel="stylesheet" href="css/style.css"></link>
+<link rel="stylesheet" href="css/style_guide.css"></link>
 </head>
 <style></style>
 <body>
+
+	<%@ include file="header.jsp" %>
+	
 	<%
 	try {
 	String id = (String)session.getAttribute("userid");	
@@ -39,6 +42,8 @@ pageEncoding="UTF-8"%>
 	} 
 	
 	%>
+
+	<%@ include file="footer.jsp" %>
 
 </body>
 <script>

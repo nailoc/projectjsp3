@@ -9,8 +9,13 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
+<link rel="stylesheet" href="css/style_guide.css"></link>
+
 </head>
 <body>
+
+	<%@ include file="header.jsp" %>
+	
 <%
 	String revno = request.getParameter("revno");
 	ProDao prodao = ProDao.getInstance();
@@ -25,6 +30,7 @@
 		<button type="button" onclick="history.back()">뒤로가기</button>
 	</form>
 	
+	<%@ include file="footer.jsp" %>
 	
 </body>
 <script>

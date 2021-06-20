@@ -9,9 +9,7 @@ public class BoardDao {
 	static String driveName = "com.mysql.jdbc.Driver";
 	static String url = "jdbc:mysql://kclh9b.freehongs.net:3306/kclh9b";
 	static String user = "kclh9b";
-	static String password = "Nev%U_aPfl*n";
-	
-	
+	static String password = "Nev%U_aPfl*n";	
 	
 	private static Connection conn = null;
 	private static Statement stmt = null;
@@ -85,6 +83,9 @@ public class BoardDao {
 			rst.setContents(rs.getString("contents"));		
 			rst.setAttach1(rs.getString("attach1"));
 			rst.setPasswd(rs.getString("passwd"));
+			if(rs.getString("attach1")==null) {
+				rst.setAttach1("첨부파일이 없습니다");
+			}
 		}
 		closeDB();
 		return rst;

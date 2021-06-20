@@ -9,9 +9,12 @@ pageEncoding="UTF-8"%>
 <head>
 <meta charset="UTF-8">
 <title>jspweb13</title>
-<link rel="stylesheet" href="css/style.css"></link>
+<link rel="stylesheet" href="css/style_guide.css"></link>
 </head>
 <style></style>
+
+<%@ include file="header.jsp" %>
+
 <%
 		String sortname = request.getParameter("sort");
 		String keywordval = request.getParameter("keyword");
@@ -98,6 +101,8 @@ pageEncoding="UTF-8"%>
 				<button type="button" onclick="search()">검색</button>
 		</form>
 	</div>
+	
+	<%@ include file="footer.jsp" %>	
 	
 </body>
 <script src="js/jquery-3.6.0.min.js"></script>
