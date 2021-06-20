@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <title>팀프로젝트</title>
 <link rel="stylesheet" href="css/style_guide.css"></link>
-<link rel="stylesheet" href="style_event.css"></link>
+<link rel="stylesheet" href="css/style_review.css"></link>
 <style></style>
 </head>
 <body>
@@ -13,8 +13,7 @@
 	
 	<%@ include file="header.jsp" %>
 		
-	<div class="middle-contents"> 
-		 
+	<div class="middle-contents"> 		 
 		<div class="board">
 			<div class="board_title">
 				<h2>상품후기</h2>
@@ -46,7 +45,7 @@
 								<div class="gallery_list">
 									<div class="image">
 										<a href="">
-											<img src="images/TOMMY HILFIGER_102702R805718.jpg" alt="이미지">
+											<img src="upload/sample.jpg" alt="이미지" class="imgsrc">
 										</a>
 									</div>
 									<div class="gallery_info">
@@ -74,7 +73,7 @@
 								<div class="gallery_list">
 									<div class="image">
 										<a href="">
-											<img src="images/HUGOBOSS_200971WCN63IR.jpg" alt="이미지">
+											<img src="upload/sample.jpg" alt="이미지" class="imgsrc">
 										</a>
 									</div>
 									<div class="gallery_info">
@@ -103,7 +102,7 @@
 								<div class="gallery_list">
 									<div class="image">
 										<a href="">
-											<img src="images/GIVENCHY_200144YB761T4.jpg" alt="이미지">
+											<img src="upload/sample.jpg" alt="이미지" class="imgsrc">
 										</a>
 									</div>
 									<div class="gallery_info">

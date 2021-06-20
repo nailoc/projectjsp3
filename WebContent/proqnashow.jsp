@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-pageEncoding="UTF-8"%>
-
+pageEncoding="UTF-8"%> 
 <%@ page import="com.hk.jsp.dao.*" %>
 <%@ page import="com.hk.jsp.vo.*" %>
 <%@ page import="com.hk.jsp.util.*" %>
@@ -11,14 +10,16 @@ pageEncoding="UTF-8"%>
 <meta charset="UTF-8">
 <title>jspweb13</title>
 <link rel="stylesheet" href="css/style_guide.css"></link>
-
+<link rel="stylesheet" href="css/style_noticeshow.css"></link>
 </head>
 <style></style>
 <body>
 	
 	<%@ include file="header.jsp" %>
 
-<h2>상품문의 상세내용</h2>
+	<div class="middle_contents">
+	
+	<h2>상품문의</h2>
 	
 	<%
 	String qnano = request.getParameter("qnano");
@@ -29,66 +30,77 @@ pageEncoding="UTF-8"%>
 	ProQnaVo rowshow = proqnadao.getProQnaByNoPno(qnano,pno);
 	%>
 	
+	<div class="board_zone">
 	
-		<h1><%= rowshow.getTitle() %></h1>
-	
-	
+			<div class="board_zone_title">
+				<h3><%= rowshow.getTitle() %></h3>
+			</div>
+		
+				<div class="board_view_info">
+									
+					
+					<span class="view_info_no">	
+						<strong><%= rowshow.getQnano() %></strong>				
+					</span>
+					
+					<span class="view_info_idip">
+						<strong><%= rowshow.getPno() %></strong>				
+					</span>
 				
-			<div>
-				<div>상품문의 번호</div>
-				<div><%= rowshow.getQnano() %></div>				
-			</div>
+					
+					<span class="view_info_idip">
+						<strong><%=rowshow.getId() %></strong>
+					</span>
+					
+					
+					<span class="view_info_day">
+						<em><%=rowshow.getRegdate() %></em>
+					</span>
+					
+					<span class="view_info_hits">
+						<strong>조회수</strong>
+						<%=rowshow.getViews() %>
+					</span>
+					
+				</div>			
+				
+				<div class="board_view_content">								
+					<div>
+						<div>내용</div>	
+						<div><%= rowshow.getContents() %></div>
+					</div>
+					
+					<div>
+						<div>코멘트 </div>
+						<div><%= rowshow.getComents() %></div>
+					</div>
+				</div>
+				
 			
-			<div>
-				<div>상품번호</div>
-				<div><%= rowshow.getPno() %></div>				
+			<!-- 관리자 세션시에만 보여지는 버튼 -->
+			<%
+			try {
+			String id = (String)session.getAttribute("userid");	
+			if(id.equals("admin")) {
+			%>		
+			 <button type="button" onclick="answer()">코멘트 달기</button>		
+			 <button type="button" onclick="delA()">코멘트 삭제하기</button>	
+			 <button type="button" onclick="del()">관리자 권한으로 삭제</button>
+			<%	} 
+			} catch(Exception e) {
+			
+			}%> 
+			
+			<div class="btn_right_box">
+				 <button type="button" onclick="deleteB()">삭제하기</button>
+					 
+				<div class="btn">
+					<button type="button" onclick="history.back()">이전으로</button>
+				</div>
 			</div>
 		
-			<div>
-				<div>작성자</div>
-				<div><%=rowshow.getId() %></div>
-			</div>
-			
-			<div>
-				<div>작성일</div>
-				<div><%=rowshow.getRegdate() %></div>
-			</div>
-			
-			<div>
-				<div>조회수</div>
-				<div><%=rowshow.getViews() %></div>
-			</div>			
-							
-			<div>
-				<div>내용</div>	
-				<div><%= rowshow.getContents() %></div>
-			</div>
-			
-			<div>
-				<div>코멘트 </div>
-				<div><%= rowshow.getComents() %></div>
-			</div>
-			
-		
-		<!-- 관리자 세션시에만 보여지는 버튼 -->
-		<%
-		try {
-		String id = (String)session.getAttribute("userid");	
-		if(id.equals("admin")) {
-		%>		
-		 <button type="button" onclick="answer()">코멘트 달기</button>		
-		 <button type="button" onclick="delA()">코멘트 삭제하기</button>	
-		 <button type="button" onclick="del()">관리자 권한으로 삭제</button>
-		<%	} 
-		} catch(Exception e) {
-		
-		}%> 
-		
-		 <button type="button" onclick="deleteB()">글삭제하기</button>
-			 
-		<div class="left">
-			<button type="button" onclick="history.back()">이전글</button>
 		</div>
+	</div>
 		
 		<%@ include file="footer.jsp" %>
 	

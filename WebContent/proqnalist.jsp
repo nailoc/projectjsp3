@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-pageEncoding="UTF-8"%>
-
+pageEncoding="UTF-8"%> 
 <%@ page import="com.hk.jsp.dao.*" %>
 <%@ page import="com.hk.jsp.vo.*" %>
 <%@ page import="java.util.*" %>
@@ -11,6 +10,7 @@ pageEncoding="UTF-8"%>
 <meta charset="UTF-8">
 <title>jspweb13</title>
 <link rel="stylesheet" href="css/style_guide.css"></link>
+<link rel="stylesheet" href="css/style_event.css"></link>
 
 </head>
 <style></style>
@@ -115,7 +115,7 @@ pageEncoding="UTF-8"%>
 					<option value="pno">상품번호</option>
 				</select>
 				<input type="text" id="keyword" name="keyword" value="">
-				<button type="button" onclick="search()">검색</button>
+				<button type="button" class="btn" onclick="search()">검색</button>
 			</div>
 		</form>
 	
