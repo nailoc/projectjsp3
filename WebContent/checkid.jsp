@@ -4,12 +4,25 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<style></style>
+<style>
+.ck {
+background-color:#00498c;
+height:50px;
+color:white;
+margin:0 auto;
+text-align:center;
+}
+
+body {
+text-align:center;
+}
+</style>
 </head>
 <body>
+	<div class="ck">
+	<h3>아이디 중복 체크</h3>
+	</div>
 	<% 
-
-		out.println("<h3>중복체크화면</h3>");
 		String id = request.getParameter("id");
 		out.println("<h3>"+id+"</h3>");
 		
@@ -21,7 +34,7 @@
 			out.println(id+"는 사용 불가한 아이디입니다");
 		}
 	%>
-	<p><input type="button" value="종료" onclick="closeChkIdWin(<%= result%>);">
+	<p><input type="button" style="	border: 1px solid #555; color:gray; background-color:white; height:31px;" value="종료" onclick="closeChkIdWin(<%= result%>);">
 </body>
 <script>
 
