@@ -11,7 +11,7 @@
 
 <body>
 
-<%@ include file="front/header.jsp" %>
+<%@ include file="header.jsp" %>
 
 <div class="content_box">
 			<div class="member_wrap">
@@ -27,7 +27,7 @@
 								<input type="text" name="id" id="id" placeholder="아이디">
 								<input type="text" name="email" id="email" placeholder="이메일">
 							</div>
-							<button type="button" onclick="scpw()">비밀번호</button>
+							<button type="button" onclick="scpw()">비밀번호 찾기</button>
 						</div>
 						<div class="id_chk">
 							<span class="form_element">
@@ -49,7 +49,7 @@
 			</div>
 		</div>
 
-<%@ include file="front/footer.jsp" %>
+<%@ include file="footer.jsp" %>
 </body>
 
 <script>

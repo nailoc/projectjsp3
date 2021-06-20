@@ -22,7 +22,7 @@
 
 
 
-<%@ include file="front/header.jsp" %>
+<%@ include file="header.jsp" %>
 
 <div class="content_box">
 		
@@ -79,7 +79,7 @@
 		</div>
 		</div>
 		</div>
-<%@ include file="front/footer.jsp" %>
+<%@ include file="footer.jsp" %>
 </body>
 
 

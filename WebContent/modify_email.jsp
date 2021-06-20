@@ -19,7 +19,7 @@
 %>
 </head>
 <body>
-	<%@ include file="front/header.jsp"%>
+	<%@ include file="header.jsp"%>
 	<div class="member_wrap">
 		<h3>이메일 변경</h3>
 		<div class="member_tit">
@@ -51,7 +51,7 @@
 				</div>
 			</div>
 		</div>
-		<%@ include file="front/footer.jsp"%>
+		<%@ include file="footer.jsp"%>
 </body>
 
 <script>
