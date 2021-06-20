@@ -12,7 +12,10 @@
 </head>
 <body>
 	<%
-		String id = "user1";
+		String id = (String) session.getAttribute("userid");
+		if(id==null) {
+			out.println("<script>alert('로그인이 필요합니다.'); location.href='login.jsp';</script>");
+		}
 		String deliway = request.getParameter("deliway");
 		String etc = request.getParameter("etc");
 		if(etc.equals("")) {
