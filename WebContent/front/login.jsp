@@ -10,12 +10,12 @@
 		border: 1px solid #cccccc;
 		margin-bottom: 5px;
 	}
- 
+
 </style>
 </head>
 <body>
 
-<% 
+<%
 if(session.getAttribute("userid") == null) {
 	
 %>

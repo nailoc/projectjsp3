@@ -15,7 +15,7 @@ dl, ul, ol, li {
 
 div.top-contents { 
 	width: 100%;
-	height: 400px; 
+	height: 300px; 
 	margin: 0 auto;
 }
 
@@ -166,7 +166,6 @@ header nav ul.menu ul.sub a:hover {
 	div.contentBox {
 		width: 1250px;
 		margin: 0 auto;
-		margin-top: -50px;
 	}
 	div.imgBox {
 		float: left;

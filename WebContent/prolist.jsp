@@ -36,6 +36,8 @@ pageEncoding="UTF-8"%>
 
 <body>
 
+	<%@ include file="header.jsp" %>
+	
 	<h2>상품후기</h2>
 
 	<!-- 정렬 -->
@@ -98,6 +100,8 @@ pageEncoding="UTF-8"%>
 				<button type="button" onclick="search()">검색</button>
 		</form>
 	</div>
+	
+	<%@ include file="footer.jsp" %>
 	
 </body>
 <script src="js/jquery-3.6.0.min.js"></script>

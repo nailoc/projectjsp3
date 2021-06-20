@@ -3,7 +3,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>마이페이지</title>
+<link rel="stylesheet" href="../css/style_mypage.css"></link>
 </head>
 <body>
 <%
@@ -12,16 +13,24 @@ if(session.getAttribute("userid") == null) {
 }
 else {
 %>
-<h3>마이페이지</h3> 
 
-<button onclick="location.href='userinfo.jsp'">회원정보</button>
-<button onclick="location.href='delete.jsp'">회원탈퇴</button> 
-<button onclick="location.href='logout.jsp'">로그아웃</button>
-<%
-String id = (String)session.getAttribute("userid");
-if(id.equals("admin")) {
-%>
-<button onclick="location.href='admin.jsp'">회원관리</button>
-<%	} }%>
+<%@ include file="header.jsp" %>
+
+<div class="middle_contents">
+	<h3>마이페이지</h3> 
+
+	<button onclick="location.href='userinfo.jsp'">회원정보</button>
+	<button onclick="location.href='delete.jsp'">회원탈퇴</button> 
+	<button onclick="location.href='logout.jsp'">로그아웃</button>
+	<%
+	String id = (String)session.getAttribute("userid");
+	if(id.equals("admin")) {
+	%>
+	<button onclick="location.href='admin.jsp'">회원관리</button>
+	<%	} }%>
+
+</div>
+
+<%@ include file="footer.jsp" %>
 </body>
 </html>

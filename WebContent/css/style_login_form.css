@@ -163,7 +163,7 @@ header nav ul.menu ul.sub a:hover {
 }
 
 .content_box {
-	margin-top: -50px;
+	margin-top: -100px;
 }
 
 .member_wrap {
@@ -219,17 +219,42 @@ header nav ul.menu ul.sub a:hover {
 	padding: 0 0 26px 0;
 }
 
-.form_element input {
+.id_chk label {
+	font-size: 12px;
 }
 
-.form_element label {
-	position: relative;
-	top: 0;
-	left: 0;
-	display: inline-block;
-	min-width: 20px;
-    min-height: 20px;
-    padding: 0 0 0 27px;
+.btn_login_box {
+	margin: 20px 0 0 0;
+	padding: 20px 0 0 0;
+	border-top: 1px solid #dcdcdc;
+}
+
+.btn_login_box li {
+	float: left;
+	margin-left: 15px;
+}
+
+.btn_member_join {
+	width: 100px;
+	height: 45px;
+	margin: 0;
+	color: #ffffff;
+	font-size: 14px;
+	border: 1px solid #666666;
+	background: #666666;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.btn_member_white {
+	width: 100px;
+	height: 45px;
+	font-weight: bold;
+	color: #3e3d3c;
+	font-size: 13px;
+	border: 1px solid #cccccc;
+	background: #ffffff;
+	cursor: pointer;
 }
 
 div.bottom-contents {

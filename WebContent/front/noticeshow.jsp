@@ -10,7 +10,7 @@ pageEncoding="UTF-8"%>
 <head>
 <meta charset="UTF-8">
 <title>jspweb13</title>
-<link rel="stylesheet" href="css/style_noticeshow.css"></link>
+<link rel="stylesheet" href="../css/style_noticeshow.css"></link>
 </head>
 <style></style>
 <body>

@@ -35,7 +35,7 @@
 		<div class="top-text">
 			<header>
 				<div id="logo">
-					<img src="images/logo.png">
+					<a href="index.jsp"><img src="images/logo.png"></a>
 				</div>
 				
 				<form method="get" action="sunglass.jsp">
