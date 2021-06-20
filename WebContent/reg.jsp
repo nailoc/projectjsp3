@@ -11,26 +11,75 @@
 %>
 
 <head>
+<link rel="stylesheet" href="css/style_introduce.css"></link>
+<link rel="stylesheet" href="css/style_reg.css"></link>
 <meta charset="UTF-8">
 <style>
 
 </style>
 </head>
 <body>
+
+
+
+<%@ include file="front/header.jsp" %>
+
+<div class="content_box">
+		
+			<div class="member_wrap">
+							<div class="member_tit">
+					<h3>회원가입</h3>
+				</div> 
+		<div class="reg_info">
+
 		<form id="reg" action="reg_control.jsp" method="GET">
-		<input type="text" id="regid" name="regid" placeholder="회원아이디">
-		<input type="button" id="checkid" value="중복확인" onclick="chkid()"><p>
-		<input type="password" id="regpw" name="regpw" placeholder="회원비밀번호"><p>
-		<input type="text" name="name" placeholder="이름"><p>
-		<input type="text" name="regi" placeholder="주민번호"><p>
-		<input type="email" name="email" placeholder="이메일"><p>
-		<input type="text" id="sample6_postcode" name="zipcode" placeholder="우편번호" value="<%=mem.getZipcode()%>"><p>
-		<input type="button" id="zipsearch" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
-		<input type="text" id="sample6_address" name="address" placeholder="주소" value="<%=mem.getAddress() %>"><p>
-		<input type="text" id="sample6_detailAddress" name="address2" placeholder="상세주소" value="<%=mem.getAddress2() %>"><p>	
-		<input type="text" name="phn" placeholder="전화번호"><p>
-		<button type="button" onclick="register();">회원가입</button>
+		<table>
+		<tr>
+		<th><span class="important">아이디</span></th>
+		<td>
+		<input class="id_box" type="text" id="regid" name="regid" placeholder="회원아이디">
+		<button type="button" id="checkid" value="중복확인" onclick="chkid()" style="	border: 1px solid #555; color:gray; background-color:white; height:31px;">중복확인</button></td></tr>
+		<tr>
+		<th><span class="important">비밀번호</span></th>
+		<td><input type="password" id="regpw" name="regpw" placeholder="회원비밀번호"></td>
+		<tr>
+		<th><span class="important">이름</span></th>
+		<td><input type="text" name="name" placeholder="이름" style="width:150px; margin-botton:5px;"></td></tr>
+		<tr>
+		<th><span class="important">주민번호</span></th>
+		<td><input type="text" name="regi" placeholder="주민번호" style="width:250px; margin-botton:5px;"></td></tr>
+		<tr>
+		
+		<th><span class="important">이메일</span></th>
+		<td><input type="text" name="email" placeholder="이메일"></td></tr>
+		<tr>
+		<th><span class="important">주소</span></th>
+		<td class="member_address"><div class="address_content">
+		<input style="width:150px; margin-botton:5px;" type="text" id="sample6_postcode" name="zipcode" placeholder="우편번호" value="<%=mem.getZipcode()%>">
+		<button type="button" id="zipsearch" onclick="sample6_execDaumPostcode()" value="우편번호 찾기" style="	border: 1px solid #555; color:gray; background-color:white; height:31px;">우편번호 찾기</button>
+		</div>
+		<div class="address_cover">
+		<input type="text" id="sample6_address" name="address" placeholder="주소" value="<%=mem.getAddress() %>"></div>
+		<div class="address_cover">
+		<input type="text" id="sample6_detailAddress" name="address2" placeholder="상세주소" value="<%=mem.getAddress2() %>"></div></td></tr>
+		
+		<tr>
+		<th><span class="important">전화번호</span></th>
+		<td><input type="text" name="phn" placeholder="전화번호"></td></tr>
+		</table>
 		</form>
+		<div class="btn_box">
+		<ul>
+			<li><button type="button" onclick="location.href='login.jsp'" class="btn_member_white">취소</button></li>
+			<li>
+			<button type="button" onclick="register();" class="btn_member_join">회원가입</button>
+			</li>
+		</ul>
+		</div>
+		</div>
+		</div>
+		</div>
+<%@ include file="front/footer.jsp" %>
 </body>
 
 

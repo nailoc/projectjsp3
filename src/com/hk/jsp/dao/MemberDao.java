@@ -133,7 +133,7 @@ public class MemberDao {
 	public MemberVo memberInfo(String id) throws Exception {
 		MemberVo rst = new MemberVo();
 		connectDB();
-		String sql = String.format("select id, name, passwd, email, address, address2, point from member where id='%s'", id);
+		String sql = String.format("select id, name, passwd, email, address, address2, point, phn from member where id='%s'", id);
 		rs = stmt.executeQuery(sql);
 		while(rs.next() ) {
 			rst.setId(rs.getString("id"));
@@ -142,6 +142,7 @@ public class MemberDao {
 			rst.setEmail(rs.getString("email"));
 			rst.setAddress(rs.getString("address"));
 	 		rst.setAddress2(rs.getString("address2"));
+	 		rst.setPhn(rs.getString("phn"));
 	 		rst.setPoint(rs.getInt("point"));
 		}
 		closeDB();

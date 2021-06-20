@@ -1,18 +1,57 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" %>
+<%@ page import="com.hk.jsp.dao.*"%>
+<%@ page import="com.hk.jsp.vo.*"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="css/style_introduce.css"></link>
+<link rel="stylesheet" href="css/style_id.css"></link>
 </head>
+
 <body>
 
-<form>
-<input type="text" name="id" id="id" placeholder="아이디를입력해 주세요.">
-<input type="text" name="email" id="email" placeholder="이메일을 입력해 주세요.">
+<%@ include file="front/header.jsp" %>
 
-<button onclick="scpw()">비밀번호 찾기</button></form>
-<button onclick="location.href='login.jsp'">돌아가기</button>
+<div class="content_box">
+			<div class="member_wrap">
+				<div class="member_tit">
+					<h2>비밀번호 찾기</h2>
+				</div> 
+				<div class="member_cont">
+					<div class="member_login_box">
+						<h3>회원 비밀번호 찾기</h3>
+						
+						<div class="sc_input">
+							<div>
+								<input type="text" name="id" id="id" placeholder="아이디">
+								<input type="text" name="email" id="email" placeholder="이메일">
+							</div>
+							<button type="button" onclick="scpw()">비밀번호</button>
+						</div>
+						<div class="id_chk">
+							<span class="form_element">
+							</span>
+						</div>
+					</div>
+					
+					
+					<div class="btn_login_box">
+						<ul>
+							<li>
+								<button onclick="location.href='login.jsp'" class="btn_member_white">로그인하기</button>
+							</li>
+							<li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+<%@ include file="front/footer.jsp" %>
 </body>
+
 <script>
 function scpw() {
 	var id = document.getElementById("id").value;

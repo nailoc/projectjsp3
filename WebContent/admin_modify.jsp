@@ -11,7 +11,6 @@ if(session.getAttribute("userid") == null) {
 		response.sendRedirect("login.jsp");
 	} else { %>
 <body>
-
 <form action="admin_modifypro.jsp" method="GET">
 		현재 아이디 : <%=id %>
 		<p>

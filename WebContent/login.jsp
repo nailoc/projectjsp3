@@ -4,41 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="css/style_introduce.css"></link>
+<link rel="stylesheet" href="css/style_login_form.css"></link>
 <style>
-.login {
-	width:800px;
-	text-align:center;
-	margin:0px auto;
-	margin-bottom:400px;
-
-}
-
-.login_idpw button {
-padding:20px;
-}
-
-.login_idpw input {
-display: block;
-    width: 292px;
-    height: 36px;
-    margin: 15px 0 10px 0;
-    padding: 0 0 0 8px;
-    border: 1px solid #d0d0d0;
-    color: #979d9d;
-}
-
-.logbt {
-float: right;
-    width: 158px;
-    height: 91px;
-    margin: 15px 0 0 0;
-    border: 1px solid #e40000;
-    background: #e40000;
-    color: #ffffff;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
-}
 </style>
 </head>
 <body>
@@ -49,20 +16,52 @@ float: right;
 if(session.getAttribute("userid") == null) {
 	
 %>
-		<div class="login">
-		<p>회원가입</p><hr>
-		<div class="login_idpw">
-		<form id="login" action="login_control.jsp" method="GET">
-		<input type="text" name="userid" id="userid" placeholder="아이디"><p>	
-		<input type="password" name="userpw" id="userpw" placeholder="비밀번호"><p>
-		<button class="logbt" type="button" onclick="login();">로그인</button>
-		</form>
+
+			
+		<div class="content_box">
+			<div class="member_wrap">
+				<div class="member_tit">
+					<h2>로그인</h2>
+				</div> 
+				<div class="member_cont">
+					<div class="member_login_box">
+						<h3>회원 로그인</h3>
+						
+						<div class="login_input">
+							<div>
+								<form id="login" action="login_control.jsp" method="GET">
+								<input type="text" name="userid" id="userid" placeholder="아이디">
+								<input type="text" name="userpw" id="userpw" placeholder="비밀번호">
+								</form>
+							</div>
+								<button class="logbt" type="button" onclick="login();">로그인</button>
+						</div>
+						<div class="id_chk">
+							<span class="form_element">
+								<input type="checkbox">
+								<label>아이디 저장</label>
+							</span>
+						</div>
+					</div>
+					
+					
+					<div class="btn_login_box">
+						<ul>
+							<li>
+								<button class="btn_member_join" onclick="location.href='reg.jsp' ">회원가입</button>
+							</li>
+							<li>
+								<button class="btn_member_white" onclick="location.href='scid.jsp' ">아이디 찾기</button>
+							</li>
+							<li>
+								<button onclick="location.href='scpw.jsp' " class="btn_member_white">비밀번호 찾기</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</div>
-		<button onclick="location.href='reg.jsp' ">회원가입</button>
-		<button onclick="location.href='scid.jsp'">아이디 찾기</button>
-		<button onclick="location.href='scpw.jsp'">비밀번호 찾기</button>
-		<hr>
-		</div>
+		
 		
 		
 <%
