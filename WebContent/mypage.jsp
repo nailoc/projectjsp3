@@ -21,6 +21,8 @@ else {
 <button onclick="location.href='userinfo.jsp'">회원정보</button>
 <button onclick="location.href='delete.jsp'">회원탈퇴</button>
 <button onclick="location.href='logout.jsp'">로그아웃</button>
+<button onclick="location.href='cart.jsp'">장바구니</button>
+
 
 <%
 String id = (String)session.getAttribute("userid");
