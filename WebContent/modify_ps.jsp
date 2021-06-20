@@ -16,7 +16,7 @@ if(session.getAttribute("userid") == null) {
 
 
 <body>
-	<%@ include file="front/header.jsp"%>
+	<%@ include file="header.jsp"%>
 	<div class="member_wrap">
 		<h3>비밀번호 변경</h3>
 		<div class="member_tit">
@@ -47,12 +47,12 @@ if(session.getAttribute("userid") == null) {
 				</div>
 			</div>
 		</div>
-		<%@ include file="front/footer.jsp"%>
+		<%@ include file="footer.jsp"%>
 </body>
 <script>
 
 
-
+ 
 
 function change() {
 	pw = document.getElementById("pw").value;

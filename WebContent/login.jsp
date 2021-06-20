@@ -9,8 +9,8 @@
 </style>
 </head>
 <body>
-
-<%@ include file="front/header.jsp" %>
+ 
+<%@ include file="header.jsp" %>
 
 <%
 if(session.getAttribute("userid") == null) {
@@ -75,7 +75,7 @@ if(session.getAttribute("userid") == null) {
 
 
 
-<%@ include file="front/footer.jsp" %>
+<%@ include file="footer.jsp" %>
 
 </body>
 <script>

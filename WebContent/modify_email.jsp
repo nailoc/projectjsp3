@@ -53,7 +53,7 @@
 		</div>
 		<%@ include file="front/footer.jsp"%>
 </body>
-
+ 
 <script>
 	function changeE() {
 		email = document.getElementById("email").value;
