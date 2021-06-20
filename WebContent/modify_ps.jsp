@@ -52,7 +52,7 @@ if(session.getAttribute("userid") == null) {
 <script>
 
 
-
+ 
 
 function change() {
 	pw = document.getElementById("pw").value;

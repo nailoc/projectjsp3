@@ -72,7 +72,7 @@ if(session.getAttribute("userid")==null) { // 세션이 없다면
 		</div>
 		</div>
 		</div>
-		
+		 
 <%-- 		
 <h3>맴버 정보</h3>
 아이디:<%=id %><p>

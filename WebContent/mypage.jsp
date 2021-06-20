@@ -17,6 +17,7 @@ if(session.getAttribute("userid") == null) {
 }
 else {
 %>
+ 
 <div class="middle_contents">
 <h3>마이페이지</h3>
 

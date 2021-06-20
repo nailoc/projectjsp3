@@ -16,7 +16,7 @@
 if(session.getAttribute("userid") == null) {
 	
 %>
-
+ 
 			
 		<div class="content_box">
 			<div class="member_wrap">
