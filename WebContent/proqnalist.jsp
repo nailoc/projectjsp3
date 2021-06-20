@@ -105,7 +105,7 @@ pageEncoding="UTF-8"%>
 		
 	</table>
 	
-	<button type="button" onclick="location.href='proqna.jsp'">상품문의작성</button>	
+	<button type="button" class="write" onclick="location.href='proqna.jsp'">상품문의작성</button>	
 	
 		<form id="form2" method="GET" action="proqnalist.jsp">
 			<div class="board_search">

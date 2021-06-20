@@ -8,6 +8,10 @@ strong {
 	font-weight: bold;
 }
 
+a {
+	color: #555;
+}
+
 dl, ul, ol, li {
     list-style: none;
 }
@@ -168,6 +172,20 @@ div.middle-contents {
 	margin-bottom: 400px;
 }
 
+.write {
+	float: right;
+	height: 30px;
+    width: 90px;
+    color: #ffffff;
+    font-size: 12px;
+    border: 1px solid #979797;
+    background-color: #979797;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
 .search_question {
 	border: 3px solid #eeeeee;
 	padding: 10px 0 20px 30px;
@@ -287,6 +305,15 @@ table thead th {
 
 .td {
 	padding: 10px;
+}
+
+.admin_write {
+	width: 60px;
+	height: 30px;
+	font-weight: bold;
+	border: 1px solid #e40000;
+	background-color: #e40000;
+	color: #ffffff;
 }
 
 .imgsrc {

@@ -104,7 +104,7 @@ pageEncoding="UTF-8"%>
 	String id = (String)session.getAttribute("userid");	
 	if(id.equals("admin")) {
 	%>
-	<button type="button" onclick="location.href='noticewrite.jsp'">글작성</button>	
+	<button type="button" class="write" onclick="location.href='noticewrite.jsp'">글작성</button>	
 	<%	} 
 	} catch(Exception e) {
 		

@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <title>장바구니</title>
 <link rel="stylesheet" href="css/style_cart.css"></link>
-<link rel="stylesheet" href="css/style_accessory.css"></link>
+<link rel="stylesheet" href="css/headerfooter.css"></link>
 <style></style>
 </head>
 <body>
@@ -37,7 +37,7 @@
 			deliFee = 2500;
 		}
 	%>
-	<%@ include file="front/header.jsp"%>
+	<%@ include file="header.jsp"%>
 	
 	<div class="mainContainerBox">
 		<div class="cartTitle">
@@ -140,7 +140,7 @@
 		</div>
 	</div>
 	
-	<%@ include file="front/footer.jsp"%>
+	<%@ include file="footer.jsp"%>
 </body>
 <script>
 	function addItem(pno, add) {

@@ -10,7 +10,7 @@ pageEncoding="UTF-8"%>
 <meta charset="UTF-8">
 <title>메인페이지</title>
 <link rel="stylesheet" href="css/style_index.css"></link>
-<link rel="stylesheet" href="css/style_accessory.css"></link>
+<link rel="stylesheet" href="css/headerfooter.css"></link>
 </head>
 <style></style>
 <%
@@ -33,11 +33,11 @@ pageEncoding="UTF-8"%>
 		<div class="slideImgBox">
 			<div class="slideImgNav">
 				<ul>
-					<li><a href="">펜디 FENDI</a></li>
-					<li><a href="">디올 DIOR</a></li>
-					<li><a href="">지미추 JIMMY CHOO</a></li>
-					<li><a href="">지방시 GIVENCHY</a></li>
-					<li><a href="">막스마라 MAXMARA</a></li>
+					<li><a href="javascript:void(0)">펜디 FENDI</a></li>
+					<li><a href="javascript:void(0)">디올 DIOR</a></li>
+					<li><a href="javascript:void(0)">지미추 JIMMY CHOO</a></li>
+					<li><a href="javascript:void(0)">지방시 GIVENCHY</a></li>
+					<li><a href="javascript:void(0)">막스마라 MAXMARA</a></li>
 				</ul>
 			</div>
 			<div class="slideImg slideFendi" style="text-align: center;">
@@ -47,7 +47,7 @@ pageEncoding="UTF-8"%>
 					펜디(FENDI)는 전세계의 모든 연령층에서<br>
 					가장 오랜 기간, 가장 많은 사랑을 받고 있는<br>
 					대표적인 브랜드입니다.
-					<a href="">전체 상품 보기</a>
+					<a href="sunglass.jsp?bname=fendi">전체 상품 보기</a>
 					</h3>
 				</div>
 				<img src="images/index/slideFendi.jpg" style="height:750px;">

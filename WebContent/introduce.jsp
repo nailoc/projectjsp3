@@ -4,7 +4,7 @@
 <head> 
 <meta charset="UTF-8">
 <title>팀프로젝트</title>
-<link rel="stylesheet" href="../css/style_introduce.css"></link>
+<link rel="stylesheet" href="css/style_introduce.css"></link>
 <style></style>
 </head>
 <body>

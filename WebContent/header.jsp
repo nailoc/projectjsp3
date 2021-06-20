@@ -27,7 +27,7 @@
 				<li><a href="cart.jsp">장바구니</a>
 					<span class="txt_bar"></span>
 				</li>
-				<li><a href="notice.jsp">공지사항</a>
+				<li><a href="noticelist.jsp">공지사항</a>
 					<span class="txt_bar"></span>
 				</li>
 			</ul>
@@ -35,7 +35,7 @@
 		<div class="top-text">
 			<header>
 				<div id="logo">
-					<img src="images/logo.png">
+					<a href="index.jsp"><img src="images/logo.png"></a>
 				</div>
 				
 				<form method="get" action="sunglass.jsp">
@@ -76,18 +76,18 @@
 					</li>
 					<li><a href="accessory.jsp">악세서리</a>
 						<ul class="sub">
-							<li><a href="accessory.jsp">케이스&파우치</a></li>
-							<li><a href="accessory2.jsp">관리용품</a></li>
+							<li><a href="accessory2.jsp">케이스&파우치</a></li>
+							<li><a href="accessory3.jsp">관리용품</a></li>
 						</ul>
 					</li>
 					<li><a href="othergoods.jsp">기타잡화</a></li>
 					<li><a href="genuine.jsp">정품등록</a>
 						<ul class="sub">
 							<li><a href="genuine.jsp">정품등록</a></li>
-							<li><a href="notice.jsp">공지사항</a></li>
+							<li><a href="noticelist.jsp">공지사항</a></li>
 							<li><a href="event.jsp">이벤트 & 갤러리</a></li>
-							<li><a href="inquiry.jsp">상품문의</a></li>
-							<li><a href="review.jsp">상품후기</a></li>
+							<li><a href="proqnalist.jsp">상품문의</a></li>
+							<li><a href="prolist.jsp">상품후기</a></li>
 							<li><a href="guide.jsp">이용안내 FAQ</a></li>
 						</ul>
 					</li>

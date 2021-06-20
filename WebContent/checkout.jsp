@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <title>jspweb13</title>
 <link rel="stylesheet" href="css/style.css"></link>
-<link rel="stylesheet" href="css/style_accessory.css"></link>
+<link rel="stylesheet" href="css/headerfooter.css"></link>
 <link rel="stylesheet" href="css/style_checkout.css"></link>
 <style>
 	p#hidden {
@@ -38,7 +38,7 @@
 		MemberDao memdao = MemberDao.getInstance();
 		MemberVo memvo = memdao.memberInfo(id);
 	%>
-	<%@ include file="front/header.jsp" %>
+	<%@ include file="header.jsp" %>
 	
 	<div class="mainContainerBox">
 		<div class="orderTitle">
@@ -206,7 +206,7 @@
 		</form>
 	</div>
 	
-	<%@ include file="front/footer.jsp" %>
+	<%@ include file="footer.jsp" %>
 </body>
 <script>
 	function pay() {

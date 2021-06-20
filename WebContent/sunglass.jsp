@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>상품목록</title>
-<link rel="stylesheet" href="../css/style_sunglass.css"></link>
+<link rel="stylesheet" href="css/style_sunglass.css"></link>
 <style>
 	ul.item_list {
 		list-style: none;

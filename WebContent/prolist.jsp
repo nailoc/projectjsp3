@@ -102,7 +102,7 @@ pageEncoding="UTF-8"%>
 	</table>
 	
 	
-	<button type="button" onclick="location.href='proreviewwrite.jsp'">상품후기작성</button>	
+	<button type="button"  class="write" onclick="location.href='proreviewwrite.jsp'">상품후기작성</button>	
 	
 		<form id="form2" method="GET" action="prolist.jsp">
 			<div class="board_search">

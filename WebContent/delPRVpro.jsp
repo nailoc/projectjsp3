@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="EUC-KR"%>    
+    pageEncoding="UTF-8"%>    
 <%@ page import="com.hk.jsp.dao.*" %>
 <%@ page import="com.hk.jsp.vo.*" %>
 <%@ page import="com.hk.jsp.util.*" %>
@@ -24,10 +24,10 @@
 %>
 	
 	<form id="form1" method="GET" action="delPRV.jsp">
-		<p>ºñ¹Ğ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä</p>
+		<p>ë¹„ë°€ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”</p>
 		<input type="password" name="pwd" id="pwd">
-		<button type="button" onclick="deleteB()">È®ÀÎ</button>
-		<button type="button" onclick="history.back()">µÚ·Î°¡±â</button>
+		<button type="button" onclick="deleteB()">í™•ì¸</button>
+		<button type="button" onclick="history.back()">ë’¤ë¡œê°€ê¸°</button>
 	</form>
 	
 	<%@ include file="footer.jsp" %>
@@ -36,7 +36,7 @@
 <script>
 
 function deleteB() {
-	ok = confirm("»èÁ¦ ? " , "");
+	ok = confirm("ì‚­ì œ ? " , "");
 	var passwd = document.getElementById("pwd").value;
 	if(ok==true) {
 		location.href="delPRV.jsp?revno="+<%= rowshow.getRevno() %>+"&pwd="+passwd;
