@@ -26,6 +26,7 @@ pageEncoding="UTF-8"%>
 	// "C:\\Users\\zhekq\\git\\projectjsp3\\WebContent\\upload";
 
 	String uploadPath = "C:\\Users\\Administrator\\git\\projectjsp3\\WebContent\\upload";
+	
 	int maxSize = 1024*1024*10;	// 10메가
 	MultipartRequest multi = new MultipartRequest(request, uploadPath, maxSize,
 			"UTF-8", new DefaultFileRenamePolicy());

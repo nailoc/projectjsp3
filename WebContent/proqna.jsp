@@ -11,41 +11,89 @@ pageEncoding="UTF-8"%>
 <meta charset="UTF-8">
 <title>jspweb13</title>
 <link rel="stylesheet" href="css/style_guide.css"></link>
-
+<link rel="stylesheet" href="css/style_write.css"></link>
 </head>
 <style></style>
 <body>
 
 	<%@ include file="header.jsp" %>
 
-<h2>상품문의</h2>
 
+	<div class="middle-contents">		
+		<div class="board">
+			<div class="board_title"> 
+				<h2>상품문의</h2>
+			</div>
+			
+			
 	<form id="frm_write" method="GET" action="proqnapro.jsp">
+			
+			<div class="board_list">
+				<table class="board_table" style="width:100%">
+					<colgroup>
+						<col style="width:15%">
+						<col style="width:85%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>상품명</th>
+							<td>
+								<div class="goods_select">
+								<input type="text" id="proname" name="proname" value="">  
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>제목</th>
+							<td>
+								<input type="text" id="title" name="title" value="">
+							</td>
+						</tr>
+						<tr>
+							<th>ID (작성자)</th>
+							<td>
+								<input type="text" id="writer" name="writer" value="">
+							</td>
+						</tr>
+						<tr>
+							<th>비밀번호</th>
+							<td>
+								<input type="password" id="passwd" name="passwd" value="">
+							</td>
+						</tr>										
+						<tr>
+							<th>상세내용</th>
+							<td>						
+								<textarea cols="30" rows="10" name="contents" id="editor"></textarea>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			
+			</div>
+			
+				</form>
+				
+			</div>		
 		
-		<p>상품명</p>
-		<input type="text" id="proname" name="proname" value="">  
-		<p>제목</p>      
-		<input type="text" id="title" name="title" value="">
-		<p>ID (작성자)</p> 
-		<input type="text" id="writer" name="writer" value="">
-		<p>비밀번호</p> 
-		<input type="password" id="passwd" name="passwd" value="">      
-		<p>상세내용</p>
-		<textarea style="height:250px" cols="40" name="contents" id="contents"></textarea>		
-		
+		<div class="button">
 			<div class="left">
-				<button type="button" onclick="history.back();">돌아가기</button>
+				<button type="button" onclick="history.back();" class="before">돌아가기</button>
 			</div>
 			
 			<div class="right">
-				<button type="button" onclick="bbs_write();">저장하기</button>
-			</div>		    
-		      
-	</form>
+				<button type="button" onclick="bbs_write();" class="save">저장하기</button>
+			</div>
+		</div>
+
+
+	</div>
 
 	<%@ include file="footer.jsp" %>
 
 </body>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/ckeditor.js"></script>
 <script>
 
 function bbs_write() {
@@ -77,6 +125,18 @@ function bbs_write() {
 	frm.submit();
 }
 
+$(document).ready(function(){
+	$("ul.menu li").hover(
+		function(){ 
+			$('ul:not(:animated)',this).stop().show();
+		},
+		function(){ 
+			$('ul',this).stop().hide();
+		}
+	);
+});
+
+CKEDITOR.replace('editor');
 
 </script>
 </html>

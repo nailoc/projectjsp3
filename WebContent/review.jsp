@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <title>팀프로젝트</title>
 <link rel="stylesheet" href="css/style_guide.css"></link>
-<link rel="stylesheet" href="style_review.css"></link>
+<link rel="stylesheet" href="css/style_review.css"></link>
 <style></style>
 </head>
 <body>
@@ -73,7 +73,7 @@
 								<div class="gallery_list">
 									<div class="image">
 										<a href="">
-											<img src="images/HUGOBOSS_200971WCN63IR.jpg" alt="이미지">
+											<img src="upload/sample.jpg" alt="이미지" class="imgsrc">
 										</a>
 									</div>
 									<div class="gallery_info">
@@ -102,7 +102,7 @@
 								<div class="gallery_list">
 									<div class="image">
 										<a href="">
-											<img src="images/GIVENCHY_200144YB761T4.jpg" alt="이미지">
+											<img src="upload/sample.jpg" alt="이미지" class="imgsrc">
 										</a>
 									</div>
 									<div class="gallery_info">

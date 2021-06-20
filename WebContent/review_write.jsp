@@ -5,7 +5,8 @@
 <meta charset="UTF-8">
 <title>팀프로젝트</title>
 <link rel="stylesheet" href="css/style_guide.css"></link>
-<link rel="stylesheet" href="style_event.css"></link>
+<link rel="stylesheet" href="css/style_event.css"></link>
+<link rel="stylesheet" href="css/style_write.css"></link>
 <style></style>
 </head>
 <body>
@@ -26,7 +27,21 @@
 					</colgroup>
 					<tbody>
 						<tr>
-							<th>작성자</th>
+							<th>상품번호</th>
+							<td>
+								<div class="goods_select">
+									<input type="text">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>제목</th>
+							<td>
+								<input type="text">
+							</td>
+						</tr>
+						<tr>
+							<th>ID (작성자)</th>
 							<td>
 								<input type="text">
 							</td>
@@ -38,39 +53,24 @@
 							</td>
 						</tr>
 						<tr>
-							<th>상품선택</th>
-							<td>
-								<div class="goods_select">
-									<span>선택된 상품이 없습니다.</span>
-									<a href="">상품 선택</a>
-								</div>
-							</td>
-						</tr>
-						<tr>
 							<th>평가</th>
 							<td>
+							<input type="radio" name="score" value="5">★ ★ ★ ★ ★ <br/>
+							<input type="radio" name="score" value="4">☆ ★ ★ ★ ★ <br/>
+							<input type="radio" name="score" value="3">☆ ☆ ★ ★ ★ <br/>
+							<input type="radio" name="score" value="2">☆ ☆ ☆ ★ ★ <br/>
+							<input type="radio" name="score" value="1">☆ ☆ ☆ ☆ ★ <br/>
 							</td>
-						</tr>
+						</tr>						
 						<tr>
-							<th>제목</th>
-							<td>
-								<input type="text">
-							</td>
-						</tr>
-						<tr>
-							<th>본문</th>
-							<td>
-								<div class="secret">
-									<input type="checkbox">
-									<label>비밀글</label>
-								</div>
+							<th>상세내용</th>
+							<td>								
 								<textarea id="editor" cols="30" rows="10"></textarea>
 							</td>
 						</tr>
 						<tr>
 							<th>첨부파일</th>
 							<td>
-								<input type="text">
 								<input type="file">
 							</td>
 						</tr>
