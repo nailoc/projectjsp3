@@ -6,7 +6,7 @@ pageEncoding="UTF-8"%>
 <%@ page import="com.hk.jsp.util.*" %>
 <%@ page import="java.util.*" %>
 <!DOCTYPE html>
-<html>
+<html> 
 <head>
 <meta charset="UTF-8">
 <title>jspweb13</title>
