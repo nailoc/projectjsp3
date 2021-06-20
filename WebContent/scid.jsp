@@ -12,7 +12,7 @@
 
 
 <body>
-<%@ include file="front/header.jsp" %>
+<%@ include file="header.jsp" %>
 
 <div class="content_box">
 			<div class="member_wrap">
@@ -53,14 +53,14 @@
 			</div>
 		</div>
 
-<%@ include file="front/footer.jsp" %>
+<%@ include file="footer.jsp" %>
 </body>
 
 
 
 
 
-
+ 
 
 <script src="js/jquery-3.6.0.min.js"></script>
 <script>

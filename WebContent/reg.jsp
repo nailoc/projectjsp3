@@ -22,7 +22,7 @@
 
 
 
-<%@ include file="front/header.jsp" %>
+<%@ include file="header.jsp" %>
 
 <div class="content_box">
 		
@@ -79,11 +79,11 @@
 		</div>
 		</div>
 		</div>
-<%@ include file="front/footer.jsp" %>
+<%@ include file="footer.jsp" %>
 </body>
 
 
- 
+  
 	<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 	<script>
 	    function sample6_execDaumPostcode() {

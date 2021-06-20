@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<%@ include file="front/header.jsp" %>
+<%@ include file="header.jsp" %>
 <%
 if(session.getAttribute("userid")==null) { // 세션이 없다면
 	out.println("<script>alert('로그인되지 않았습니다'); location.href='login.jsp'</script>");
@@ -72,7 +72,7 @@ if(session.getAttribute("userid")==null) { // 세션이 없다면
 		</div>
 		</div>
 		</div>
-		
+		 
 <%-- 		
 <h3>맴버 정보</h3>
 아이디:<%=id %><p>
@@ -82,7 +82,7 @@ if(session.getAttribute("userid")==null) { // 세션이 없다면
 주소:<%= mev.getAddress()+"   "+mev.getAddress2() %><p>
 포인트:<%= mev.getPoint() %> --%>
 
-<%@ include file="front/footer.jsp" %>
+<%@ include file="footer.jsp" %>
 </body>
 <script></script>
 </html>
