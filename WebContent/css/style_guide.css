@@ -284,8 +284,15 @@ table thead th {
 	background-color: #fbfbfb;
 }
 
+
+
 .td {
 	padding: 10px;
+}
+
+.imgsrc {
+	width: 200px;
+	height: 200px;
 }
 
 div.bottom-contents {
