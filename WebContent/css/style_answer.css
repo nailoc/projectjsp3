@@ -5,7 +5,7 @@ body {
 }
 
 a {
-	color: #333;
+	color: #555;
 }
 
 strong { 
@@ -14,11 +14,11 @@ strong {
 
 dl, ul, ol, li {
     list-style: none;
-}
+} 
 
 div.top-contents {
 	width: 100%;
-	height: 250px;
+	height: 300px;
 	margin: 0 auto;
 }
 
@@ -167,135 +167,41 @@ header nav ul.menu ul.sub a:hover {
 
 .middle_contents {
 	margin: 0 auto;
-	width: 1050px;
 	margin-bottom: 100px;
-	position: relative;
+	width: 900px;
 }
 
-.board_zone_title {
-	padding: 5px 5px 5px 20px;
-	border-top: 1px solid #999999;
-	border_bottom: 1px solid #dbdbdb;
-	background: #f7f7f7;
-}
-
-.board_zone_title h3 {
-	display: inline-block;
-	color: #111111;
+.before {
+	display:inline-block;
+	width: 100px;
+	height: 42px;
+	padding: 0 10px 0 10px;
+	color: #3e3d3c;
 	font-size: 14px;
-}
-
-.board_view_info {
-	padding: 10px 15px 10px 15px;
-	border-bottom: 1px solid #dbdbdb;	
-}
-
-.view_info_no {
-	display: inline-block;
-}
-
-.view_info_idip {
-	border-left: 1px solid #dbdbdb;
-	display: inline-block;
-	padding-left: 10px;
-}
-
-.view_info_day {
-	display: inline-block;
-	height: 10px;
-	margin: 0 0 0 7px;
-	font-size: 11px;
-	border-left: 1px solid #dbdbdb;
-	vertical-align: middle;
-	padding-left: 10px;
-}
-
-.view_info_day em {
-	position: relative;
-	display: block;
-	top: -3px;
-	font-style: normal;
-	fotn-weight: normal;
-}
-
-.view_info_hits {
-	display: inline-block;
-	float: right;
-	text-align: right;
-	font-size: 13px;
-	padding-left: 15px;
-}
-
-.board_view_content {
-	padding: 30px 15px 30px 15px;
-	line-height: 1.8;
-	border-bottom: 1px solid #dbdbdb;
-}
-
-.comment {
-	padding: 15px;
-	border-bottom: 1px solid #dbdbdb;
-	margin-bottom: 10px;
-}
-
-.delete {
-	float: right;
-}
-
-.delete button {
-	color: #fff;
-	border: 1px solid #e40000;
-	background-color: #e40000;
-	height: 31px;
+	border: 1px solid #cccccc;
+	background: #ffffff;
+	text-align: center;
 	cursor: pointer;
 	font-weight: bold;
 }
 
-.delete button:hover {
-	color: #555;
-	background: #fff;
-}
-
-.btn_right_box {
-	margin: 20px 0 0 0;
-	text-align: right;
-	clear: both;
-}
-
-.btn_board_list {
-	height: 28px;
-	line-height: 26px;
-	margin: 0 0 0 5px;
-	padding: 0 12px  0 12px;
-	color: #666666;
-	border: 1px solid #a3a3a3;
-	text-align: center;
-	background: #ffffff;
-	cursor: pointer;
-}
-
-.btn_board_list:hover {
+.save {
+	display:inline-block;
+	width: 100px;
+	height: 42px;
+	padding: 0 10px 0 10px;
+	color: #ffffff;
+	font-size: 14px;
 	border: 1px solid #555;
-}
-
-.btn {
-	margin-top: 5px;
-}
-
-.btn_right_box button {
-	height: 28px;
-	line-height: 26px;
-	margin: 0 0 0 5px;
-	padding: 0 12px  0 12px;
-	color: #666666;
-	border: 1px solid #a3a3a3;
+	background: #555;
 	text-align: center;
-	background: #ffffff;
 	cursor: pointer;
+	font-weight: bold;
 }
 
-.btn_right_box button:hover {
-	border: 1px solid #555;
+.save:hover {
+	border: 1px solid black;
+	background: black;
 }
 
 div.bottom-contents {
