@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>    
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>    
 <%@ page import="com.hk.jsp.dao.*" %>
 <%@ page import="com.hk.jsp.vo.*" %>
 <%@ page import="java.util.*" %>
@@ -21,9 +21,9 @@
 		
 		int result = bodao.delBoard(no);
 			if(result==1) {
-				out.println("<script>alert('±Û»èÁ¦ ¼º°ø'); location.href='noticelist.jsp'; </script>");
+				out.println("<script>alert('ê¸€ì‚­ì œ ì„±ê³µ'); location.href='noticelist.jsp'; </script>");
 			} else {
-				out.println("<script>alert('±Û»èÁ¦ ½ÇÆÐ'); location.href='noticelist.jsp'; </script>");
+				out.println("<script>alert('ê¸€ì‚­ì œ ì‹¤íŒ¨'); location.href='noticelist.jsp'; </script>");
 			}
 		 
 	%>

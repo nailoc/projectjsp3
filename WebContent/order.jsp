@@ -7,104 +7,9 @@
 <head>
 <meta charset="UTF-8">
 <title>주문내역</title>
-<link rel="stylesheet" href="css/style.css"></link>
-<style>
-	.orWrapper {
-		width: 1000px;
-		margin: 0 auto;
-	}
-	.orderBox{
-		padding: 10px 20px 15px 20px;
-		border: 1px solid lightgray;
-		margin-bottom: 30px;
-		border-radius: 10px;
-		box-shadow: 2px 2px 2px 2px lightgray;
-	}
-	.orderTitleBox {
-		position: relative;
-	}
-	.detailCancel {
-		position: absolute;
-		right: 0;
-		top: -20px;
-		text-align: center;
-	}
-	.detailCancel p button {
-		background-color: #fff;
-		border: none;
-		cursor: pointer;
-		font-size: 15px;
-	}
-	.item {
-		border: 1px solid lightgray;
-		border-radius: 8px;
-		margin-bottom: 15px;
-		overflow: auto;
-	}
-	.itemImg {
-		float: left;
-		vertical-align: middle;
-	}
-	.itemTitleBox {
-		height: 80px;
-		position: relative;
-		left: 20px;
-		padding-right: 10px;
-		word-break: keep-all;
-	}.itemTitle {
-		position: relative;
-		top: 5px;
-	}
-	.quantity {
-		position: absolute;
-		left: 80px;
-		bottom: 5px;
-	}
-	td.tdLeft {
-		padding: 15px;
-		border-right:1px solid lightgray;
-	}
-	td.tdRight {
-		width: 254px;
-		position: relative;
-	}
-	td.tdRight>div {
-		overflow: auto;
-	}
-	td.tdRight>div button {
-		display: block;
-		position: relative;
-		left: 0;
-		right: 0;
-		margin: 0 auto;
-		width: 120px;
-		height: 35px;
-		margin-top: 5px;
-		margin-bottom: 5px;
-		background-color: #fff;
-		cursor: pointer;
-		border: 1px solid lightgray;
-		border-radius: 5px;
-	}
-	
-	/*
-	.detailCancel>#popup{
-		position: absolute;
-		width : 300px;
-		height : 300px;
-		top : 25px;
-		left : 15px;
-		border : 3px solid Red;
-		background: yellow;
-	}
- 
-	.detailCancel>#view {
-		width : 296px;
-		height : 270px;
-		border : 1px solid black;
-	}
-	*/
-</style>
+<link rel="stylesheet" href="css/style_order.css"></link>
+<link rel="stylesheet" href="css/headerfooter.css"></link>
+<style></style>
 </head>
 <body>
 	<%
@@ -115,12 +20,14 @@
 		OrderDao ordao = OrderDao.getInstance();
 		List<OrderVo> row = ordao.getOrderList(id);
 	%>
+	<%@ include file="header.jsp" %>
 	<div class="orWrapper">
+	<h2>주문내역</h2>
 	<%
 		if(row.size()==0) {
 	%>
-		<div>
-			<h2>주문내역이 없습니다.</h2>
+		<div style="text-align:center;">
+			<h2 style="margin: 100px 0 140px 0;">주문내역이 없습니다.</h2>
 		</div>
 	<%
 		}else {
@@ -179,7 +86,7 @@
 		}
 	%>
 	</div>
-		
+	<%@ include file="footer.jsp" %>
 </body>
 <script>
 	function toReview(pno) {

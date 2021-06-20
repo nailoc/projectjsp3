@@ -25,7 +25,7 @@ pageEncoding="UTF-8"%>
 	// 파일을 업로드 하는 경우 cos.jar 사용해서 전송값 저장
 	// "C:\\Users\\zhekq\\git\\projectjsp3\\WebContent\\upload";
 
-	String uploadPath = "C:\\Users\\Administrator\\git\\projectjsp3\\WebContent\\upload";
+	String uploadPath = "C:\\Users\\Rainbow\\git\\projectjsp3\\WebContent\\upload";
 	
 	int maxSize = 1024*1024*10;	// 10메가
 	MultipartRequest multi = new MultipartRequest(request, uploadPath, maxSize,

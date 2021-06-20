@@ -76,13 +76,8 @@ pageEncoding="UTF-8"%>
 			</div>		
 		
 		<div class="button">
-			<div class="left">
 				<button type="button" onclick="history.back();" class="before">돌아가기</button>
-			</div>
-			
-			<div class="right">
 				<button type="button" onclick="bbs_write();" class="save">저장하기</button>
-			</div>
 		</div>
 
 

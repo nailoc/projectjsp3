@@ -4,21 +4,21 @@ body {
     color: #555;
 }
 
-strong {
-	font-weight: bold;
-}
-
 a {
 	color: #555;
 }
 
+strong { 
+	font-weight: bold;
+}
+
 dl, ul, ol, li {
     list-style: none;
-}
+} 
 
 div.top-contents {
 	width: 100%;
-	height: 400px;
+	height: 300px;
 	margin: 0 auto;
 }
 
@@ -165,171 +165,55 @@ header nav ul.menu ul.sub a:hover {
 	color: #fff;
 }
 
-ul.item_list {
-	list-style: none;
-}
-ul.item_list li {
-	float: left;
-	margin-top: 10px;
-	margin-bottom: 30px;
-	height: 359.5px;
-}
-a {
-	text-decoration: none;
-	color: #000;
-}
-a.img {
-	display: block;
-	width: 292.5px;
-	height: 292.5px;
-	background-size: 292.5px !important;
-	transition: all 0.2s ease;
-}
-a.active {
-	color: red !important;
-}
-
-div.middle-contents {
-	margin-top: -200px;
-	margin-left: 400px;
-	margin-right: 400px;
-	padding-top: 50px;
-}
-
-.location_wrap .location_cont {
-	position: absolute;
-	width: auto;
-	right: 350px;	
-}
-
-.location_cont em {
-	display: block;
-    float: left;
-    padding: 12px 0 10px 0;
-    color: #777777;
-    font-size: 11px;
-	font-style: normal;
-    font-weight: normal;
-}
-
-.location_select {
-	display: inline-block;
-	position: relative;
-	margin: 7px 0 0 0;
-}
-
-.itemlist {
-	position: relative;
-}
-
-.itemlist_title {
+.middle_contents {
 	margin: 0 auto;
-	padding-left: 400px;
-	margin-top: -150px;
-}
-
-.itemlist_title h2 {
-	font-size: 19px;
-}
-
-a.active {
-	color: red !important;
-}
-
-div.category {
-	padding-left: 400px;
-}
-
-div.category a {
-	display: inline-block;
-    width: 140px;
-    height: 34px;
-    line-height: 34px;
-    background-color: #f9f9f9;
-    font-size: 12px;
-    text-align: left;
-    vertical-align: middle;
-    padding-left: 10px;
-}
-
-div.list_box {
-	border-top: 1px solid #999999;
-    border-bottom: 1px solid #dbdbdb;
-    padding: 20px;
-    margin-left: 400px;
-    margin-top: 20px;
-    width: 1000px;
-}
-
-div.list_box a{
-	color: #555;
-    font-size: 14px;
-    padding-left: 15px;	
-}
-
-div.images {
-	margin-left: 350px;
-}
-
-a.img {
-		display: block;
-		width: 250px;
-		height: 292.5px;
-		background-size: 292.5px !important;
-		transition: all 0.2s ease;
-}
-
-.goods {
-	font-weight: bold;
-	font-size: 14px;
-}
-
-.price {
-	font-weight: bold;
-}
-
-.number {
-	clear: both;
-	text-align: center;
-	padding-top: 50px;
-}
-
-.number .active {
-	font-size: 15px;
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-    font-size: 15px;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    margin: 0 auto;
-    font-weight: bold;
-    color: #fff !important;
-    background-color: #7a7d81;
-    border-radius: 20px;
-}
-
-.number a {
-	font-size: 15px;
-    width: 30px;
-    height: 30px;
-    font-size: 15px;
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-    line-height: 30px;
-    margin: 0 auto;
-}
-
-.goods_no_data {
-	border-bottom: 1px solid #dbdbdb;
 	margin-bottom: 100px;
+	width: 900px;
 }
 
-.goods_no_data strong {
-	font-weight: normal;
-	line-height: 150px;
+.btn_check {
+	margin-top: 10px;
+}
+
+.cancel {
+	display:inline-block;
+	width: 100px;
+	height: 42px;
+	padding: 0 10px 0 10px;
+	color: #3e3d3c;
+	font-size: 14px;
+	border: 1px solid #cccccc;
+	background: #ffffff;
+	text-align: center;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.ok {
+	display:inline-block;
+	width: 100px;
+	height: 42px;
+	padding: 0 10px 0 10px;
+	color: #ffffff;
+	font-size: 14px;
+	border: 1px solid #555;
+	background: #555;
+	text-align: center;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.ok:hover {
+	border: 1px solid black;
+	background: black;
+}
+
+.middle_contents input[type="password"] {
+	padding: 0 10px;
+	font-size: 12px;
+	height: 31px;
+	color: #333333;
+	border: 1px solid #d6d6d6;
 }
 
 div.bottom-contents {
@@ -338,7 +222,6 @@ div.bottom-contents {
 	width: 100%;
 	margin: 0 auto;
 	clear: both;
-	margin-top: 100px;
 }
 
 div.bottom-contents > div {
@@ -392,10 +275,10 @@ ul.tabs {
 	padding: 0;
 }
 
-ul.tabs li a.name {
+ul.tabs li a.active {
 	height: 50px;
 	background: none;
-	color: #555;
+	color: #111;
 	z-index: 4;
 }
 

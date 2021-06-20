@@ -3,16 +3,16 @@
 		<div class="bottom1">
 			<div class="tabwrap">
 				<ul class="tabs">
-					<li><a class="name" href="notice.jsp">NOTICE</a></li>
+					<li><a class="name" href="noticelist.jsp">NOTICE</a></li>
 				</ul>
 				<div id="panelsbo">
 					<div id="one">
 						<ul>
-							<li><a href="">[휴무안내] 10월 9일 한글날 휴무로 상담과 배송이 중단됩니다...</a></li>
-							<li><a href="">[휴무안내] 9월 29일(화) ~ 10월 4일(일) 추석휴무로...</a></li>
-							<li><a href="">[휴무안내] 4월 30일(목) ~ 5월 5일(화) 6일간 전체 ...</a></li>
-							<li><a href="">[배송공지] 크리스마스 & 연말연시 관련 배송안내 </a></li>
-							<li><a href="">[배송공지] 개천절 및 한글날 배송관련 안내</a></li>
+							<li><a href="noticelist.jsp">[휴무안내] 10월 9일 한글날 휴무로 상담과 배송이 중단됩니다...</a></li>
+							<li><a href="noticelist.jsp">[휴무안내] 9월 29일(화) ~ 10월 4일(일) 추석휴무로...</a></li>
+							<li><a href="noticelist.jsp">[휴무안내] 4월 30일(목) ~ 5월 5일(화) 6일간 전체 ...</a></li>
+							<li><a href="noticelist.jsp">[배송공지] 크리스마스 & 연말연시 관련 배송안내 </a></li>
+							<li><a href="noticelist.jsp">[배송공지] 개천절 및 한글날 배송관련 안내</a></li>
 						</ul>
 					</div>
 				</div>
@@ -21,14 +21,14 @@
 		<div class="bottom2">
 			<div class="tabwrap">
 				<ul class="tabs">
-					<li><a class="name" href="">REVIEW</a></li>
+					<li><a class="name" href="prolist.jsp">REVIEW</a></li>
 				</ul>
 				<div id="panelsbo">
 					<div id="one">
 						<ul>
-							<li><a href="">깔끔하고, 정말 고급스러운 안경테입니다</a></li>
-							<li><a href="">이제품 다른색상쓰는데 면세에만 잇엇어서 구하고 싶은데... ㅠㅠ 이...</a></li>
-							<li><a href="">배송이 무지 빨라요.</a></li>
+							<li><a href="prolist.jsp">깔끔하고, 정말 고급스러운 안경테입니다</a></li>
+							<li><a href="prolist.jsp">이제품 다른색상쓰는데 면세에만 잇엇어서 구하고 싶은데... ㅠㅠ 이...</a></li>
+							<li><a href="prolist.jsp">배송이 무지 빨라요.</a></li>
 						</ul>
 					</div>
 				</div>
