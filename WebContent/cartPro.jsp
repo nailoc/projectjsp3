@@ -12,18 +12,24 @@
 </head>
 <body>
 	<%
-		String id = "user1";
+		String id = (String) session.getAttribute("userid");
 		String oper = request.getParameter("oper");
 		String pno = request.getParameter("pno");
 		String add = request.getParameter("add");
 		String quantity = request.getParameter("quantity");
 		CartDao cartdao = CartDao.getInstance();
 		if(oper.equals("0")) {
-			int result = cartdao.addCart(id, pno, quantity);
-			if(result!=-1 && result!= 0) {
-				out.println("장바구니에 추가되었습니다");
+			if(id==null) {
+				out.println("로그인이 필요합니다");
 			}else {
-				out.println("장바구니담기에 실패했습니다");
+				int result = cartdao.addCart(id, pno, quantity);
+				if(result!=-1 && result!= 0) {
+						out.println("장바구니에 추가되었습니다");
+				
+				}else {
+					out.println("장바구니담기에 실패했습니다");
+				}
+				
 			}
 		}else if(oper.equals("1")) {
 			cartdao.addItemQuantity(id, pno, add);

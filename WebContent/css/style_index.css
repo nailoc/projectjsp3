@@ -1,25 +1,36 @@
+body {
+	margin: 0;
+}
 .mainContainerBox {
 	padding: 0;
 	margin: 0;
+	margin-top: -174px;
 }
 
 .slideImgBox {
 	height: 540px;
 	position: relative;
+	left: 0;
+	right: 0;
 	border-bottom: 1px solid lightgray;
-	margin-bottom: 80px;
+	overflow: hidden;
+	margin: 0 auto 130px auto;
 }
 .slideImg {
 	position: relative;
 	/*z-index: -2;*/
-	transform: translate(-107px, -210px);
+	transform: translateY(-210px); /*107*/
+	width: 1910px;
+	margin: 0 auto;
 }
 .slideImgNav {
 	position: absolute;
 	bottom: 0;
-	left: 50%;
 	z-index: 5;
-	transform: translateX(-50%);
+	width: 1250px;
+	right: 0;
+	left: 0;
+	margin: 0 auto;
 }
 .slideImgNav>ul {
 	list-style: none;
@@ -31,6 +42,8 @@
 	background-color: #fff;
 	padding-left: 0;
 	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
 }
 .slideImgNav>ul li {
 	float: left;
@@ -56,6 +69,7 @@
 	position: absolute;
 	top: 330px;
 	left: 230px;
+	text-align: left;
 }
 .slideImg div h3 {
 	color: #555;
@@ -83,7 +97,7 @@
 /* 이벤트슬라이드 */
 .slideEventBox, .slideNewBox {
 	height: 312px;
-	margin-bottom: 100px;
+	margin-bottom: 150px;
 	position: relative;
 	text-align: center;
 }
@@ -99,7 +113,6 @@
 	display: block;
 	width: 100%;
 	height: 238px;
-	background-color: orange;
 }
 .eventText {
 	background-color: #fff;
@@ -149,62 +162,239 @@ a.eventRight, a.newRight {
 /* 신상 */
 .slideNewBox {
 	height: 420px;
-	background-color: blue;
-}
-.slideNew {
-	box-sizing: border-box;
-	width: 312px;
-	height: 293px;
-	float: left;
-	background-color: orange;
 }
 .slideNewList {
+	width: 1250px;
+	position: relative;
+	margin: 30px auto 0 auto;
+	padding-left: 5px;
+	overflow: visible;
+}
+.slideNew {
+	position: relative;
+	display: inline-block;
+	box-sizing: border-box;
+	width: 302px;
+	height: 293px;
+	float: left;
+	margin-right: 10px;
+	text-decoration: none;
+	border: 1px solid lightgray;
+}
+span#img {
+	display:block;
+	position:absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat !important;
+	background-size: 302px !important;
+	transition: all 0.2s ease;
+}
+.onCursor {
+	height: 290px;
+	position: relative;
+	background-color: rgb(0,0,0, 0.5);
+}
+.onCursorText {
+	padding: 20px;
+	color: #fff;
+	position:absolute;
+	top:50%;
+	transform: translateY(-50%);
 }
 
 /* 주간 베스트 */
 .weekItemBox {
 	min-height: 200px;
-	background-color: red;
 	text-align: center;
+	margin-bottom: 120px;
 }
 ul.weekList {
 	list-style: none;
 	overflow: auto;
-	border: 1px solid black;
-	padding-left: 25px;
+	padding-left: 0;
+	text-align: left;
+	margin-top: 30px;
 }
 ul.weekList li {
 	width: 600px;
 	height: 302px;
-	border-sizing: border-box;
-	background-color: pink;
+	margin: 12.5px;
 	float: left;
+	outline : lightgray solid thin;
 }
+.weekImgBox {
+	float: left;
+	position: relative;
+	width: 50%;
+	vertical-align: middle;
+	margin: 0;
+	padding: 0;
+}
+.weekImg {
+	display: block;
+	width: 302px;
+	height: 302px;
+	background-size: 302px !important;
+	outline : lightgray solid thin;
+	margin: 0;
+	transition: all 0.2s ease;
+}
+.weekContentBox {
+	position: relative;
+	width: 43%;
+	float: left;
+	padding: 14% 3% 0;
+	font-size: 14px;
+}
+.weekContentBox div {
+	margin-bottom: 20px;
+}
+.weekContentBox a {
+	text-decoration: none;
+	color: black;
+}
+
+
 
 /* 슬라이드 이미지 */
-div.slideImg2Box {
-	width: 2000px;
-	height: 450px;
-	margin: 0 auto;
-	background-color: green;
-	transform: translateX(-375px);
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  box-sizing:border-box;
 }
 
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+
 /* 안경테 */
-div.glassesItemBox {
+.glassesItemBox {
 	min-height: 200px;
-	background-color: red;
 	text-align: center;
 }
 ul.glassesList {
 	list-style: none;
 	overflow: auto;
+	padding-top: 30px;
 	padding-left: 0px;
 }
 ul.glassesList li {
 	width: 312.5px;
 	height: 408.5px;
 	border-sizing: border-box;
-	background-color: pink;
 	float: left;
+	margin-bottom: 25px;
+}
+a.glassesImg {
+	display: block;
+	width: 292.5px;
+	height: 292.5px;
+	background-size: 292.5px !important;
+	outline : lightgray solid thin;
+	position: relative;
+	left: 10px;
+	transition: all 0.2s ease;
+}
+.glassesContentBox {
+	text-align: left;
+	padding-left: 10px;
+}
+.glassesContentBox a {
+	text-decoration: none;
+	color: #111;
 }
