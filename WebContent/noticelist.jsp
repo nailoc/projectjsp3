@@ -9,10 +9,12 @@ pageEncoding="UTF-8"%>
 <head>
 <meta charset="UTF-8">
 <title>jsp3</title>
-<link rel="stylesheet" href="css/style.css"></link>
+<link rel="stylesheet" href="css/style_guide.css"></link>
 </head>
 <style></style>
-
+	
+	<%@ include file="header.jsp" %>
+		
 	<%
 		String sortname = request.getParameter("sort");
 		String keywordval = request.getParameter("keyword");
@@ -36,13 +38,15 @@ pageEncoding="UTF-8"%>
 	%>
 
 <body>
-
-	<h2>공지사항</h2>
-
-	<!-- 정렬 -->
-		<div>
-			<div>전체 <%=totalrst.size() %></div>	
-				
+	
+	<div class="middle-contents">  		
+		<div class="board">
+			<div class="board_title">
+				<h2>공지사항</h2>
+			</div>
+			
+				<!-- 정렬 -->
+		<div>				
 			<div>
 				<form id="form1" method="GET" action="noticelist.jsp">
 					<select id="select1" name="select1" onchange="sort()">
@@ -53,31 +57,45 @@ pageEncoding="UTF-8"%>
 				</form>
 			</div>
 		</div>
-
-	<table>
-		<tr>
-			<th>no</th>
-			<th>writer</th>
-			<th>title</th>
-			<th>regdate</th>
-			<th>views</th>
-		</tr>
-		
-		<%
+			
+			<div class="board_list">
+				<table class="board_table" style="width:100%">
+					<colgroup>
+						<col style="width:6%">
+						<col style="width:37%">
+						<col style="width:12%">
+						<col style="width:7%">
+						<col style="width:15%">
+						<col style="width:6%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>번호</th>
+							<th>제목</th>
+							<th>날짜</th>
+							<th>작성자</th>
+							<th>조회</th>
+						</tr>
+					</thead>
+						
+			<tbody>
+								
+		<%	
 			for(int i=0; i<totalrst.size(); i++) {
 				BoardVo temp = totalrst.get(i);
 				out.println("<tr class=''>");
 		%>	
-			<td><%= temp.getNo() %></td>
-			<td><%= temp.getWriter() %></td>
-			<td><a href="noticeshow.jsp?no=<%=temp.getNo() %>"><%= temp.getTitle() %></a></td>
-			<td><%= temp.getRegdate() %></td>
-			<td><%= temp.getViews() %></td>
+			<td class="td"><%= temp.getNo() %></td>
+			<td class="td"><a href="noticeshow.jsp?no=<%=temp.getNo() %>"><strong><%= temp.getTitle() %></strong></a></td>
+			<td class="td"><%= temp.getRegdate() %></td>
+			<td class="td"><%= temp.getWriter() %></td>
+			<td class="td"><%= temp.getViews() %></td>
 		</tr>
 		
-		<%
-			}
+		<%				
+			}			
 		%>
+			</tbody>				
 	</table>
 	<!-- 관리자 세션시에만 보여지는 버튼 -->
 	
@@ -92,17 +110,25 @@ pageEncoding="UTF-8"%>
 		
 	}%>
 	
-	<div>
+	
 		<form id="form2" method="GET" action="noticelist.jsp">
+			<div class="board_search">
 				<select id="select2" name="target">
 					<option value="title">정렬</option>
 					<option value="title">제목</option>
 					<option value="writer">작성자</option>
 				</select>
 				<input type="text" id="keyword" name="keyword" value="">
-				<button type="button" onclick="search()">검색</button>
+				<button type="button" class="btn" onclick="search()">검색</button>
+			</div>	
 		</form>
+	
+	
+			</div>
+		</div>
 	</div>
+	
+	<%@ include file="footer.jsp" %>
 	
 </body>
 <script src="js/jquery-3.6.0.min.js"></script>

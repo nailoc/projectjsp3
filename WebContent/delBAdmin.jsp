@@ -8,8 +8,12 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
+<link rel="stylesheet" href="css/style_guide.css"></link>
+
 </head>
 <body>
+
+	<%@ include file="header.jsp" %>
 
 	<%
 		String no = request.getParameter("no");
@@ -23,6 +27,8 @@
 			}
 		 
 	%>
+	
+	<%@ include file="footer.jsp" %>
 	
 </body>
 </html>

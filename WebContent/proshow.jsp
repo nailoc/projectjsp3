@@ -10,10 +10,14 @@ pageEncoding="UTF-8"%>
 <head>
 <meta charset="UTF-8">
 <title>jspweb13</title>
-<link rel="stylesheet" href="css/style.css"></link>
+<link rel="stylesheet" href="css/style_guide.css"></link>
+
 </head>
 <style></style>
 <body>
+	
+	<%@ include file="header.jsp" %>
+	
 	<h2>상품후기 상세내용</h2>
 	
 	<%
@@ -98,6 +102,8 @@ pageEncoding="UTF-8"%>
 		<div class="right">
 			<button>다음글</button>
 		</div>
+	
+	<%@ include file="footer.jsp" %>
 	
 </body>
 <script>
