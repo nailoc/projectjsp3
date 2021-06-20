@@ -20,6 +20,9 @@
 			deliFee = "무료";
 		}
 	%>
+	
+	<%@ include file="header.jsp" %>
+	
 	<div class="contentBox">
 		<div class="item_photo_info">
 			<div class="imgBox"><a id="mainImg" href="" style="background: url('<%= row.getMain_img2().replaceAll("\\\\","/") %>');" ></a></div>
@@ -404,6 +407,9 @@
 			</div>
 		</div>
 	</div> <!-- contentBox end -->
+	
+	<%@ include file="footer.jsp" %>
+	
 </body>
 <script>
 	function add(quantity) {

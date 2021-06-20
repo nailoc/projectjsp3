@@ -92,6 +92,7 @@ span.dapContent2 {
 
 .resultBox {
 	overflow: auto;
+	margin-top: 30px;
 }
 .resultBox table {
 	border-collapse: collapse;
@@ -102,4 +103,19 @@ span.dapContent2 {
 }
 .payWayBox {
 	float: left;
+}
+
+.payResult button{
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 140px;
+	height: 60px;
+	background-color: #343434;
+	border: none;
+	border-radius: 10px;
+	color: #fff;
+	font-size: 20px;
+	margin-top: 50px;
+	margin-bottom: 80px;
 }

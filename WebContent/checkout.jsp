@@ -160,9 +160,12 @@
 				</table>
 				<div class="resultBox">
 					<table>
+						<colgroup>
+							<col width="70%">
+						</colgroup>
 						<tbody>
 							<tr>
-								<td style="border-right: 1px solid lightgray;">
+								<td>
 									<div class="payWayBox">
 										<h3>결제 수단</h3>
 										<p>간편결제 선택
@@ -179,14 +182,14 @@
 								</td>
 								
 								<td>
-									<h3>최종결제금액</h3>
+									<h3 style="padding-left: 20px;">최종결제금액</h3>
 									<ul>
 										<li><span>상품금액</span><strong style="float:right;"><%=String.format("%,d",proPrice) %>원</strong></li>
 										<li style="display:none"><input type="text" name="proPrice" value="<%=proPrice%>"></li>
 										<li><span>배송비</span><strong style="float:right;"><%=String.format("%,d",deliFee) %>원</strong></li>
 										<li style="display:none"><input type="text" name="deliFee" value="<%=deliFee%>"></li>
 										<li><span>사용포인트</span><strong style="float:right;">0원</strong></li>
-										<li><span>최종금액</span><strong style="float:right;"><%=String.format("%,d",proPrice+deliFee)%>원</strong></li>
+										<li><span>최종금액</span><strong style="float:right; color:#e40000;"><%=String.format("%,d",proPrice+deliFee)%>원</strong></li>
 										<li style="display:none"><input type="text" name="price" value="<%=proPrice + deliFee%>"></li>
 									</ul>
 								</td>
@@ -197,7 +200,7 @@
 			</div>
 			
 			
-			<div class="payReult">
+			<div class="payResult">
 				<button type="button" onclick="pay()">결제하기</button>
 			</div>
 		</form>
