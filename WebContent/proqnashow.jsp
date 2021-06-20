@@ -69,11 +69,11 @@ pageEncoding="UTF-8"%>
 						<div>내용</div>	
 						<div><%= rowshow.getContents() %></div>
 					</div>
-					
-					<div>
-						<div>코멘트 </div>
-						<div><%= rowshow.getComents() %></div>
-					</div>
+				</div>
+				
+				<div class="comment">
+					<div class="subject">코멘트 </div>
+					<div><%= rowshow.getComents() %></div>
 				</div>
 				
 			

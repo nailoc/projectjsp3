@@ -27,7 +27,7 @@ pageEncoding="UTF-8"%>
 	List<ProductVo> glassesItems = prodao.getProductList(keyword, kind, bname, sort, cPage);
 %>
 <body>
-	<%@ include file="front/header.jsp"%>
+	<%@ include file="header.jsp"%>
 	
 	<div class="mainContainerBox">
 		<div class="slideImgBox">
@@ -246,7 +246,7 @@ pageEncoding="UTF-8"%>
 		</div>
 	</div>
 	
-	<%@ include file="front/footer.jsp"%>
+	<%@ include file="footer.jsp"%>
 </body>
 <script>
 	function changeImg1(event, img1) {
