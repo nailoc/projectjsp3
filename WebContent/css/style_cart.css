@@ -1,0 +1,153 @@
+.mainContainerBox {
+	margin: 0 auto;
+	margin-top: -144px;
+	width: 1250px;
+}
+/* 타이틀 */
+.cartTitle {
+	position: relative;
+}
+.cartTitle ol {
+	position: absolute;
+	top: 0;
+	right: 0;
+	
+}
+.cartTitle ol li {
+	float: left;
+	font-weight: bold;
+	font-size: 14px;
+}
+.cartTitle ol li.active {
+	color: #e40000;
+}
+.cartTitle ol li span {
+	font-size: 16px;
+}
+.cartTitle ol li span.arrow {
+	display: inline-block;
+	width: 38px;
+	text-align: center;
+}
+
+/* 리스트 */
+.cartListBox {
+	border: 1px solid lightgray;
+	border-width: 1px 0 1px 0;
+	padding: 20px 0 20px 0;
+	min-height: 120px;
+	margin-bottom: 20px;
+}
+.cartListBox a {
+	color: #111;
+}
+.cartListBox table {
+	padding-left: 25px;
+	border-collapse: separate;
+	border-spacing: 0 10px;
+}
+.cartListBox table tr {
+	margin: 10px 0 10px 0;
+}
+
+.cartListBox input[type="text"] {
+	text-align: center;
+	width: 40px;
+	height: 20px;
+	border-radius: 5px;
+	border: 2px solid lightgray;
+}
+button.add {
+	width: 30px;
+	height: 20px;
+	border: none;
+	background-color: #fff;
+	font-size: 16px;
+	cursor: pointer;
+}
+button.delete {
+	width: 70px;
+	height: 35px;
+	background-color: #565656;
+	color: #fff;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+}
+a.goShop {
+	font-size: 12px;
+	text-decoration: underline;
+	color: #111;
+	display: block;
+	width: 95px;
+	margin-bottom: 50px;
+}
+.delAllBox {
+	position: relative;
+	width: 100%;
+}
+.delAllBox button.delAll {
+	position: absolute;
+	right: 10px;
+	top: -75px;
+	width: 120px;
+	height: 40px;
+	background-color: #565656;
+	border: none;
+	border-radius: 8px;
+	color: #fff;
+	cursor: pointer;
+}
+
+/* 결과 */
+.resultWrap {
+	padding-bottom: 100px;
+}
+.resultBox {
+	border: 3px solid lightgray;
+	width: 100%;
+	padding: 10px 0;
+	margin-bottom: 40px;
+	overflow: auto;
+}
+.result {
+	display: table;
+	float: right;
+	padding: 20px 40px 20px 40px;
+}
+.result dl {
+	display: table-cell;
+	padding: 5px 10px;
+	font-size: 16px;
+	text-align: right;
+	height: 64px;
+	line-height: 28px;
+	margin: 0;
+}
+.result dl dd {
+	color: #e40000;
+	margin: 0;
+}
+.result span {
+	display: table-cell;
+	padding: 0 20px;
+	vertical-align: middle;
+	font-weight: bold;
+	font-size: 18px;
+	margin: 0;
+}
+
+/* 구매하기 */
+button.pay {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 140px;
+	height: 50px;
+	background-color: #343434;
+	border-radius: 8px;
+	border: none;
+	color: #fff;
+	font-size: 20px;
+	cursor: pointer;
+}

@@ -10,6 +10,7 @@ pageEncoding="UTF-8"%>
 <meta charset="UTF-8">
 <title>메인페이지</title>
 <link rel="stylesheet" href="css/style_index.css"></link>
+<link rel="stylesheet" href="css/style_accessory.css"></link>
 </head>
 <style></style>
 <%
@@ -26,6 +27,8 @@ pageEncoding="UTF-8"%>
 	List<ProductVo> glassesItems = prodao.getProductList(keyword, kind, bname, sort, cPage);
 %>
 <body>
+	<%@ include file="front/header.jsp"%>
+	
 	<div class="mainContainerBox">
 		<div class="slideImgBox">
 			<div class="slideImgNav">
@@ -61,7 +64,7 @@ pageEncoding="UTF-8"%>
 				<a class="eventButton eventRight" href="">&#10095;</a>
 				<div class="slideEventList">
 					<div class="slideEvent">
-						<a href="" class="" style="background:url('images/index/eventCarrera.jpg') no-repeat; background-size:416px;"></a>
+						<a href="sunglass.jsp?bname=carrera" class="" style="background:url('images/index/eventCarrera.jpg') no-repeat; background-size:416px;"></a>
 						<div class="eventText">
 							<p class="eventTitle">CARRERA</p>
 							<p class="eventContent">까레라 모든 상품 보기
@@ -69,7 +72,7 @@ pageEncoding="UTF-8"%>
 					</div>
 					
 					<div class="slideEvent">
-						<a href="" class="" style="background:url('images/index/eventPolaroid.jpg') no-repeat; background-size:416px;"></a>
+						<a href="sunglass.jsp?bname=carrera" class="" style="background:url('images/index/eventPolaroid.jpg') no-repeat; background-size:416px;"></a>
 						<div class="eventText">
 							<p class="eventTitle">POLAROID</p>
 							<p class="eventContent">폴라로이드 모든 상품 보기
@@ -77,7 +80,7 @@ pageEncoding="UTF-8"%>
 					</div>
 					
 					<div class="slideEvent">
-						<a href="" class="" style="background:url('images/index/eventJimmychoo.jpg') no-repeat; background-size:416px;"></a>
+						<a href="sunglass.jsp?bname=jimmy" class="" style="background:url('images/index/eventJimmychoo.jpg') no-repeat; background-size:416px;"></a>
 						<div class="eventText">
 							<p class="eventTitle">JIMMY CHOO</p>
 							<p class="eventContent">지미추 모든 상품 보기
@@ -168,7 +171,7 @@ pageEncoding="UTF-8"%>
 				
 				<div class="mySlides fade">
 					<div class="numbertext">4 / 8</div>
-				    <a href="sunglass.jsp?bname=jimmy choo"><img src="images/index/jimmy choo.jpg" style="width:100%"></a>
+				    <a href="sunglass.jsp?bname=jimmy"><img src="images/index/jimmy choo.jpg" style="width:100%"></a>
 				    <div class="text">지미추 / JIMMY CHOO</div>
 				</div>
 				
@@ -186,7 +189,7 @@ pageEncoding="UTF-8"%>
 				
 				<div class="mySlides fade">
 					<div class="numbertext">7 / 8</div>
-				    <a href="sunglass.jsp?bname=hugo boss"><img src="images/index/hugoBoss.jpg" style="width:100%"></a>
+				    <a href="sunglass.jsp?bname=hugo"><img src="images/index/hugoBoss.jpg" style="width:100%"></a>
 				    <div class="text">휴고 보스 / HUGOBOSS</div>
 				</div>
 				
@@ -241,8 +244,9 @@ pageEncoding="UTF-8"%>
 				</ul>
 			</div>
 		</div>
-		
 	</div>
+	
+	<%@ include file="front/footer.jsp"%>
 </body>
 <script>
 	function changeImg1(event, img1) {
