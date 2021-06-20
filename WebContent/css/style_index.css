@@ -1,10 +1,10 @@
 body {
 	margin: 0;
-	scroll-width:none; 
 }
 .mainContainerBox {
 	padding: 0;
 	margin: 0;
+	margin-top: -174px;
 }
 
 .slideImgBox {
@@ -113,7 +113,6 @@ body {
 	display: block;
 	width: 100%;
 	height: 238px;
-	background-color: orange;
 }
 .eventText {
 	background-color: #fff;
@@ -179,7 +178,6 @@ a.eventRight, a.newRight {
 	height: 293px;
 	float: left;
 	margin-right: 10px;
-	background-color: orange;
 	text-decoration: none;
 	border: 1px solid lightgray;
 }

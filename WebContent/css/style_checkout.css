@@ -1,0 +1,105 @@
+.mainContainerBox {
+	width: 1250px;
+	margin: 0 auto;
+	margin-top: -144px;
+}
+/* 타이틀 */
+.orderTitle {
+	position: relative;
+}
+.orderTitle ol {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.orderTitle ol li {
+	float: left;
+	font-weight: bold;
+	font-size: 14px;
+}
+.orderTitle ol li.active {
+	color: #e40000;
+}
+.orderTitle ol li span {
+	font-size: 16px;
+}
+.orderTitle ol li span.arrow {
+	display: inline-block;
+	width: 38px;
+	text-align: center;
+}
+
+.orderList {
+	border : 1px solid lightgray;
+	border-radius: 10px;
+	padding: 20px 10px;
+	width: 95%;
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+.orderList table {
+	margin: 0 auto;
+}
+
+table.info {
+	width: 100%;
+	font-size: 14px;
+	border: 1px solid lightgray;
+	border-width: 2px 0 1px 0;
+	border-collapse: collapse;
+}
+table.info tr {
+	border-bottom: 1px solid lightgray;
+}
+table.info td{
+	padding: 10px 20px;
+}
+table.info td.title {
+	border-right: 1px solid lightgray;
+	text-align: right;
+	background-color: #f4f4f4;
+}
+table.info input[type="text"] {
+	border-width: 0 0 0 0;
+	background-color: #fff;
+	height: 25px;
+}
+
+table.disAndPoint {
+	border-collapse: collapse;
+	border: 1px solid lightgray;
+	border-width: 2px 0 1px 0;
+	width: 100%;
+	font-size: 14px;
+}
+table.disAndPoint  tr {
+	border-bottom: 1px solid lightgray;
+}
+table.disAndPoint  tr td {
+	padding: 10px 20px;
+}
+table.disAndPoint  tr td.title{
+	text-align: right;
+	background-color: #f4f4f4;
+}
+td.dapContent1 {
+	position: relative;
+}
+span.dapContent2 {
+	position: absolute;
+	left: 170px;
+}
+
+.resultBox {
+	overflow: auto;
+}
+.resultBox table {
+	border-collapse: collapse;
+}
+.resultBox ul {
+	float: right;
+	width: 300px;
+}
+.payWayBox {
+	float: left;
+}
