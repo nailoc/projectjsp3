@@ -47,7 +47,7 @@ pageEncoding="UTF-8"%>
 					펜디(FENDI)는 전세계의 모든 연령층에서<br>
 					가장 오랜 기간, 가장 많은 사랑을 받고 있는<br>
 					대표적인 브랜드입니다.
-					<a href="sunglass.jsp?bname=fendi">전체 상품 보기</a>
+					<a href="sunglass.jsp?bname=fendi&kind=10">전체 상품 보기</a>
 					</h3>
 				</div>
 				<img src="images/index/slideFendi.jpg" style="height:750px;">
@@ -64,7 +64,7 @@ pageEncoding="UTF-8"%>
 				<a class="eventButton eventRight" href="">&#10095;</a>
 				<div class="slideEventList">
 					<div class="slideEvent">
-						<a href="sunglass.jsp?bname=carrera" class="" style="background:url('images/index/eventCarrera.jpg') no-repeat; background-size:416px;"></a>
+						<a href="sunglass.jsp?bname=carrera&kind=10" class="" style="background:url('images/index/eventCarrera.jpg') no-repeat; background-size:416px;"></a>
 						<div class="eventText">
 							<p class="eventTitle">CARRERA</p>
 							<p class="eventContent">까레라 모든 상품 보기
@@ -72,7 +72,7 @@ pageEncoding="UTF-8"%>
 					</div>
 					
 					<div class="slideEvent">
-						<a href="sunglass.jsp?bname=carrera" class="" style="background:url('images/index/eventPolaroid.jpg') no-repeat; background-size:416px;"></a>
+						<a href="sunglass.jsp?bname=polaroid&kind=10" class="" style="background:url('images/index/eventPolaroid.jpg') no-repeat; background-size:416px;"></a>
 						<div class="eventText">
 							<p class="eventTitle">POLAROID</p>
 							<p class="eventContent">폴라로이드 모든 상품 보기
@@ -80,7 +80,7 @@ pageEncoding="UTF-8"%>
 					</div>
 					
 					<div class="slideEvent">
-						<a href="sunglass.jsp?bname=jimmy" class="" style="background:url('images/index/eventJimmychoo.jpg') no-repeat; background-size:416px;"></a>
+						<a href="sunglass.jsp?bname=jimmy choo&kind=10" class="" style="background:url('images/index/eventJimmychoo.jpg') no-repeat; background-size:416px;"></a>
 						<div class="eventText">
 							<p class="eventTitle">JIMMY CHOO</p>
 							<p class="eventContent">지미추 모든 상품 보기
@@ -153,49 +153,49 @@ pageEncoding="UTF-8"%>
 				<!-- Full-width images with number and caption text -->
 				<div class="mySlides fade">
 					<div class="numbertext">1 / 8</div>
-					<a href="sunglass.jsp?bname=fendi"><img src="images/index/fendi.jpg" style="width:100%"></a>
+					<a href="sunglass.jsp?bname=fendi&kind=10"><img src="images/index/fendi.jpg" style="width:100%"></a>
 					<div class="text">펜디 / FENDI</div>
 				</div>
 			
 				<div class="mySlides fade">
 					<div class="numbertext">2 / 8</div>
-					<a href="sunglass.jsp?bname=polaroid"><img src="images/index/polaroid.jpg" style="width:100%"></a>
+					<a href="sunglass.jsp?bname=polaroid&kind=10"><img src="images/index/polaroid.jpg" style="width:100%"></a>
 				    <div class="text">폴라로이드 / POLAROID</div>
 				</div>
 				
 				<div class="mySlides fade">
 					<div class="numbertext">3 / 8</div>
-				    <a href="sunglass.jsp?bname=dior"><img src="images/index/dior.jpg" style="width:100%"></a>
+				    <a href="sunglass.jsp?bname=dior&kind=10"><img src="images/index/dior.jpg" style="width:100%"></a>
 				    <div class="text">디올 / DIOR</div>
 				</div>
 				
 				<div class="mySlides fade">
 					<div class="numbertext">4 / 8</div>
-				    <a href="sunglass.jsp?bname=jimmy"><img src="images/index/jimmy choo.jpg" style="width:100%"></a>
+				    <a href="sunglass.jsp?bname=jimmy choo&kind=10"><img src="images/index/jimmy choo.jpg" style="width:100%"></a>
 				    <div class="text">지미추 / JIMMY CHOO</div>
 				</div>
 				
 				<div class="mySlides fade">
 					<div class="numbertext">5 / 8</div>
-				    <a href="sunglass.jsp?bname=maxmara"><img src="images/index/maxmara.jpg" style="width:100%"></a>
+				    <a href="sunglass.jsp?bname=maxmara&kind=10"><img src="images/index/maxmara.jpg" style="width:100%"></a>
 				    <div class="text">막스마라 / MAXMARA</div>
 				</div>
 				
 				<div class="mySlides fade">
 					<div class="numbertext">6 / 8</div>
-				    <a href="sunglass.jsp?bname=givenchy"><img src="images/index/givenchy.jpg" style="width:100%"></a>
+				    <a href="sunglass.jsp?bname=givenchy&kind=10"><img src="images/index/givenchy.jpg" style="width:100%"></a>
 				    <div class="text">지방시 / GIVENCHY</div>
 				</div>
 				
 				<div class="mySlides fade">
 					<div class="numbertext">7 / 8</div>
-				    <a href="sunglass.jsp?bname=hugo"><img src="images/index/hugoBoss.jpg" style="width:100%"></a>
+				    <a href="sunglass.jsp?bname=hugo boss&kind=10"><img src="images/index/hugoBoss.jpg" style="width:100%"></a>
 				    <div class="text">휴고 보스 / HUGOBOSS</div>
 				</div>
 				
 				<div class="mySlides fade">
 					<div class="numbertext">8 / 8</div>
-				    <a href="sunglass.jsp?bname=carrera"><img src="images/index/carrera.jpg" style="width:100%"></a>
+				    <a href="sunglass.jsp?bname=carrera&kind=10"><img src="images/index/carrera.jpg" style="width:100%"></a>
 				    <div class="text">까레라 / CARRERA</div>
 				</div>
 				

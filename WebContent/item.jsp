@@ -423,8 +423,15 @@
 	}
 	function addCart(id, pno) {
 		var cQuantity = document.getElementById("quantity").value;
+		
+		var wWidth = '400';
+	    var wHeight = '250';
+		
+		var wLeft = Math.ceil(( window.screen.width - wWidth )/2);
+	    var wTop = Math.ceil(( window.screen.height - wHeight )/2 -120); 
+
 		url = "cartPro.jsp?oper=0&pno=" + pno + "&quantity=" + cQuantity;
-		window.open(url, "장바구니 담기", "width=400, height=250;");
+		window.open(url, "장바구니 담기", "width="+wWidth+", height="+wHeight+", left="+wLeft+", top="+wTop);
 	}
 	function changeImg(img) {
 		var mainImg = document.getElementById("mainImg");

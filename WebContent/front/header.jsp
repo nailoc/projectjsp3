@@ -19,13 +19,13 @@
 					<span class="txt_bar"></span>
 				</li>
 				<%}%>
+				<li><a href="cart.jsp">장바구니</a>
+					<span class="txt_bar"></span>
+				</li>
 				<li>
 					<div class="mypage_contents">
 						<span><a href="order.jsp">주문조회</a></span>
 					</div>
-				</li>
-				<li><a href="cart.jsp">장바구니</a>
-					<span class="txt_bar"></span>
 				</li>
 				<li><a href="noticelist.jsp">공지사항</a>
 					<span class="txt_bar"></span>

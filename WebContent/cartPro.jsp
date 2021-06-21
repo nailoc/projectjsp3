@@ -8,7 +8,23 @@
 <meta charset="UTF-8">
 <title>jspweb13</title>
 <link rel="stylesheet" href="css/style.css"></link>
-<style></style>
+<style>
+	h3{
+		width: 100%;
+		text-align: center;
+		margin: 50px 0;
+	}
+	button{
+		width: 80px;
+		height: 40px;
+		background-color: #343434;
+		border: none;
+		border-radius: 8px;
+		color: #fff;
+		font-size: 16px;
+		cursor: pointer;
+	}
+</style>
 </head>
 <body>
 	<%
@@ -20,11 +36,17 @@
 		CartDao cartdao = CartDao.getInstance();
 		if(oper.equals("0")) {
 			if(id==null) {
-				out.println("로그인이 필요합니다");
+				%>
+					<h3>로그인이 필요합니다</h3>
+				<%
+				//out.println("로그인이 필요합니다");
 			}else {
 				int result = cartdao.addCart(id, pno, quantity);
 				if(result!=-1 && result!= 0) {
-						out.println("장바구니에 추가되었습니다");
+				%>
+					<h3>장바구니에 추가되었습니다</h3>
+				<%
+						//out.println("장바구니에 추가되었습니다");
 				
 				}else {
 					out.println("장바구니담기에 실패했습니다");
@@ -42,7 +64,7 @@
 			out.println("<script>alert('상품을 전부 삭제했습니다'); location.href='cart.jsp';</script>");
 		}
 	%>
-	<p><button type="button" onclick="closeWindow()">닫기</button></p>
+	<div style="text-align: center;"><button type="button" onclick="closeWindow()">닫기</button></div>
 </body>
 <script>
 	function closeWindow() {

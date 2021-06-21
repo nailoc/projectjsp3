@@ -73,7 +73,7 @@
 					if(row.size()==0) {
 				%>
 					<tr>
-						<td colspan="4" style="text-align:center; padding: 10px 0 0 150px;">
+						<td colspan="4" style="text-align:center; padding: 15px 0 0 100px;">
 							<h2>장바구니에 담은 상품이 없습니다.</h2>
 						</td>
 					</tr>
@@ -98,7 +98,7 @@
 				%>
 			</table>
 		</div>
-		<a href="front/sunglass.jsp?kind=10" class="goShop">&lt; 쇼핑 계속하기</a>
+		<a href="sunglass.jsp?kind=10" class="goShop">&lt; 쇼핑 계속하기</a>
 		<%
 			if(row.size()>1) {
 		%>

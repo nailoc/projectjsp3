@@ -19,13 +19,13 @@
 					<span class="txt_bar"></span>
 				</li>
 				<%}%>
+				<li><a href="cart.jsp">장바구니</a>
+					<span class="txt_bar"></span>
+				</li>
 				<li>
 					<div class="mypage_contents">
 						<span><a href="order.jsp">주문조회</a></span>
 					</div>
-				</li>
-				<li><a href="cart.jsp">장바구니</a>
-					<span class="txt_bar"></span>
 				</li>
 				<li><a href="noticelist.jsp">공지사항</a>
 					<span class="txt_bar"></span>
@@ -48,16 +48,16 @@
 				<nav>
 				<ul class="menu">
 					<li><a href="introduce.jsp">회사소개</a></li>
-					<li><a href="sunglass.jsp">패션 선글라스</a>
+					<li><a href="sunglass.jsp?kind=10">패션 선글라스</a>
 						<ul class="sub">
 							<li><a href="sunglass.jsp?bname=fendi&kind=10">FENDI</a></li>
 							<li><a href="sunglass.jsp?bname=dior&kind=10">DIOR</a></li>
-							<li><a href="sunglass.jsp?bname=jimmy&kind=10">JIMMY CHOO</a></li>
+							<li><a href="sunglass.jsp?bname=jimmy choo&kind=10">JIMMY CHOO</a></li>
 							<li><a href="sunglass.jsp?bname=maxmara&kind=10">MAXMARA</a></li>
 							<li><a href="sunglass.jsp?bname=carrera&kind=10">CARRERA</a></li>
-							<li><a href="sunglass.jsp?bname=givenchy&kind=10">CIVENCHY</a></li>
-							<li><a href="sunglass.jsp?bname=hugo&kind=10">HUGO BOSS</a></li>
-							<li><a href="sunglass.jsp?bname=tommy&kind=10">TOMMY HILFIGER</a></li>
+							<li><a href="sunglass.jsp?bname=givenchy&kind=10">GIVENCHY</a></li>
+							<li><a href="sunglass.jsp?bname=hugo boss&kind=10">HUGO BOSS</a></li>
+							<li><a href="sunglass.jsp?bname=tommy hilfiger&kind=10">TOMMY HILFIGER</a></li>
 							<li><a href="sunglass.jsp?bname=polaroid&kind=10">POLAROID</a></li>
 						</ul>
 					</li>
@@ -65,13 +65,13 @@
 						<ul class="sub">
 							<li><a href="sunglass.jsp?bname=fendi&kind=20">FENDI</a></li>
 							<li><a href="sunglass.jsp?bname=dior&kind=20">DIOR</a></li>
-							<li><a href="sunglass.jsp?bname=jimmy&kind=20">JIMMY CHOO</a></li>
+							<li><a href="sunglass.jsp?bname=jimmy choo&kind=20">JIMMY CHOO</a></li>
 							<li><a href="sunglass.jsp?bname=maxmara&kind=20">MAXMARA</a></li>
 							<li><a href="sunglass.jsp?bname=carrera&kind=20">CARRERA</a></li>
-							<li><a href="sunglass.jsp?bname=givenchy&kind=20">CIVENCHY</a></li>
-							<li><a href="sunglass.jsp?bname=hugo&kind=20">HUGO BOSS</a></li>
-							<li><a href="sunglass.jsp?bname=tommy&kind=20">TOMMY HILFIGER</a></li>
-							<li><a href="sunglass.jsp?bname=polaroid&kind=20">POLAROID</a></li>
+							<li><a href="sunglass.jsp?bname=givenchy&kind=20">GIVENCHY</a></li>
+							<li><a href="sunglass.jsp?bname=hugo boss&kind=20">HUGO BOSS</a></li>
+							<li><a href="sunglass.jsp?bname=tommy hilfiger&kind=20">TOMMY HILFIGER</a></li>
+							<!-- li><a href="sunglass.jsp?bname=polaroid&kind=20">POLAROID</a></li-->
 						</ul>
 					</li>
 					<li><a href="accessory.jsp">악세서리</a>

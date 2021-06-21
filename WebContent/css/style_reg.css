@@ -68,6 +68,7 @@ div.top-contents {
 
 .reg_info table th {
     padding: 10px 25px;
+    width: 70px;
 }
 
 .reg_info table th:first-child, .reg_info table td:first-child {
@@ -77,7 +78,7 @@ div.top-contents {
 .reg_info table {
     border-collapse: separate;
     text-indent: initial;
-    border-spacing: 2px;
+    border-spacing: 0;
 }
 
 .reg_info {
