@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>jspweb13</title>
+<title>결제화면</title>
 <link rel="stylesheet" href="css/style.css"></link>
 <link rel="stylesheet" href="css/headerfooter.css"></link>
 <link rel="stylesheet" href="css/style_checkout.css"></link>

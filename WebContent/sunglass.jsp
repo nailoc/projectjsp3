@@ -41,7 +41,7 @@
 			selSort.append("keyword=" + keyword);
 		}
 		if(kind==null) {
-			kind="10";
+			kind="";
 		}else {
 			nextPage.append("&kind=" + kind);
 			selSort.append("&kind=" + kind);
@@ -62,8 +62,10 @@
 		}
 		ProductDao prodao = ProductDao.getInstance();
 		List<ProductVo> row = prodao.getProductList(keyword, kind, bname, sort, cPage);
-		
-		int[] bnameCnt = prodao.getBnameCnt(kind);
+		int[] bnameCnt=null;
+		if(keyword.equals("")){
+			bnameCnt = prodao.getBnameCnt(kind);			
+		}
 		
 		int totalPage = prodao.getTotalPage(keyword, kind, bname);
 		
@@ -80,8 +82,11 @@
 	<%@ include file="header.jsp" %>
 	
 	<div class="middle_contents">
+			<%
+				if(keyword.equals("")) {
+			%>
 			<div class="itemlist_title">
-				<h2>패션 선글라스</h2>
+				<h2><%=kind.equals("10") ? "패션 선글라스" : "안경테" %></h2>
 			</div>
 			<div class="category">
 				<%
@@ -100,7 +105,15 @@
 					}
 				%>
 			</div>
-		
+			<%
+				}else {
+			%>
+				<div style="width: 1250px; text-align: left; margin: -130px auto 60px auto; padding-left: 80px;">
+					<h2>검색결과 : <%=keyword %></h2>
+				</div>
+			<%
+				}
+			%>
 			<div class="list_box">
 			<%
 				for(int i=0; i<sortList1.length; i++) {

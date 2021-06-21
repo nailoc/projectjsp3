@@ -10,7 +10,7 @@ pageEncoding="UTF-8"%>
 <head>
 <meta charset="UTF-8">
 <title>jspweb13</title>
-<link rel="stylesheet" href="css/style_guide.css"></link>
+<link rel="stylesheet" href="css/style_delBpro.css"></link>
 
 </head>
 <style></style>
@@ -24,14 +24,21 @@ pageEncoding="UTF-8"%>
 	ProQnaVo rowshow = proqnadao.getProQnaByNo(qnano);
 	
 %>
-	
-	<form id="form1" method="GET" action="delQNA.jsp">
-		<p>비밀번호를 입력하세요</p>
-		<input type="password" name="pwd" id="pwd">
-		<button type="button" onclick="deleteB()">확인</button>
-		<button type="button" onclick="history.back()">뒤로가기</button>
-	</form>
-	
+	<div class="middle_contents"> 
+		<div class="">
+			<h2>글 삭제</h2>
+		</div>
+			<form id="form1" method="GET" action="delQNA.jsp">
+				<p>
+					<strong>비밀번호를 입력하세요</strong>
+				</p>
+				<input type="password" name="pwd" id="pwd">
+				<div class="btn_check">
+					<button type="button" class="cancel" onclick="history.back()">뒤로가기</button>
+					<button type="button" class="ok" onclick="deleteB()">확인</button>
+				</div>
+			</form>
+	</div>
 	<%@ include file="footer.jsp" %>
 	
 </body>

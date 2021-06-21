@@ -31,7 +31,7 @@ if(session.getAttribute("userid") == null) {
 							<div>
 								<form id="login" action="login_control.jsp" method="GET">
 								<input type="text" name="userid" id="userid" placeholder="아이디">
-								<input type="text" name="userpw" id="userpw" placeholder="비밀번호">
+								<input type="password" name="userpw" id="userpw" placeholder="비밀번호">
 								</form>
 							</div>
 								<button class="logbt" type="button" onclick="login();">로그인</button>
